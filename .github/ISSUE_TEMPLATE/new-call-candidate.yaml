@@ -1,0 +1,48 @@
+name: New Call Candidate
+description: Submit one or more reviewer self-nomination links for verification
+title: "[Candidate] New reviewer call(s)"
+labels: ["candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting reviewer call candidate(s)!
+        You can submit one or multiple calls at once. A maintainer will verify and add to the curated list.
+
+  - type: textarea
+    id: calls
+    attributes:
+      label: Candidate calls
+      description: |
+        One call per line in format: CONF YEAR | Role | URL
+        Role types: Reviewer, External Reviewer, PC, SPC, AC, SAC, AEC, Emergency Reviewer
+      placeholder: |
+        AAAI 2026 | Reviewer | https://aaai.org/reviewer-self-nomination
+        IJCAI 2026 | PC | https://ijcai.org/pc-nomination
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: How did you find this?
+      options:
+        - Search engine
+        - Conference homepage
+        - Social media / mailing list
+        - Word of mouth
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I verified all URLs are accessible
+          required: true
+        - label: These are self-nomination/application pages (not just CFPs)
+          required: true
+        - label: I checked these are not already in the curated list
+          required: true

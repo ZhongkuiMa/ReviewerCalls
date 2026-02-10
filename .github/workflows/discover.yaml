@@ -1,0 +1,28 @@
+name: Discover Reviewer Calls
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install "pyyaml>=6.0.3" "requests>=2.32.5" "aiohttp>=3.13.3" "validators>=0.35.0" "ddgs>=9.10.0"
+      - name: Run discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python -m discover
+          --search-provider serper
+          --serper-key "${{ secrets.SERPER_API_KEY }}"
+          --repo "${{ github.repository }}"

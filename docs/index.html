@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReviewerCalls - Conference Reviewer Self-Nomination Calls</title>
+  <meta property="og:title" content="ReviewerCalls">
+  <meta property="og:description" content="Curated self-nomination calls for reviewers of CCF/CORE conferences">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ZhongkuiMa.github.io/ReviewerCalls/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231a237e'/><text x='50' y='68' font-size='48' font-weight='bold' fill='white' text-anchor='middle' font-family='system-ui'>RC</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <hgroup>
+        <h1>ReviewerCalls</h1>
+        <p>Curated self-nomination calls for reviewers and committee members of CCF- and CORE-ranked conferences.</p>
+      </hgroup>
+      <nav>
+        <ul>
+          <li><a href="https://github.com/ZhongkuiMa/ReviewerCalls" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.buymeacoffee.com/zhongkuimac" target="_blank" rel="noopener">☕ Support</a></li>
+          <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <div id="stats-banner" class="stats-banner"></div>
+    <div class="filters" role="group">
+      <select id="filter-area" aria-label="Filter by area">
+        <option value="">All Areas</option>
+      </select>
+      <select id="filter-ccf" aria-label="Filter by CCF rank">
+        <option value="">All CCF</option>
+        <option value="A">CCF-A</option>
+        <option value="B">CCF-B</option>
+        <option value="C">CCF-C</option>
+      </select>
+      <select id="filter-core" aria-label="Filter by CORE rank">
+        <option value="">All CORE</option>
+        <option value="A*">CORE-A*</option>
+        <option value="A">CORE-A</option>
+        <option value="B">CORE-B</option>
+        <option value="C">CORE-C</option>
+      </select>
+      <select id="filter-role" aria-label="Filter by role">
+        <option value="">All Roles</option>
+      </select>
+      <select id="page-size" aria-label="Rows per page">
+        <option value="20" selected>20 / page</option>
+        <option value="50">50 / page</option>
+        <option value="100">100 / page</option>
+      </select>
+      <button id="clear-filters" aria-label="Clear all filters" style="display: none;">Clear Filters</button>
+    </div>
+    <div id="loading-state" class="loading-container">
+      <div class="loading-spinner" role="status" aria-label="Loading"></div>
+      <p>Loading reviewer calls...</p>
+    </div>
+    <div id="calls-table"></div>
+    <p id="empty-state" class="empty-state" hidden>
+      No reviewer calls match your filters. Try adjusting your selection or
+      <a href="https://github.com/ZhongkuiMa/ReviewerCalls/issues/new/choose" target="_blank" rel="noopener">submit a new candidate</a>.
+    </p>
+    <article class="disclaimer-banner" role="alert">
+      <p><strong>⚠️ Information Aggregation Service:</strong> This website collects reviewer calls from publicly available sources. Information may be outdated or incomplete. <strong>Always verify deadlines, requirements, and links with official conference websites before applying.</strong> We make no warranties about accuracy or completeness.</p>
+    </article>
+  </main>
+
+  <footer class="container">
+    <small>
+      Information is manually curated but may be outdated. Always verify with official conference sources.
+      <a href="https://github.com/ZhongkuiMa/ReviewerCalls" target="_blank" rel="noopener">Contribute on GitHub</a>.
+      <span id="last-updated" class="last-updated"></span>
+    </small>
+    <small class="copyright">
+      © 2026 <a href="https://github.com/ZhongkuiMa" target="_blank" rel="noopener">Zhongkui Ma</a>. Licensed under <a href="https://github.com/ZhongkuiMa/ReviewerCalls/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.
+    </small>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
