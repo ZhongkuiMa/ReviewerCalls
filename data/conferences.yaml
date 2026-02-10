@@ -1,0 +1,3244 @@
+# Full CCF/CORE conference list.
+# Source: ccfddl/ccf-deadlines (https://github.com/ccfddl/ccf-deadlines)
+# Generated: 321 conferences across 10 areas.
+
+areas:
+  AI: Artificial Intelligence
+  CG: Computer Graphics & Multimedia
+  CT: Computing Theory
+  DB: Databases & Data Mining
+  DS: Computer Architecture & Parallel Computing
+  HI: Human-Computer Interaction
+  MX: Interdisciplinary & Emerging
+  NW: Computer Networks
+  SC: Security & Cryptography
+  SE: Software Engineering
+conferences:
+- short: AAAI
+  name: AAAI Conference on Artificial Intelligence
+  domain: aaai.org
+  area: AI
+  dblp: aaai
+  conf_date: 1
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ACL
+  name: Annual Meeting of the Association for Computational Linguistics
+  domain: 2026.aclweb.org
+  area: AI
+  dblp: acl
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CVPR
+  name: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  domain: cvpr.thecvf.com
+  area: AI
+  dblp: cvpr
+  conf_date: 6
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ICCV
+  name: IEEE International Conference on Computer Vision
+  domain: iccv.thecvf.com
+  area: AI
+  dblp: iccv
+  conf_date: 10
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ICML
+  name: International Conference on Machine Learning
+  domain: icml.cc
+  area: AI
+  dblp: icml
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: IJCAI
+  name: International Joint Conference on Artificial Intelligence
+  domain: 2026.ijcai.org
+  area: AI
+  dblp: ijcai
+  conf_date: 8
+  rank:
+    ccf: A
+    core: A*
+    thcpl: B
+- short: NeurIPS
+  name: Conference on Neural Information Processing Systems
+  domain: neurips.cc
+  area: AI
+  dblp: nips
+  conf_date: 12
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: AAMAS
+  name: International Conference on Autonomous Agents and Multiagent Systems
+  domain: cyprusconferences.org
+  area: AI
+  dblp: ifaamas
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: COLING
+  name: INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS
+  domain: coling2025.org
+  area: AI
+  dblp: coling
+  conf_date: 5
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: COLT
+  name: Annual Conference on Learning Theory
+  domain: learningtheory.org
+  area: AI
+  dblp: colt
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: ECAI
+  name: European Conference on Artificial Intelligence
+  domain: ecai2025.org
+  area: AI
+  dblp: ecai
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: ECCV
+  name: European Conference on Computer Vision
+  domain: eccv.ecva.net
+  area: AI
+  dblp: eccv
+  conf_date: 9
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: EMNLP
+  name: The annual Conference on Empirical Methods in Natural Language Processing
+  domain: 2025.emnlp.org
+  area: AI
+  dblp: emnlp
+  conf_date: 11
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: ICAPS
+  name: International Conference on Automated Planning and Scheduling
+  domain: icaps26.icaps-conference.org
+  area: AI
+  dblp: icaps
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: ICCBR
+  name: International Conference on Case-Based Reasoning
+  domain: 2026.iccbr.org
+  area: AI
+  dblp: iccbr
+  conf_date: 8
+  rank:
+    ccf: B
+    core: C
+    thcpl: '-'
+- short: ICRA
+  name: IEEE International Conference on Robotics and Automation
+  domain: 2026.ieee-icra.org
+  area: AI
+  dblp: icra
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: KR
+  name: International Conference on Principles of Knowledge Representation and Reasoning
+  domain: kr.org
+  area: AI
+  dblp: kr
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A*
+    thcpl: '-'
+- short: NAACL
+  name: The Annual Conference of the North American Chapter of the Association for
+    Computational Linguistics
+  domain: 2025.naacl.org
+  area: AI
+  dblp: naacl
+  conf_date: 4
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: PPSN
+  name: International Conference on Parallel Problem Solving From Nature
+  domain: ppsn2026.disi.unitn.it
+  area: AI
+  dblp: ppsn
+  conf_date: 8
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: UAI
+  name: Conference on Uncertainty in Artificial Intelligence
+  domain: www.auai.org
+  area: AI
+  dblp: uai
+  conf_date: 8
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ACCV
+  name: Asian Conference on Computer Vision
+  domain: accv2026.org
+  area: AI
+  dblp: accv
+  conf_date: 12
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: ACML
+  name: Asian Conference on Machine Learning
+  domain: www.acml-conf.org
+  area: AI
+  dblp: acml
+  conf_date: 12
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: AISTATS
+  name: International Conference on Artificial Intelligence and Statistics
+  domain: virtual.aistats.org
+  area: AI
+  dblp: aistats
+  conf_date: 5
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: ALT
+  name: International Conference on Algorithmic Learning Theory
+  domain: algorithmiclearningtheory.org
+  area: AI
+  dblp: alt
+  conf_date: 2
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: BMVC
+  name: British Machine Vision Conference
+  domain: bmvc2026.bmva.org
+  area: AI
+  dblp: bmvc
+  conf_date: 11
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: CoNLL
+  name: Conference on Computational Natural Language Learning
+  domain: www.conll.org
+  area: AI
+  dblp: conll
+  conf_date: 7
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: FG
+  name: International Conference on Automatic Face and Gesture Recognition
+  domain: fg2026.ieee-biometrics.org
+  area: AI
+  dblp: fg
+  conf_date: 5
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: GECCO
+  name: Genetic and Evolutionary Computation Conference
+  domain: gecco-2026.sigevo.org
+  area: AI
+  dblp: gecco
+  conf_date: 7
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: ICANN
+  name: International Conference on Artificial Neural Networks
+  domain: e-nns.org
+  area: AI
+  dblp: icann
+  conf_date: 0
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ICDAR
+  name: International Conference on Document Analysis and Recognition
+  domain: icdar2026.org
+  area: AI
+  dblp: icdar
+  conf_date: 8
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: ICONIP
+  name: International Conference on Neural Information Processing
+  domain: iconip2025.apnns.org
+  area: AI
+  dblp: iconip
+  conf_date: 11
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: ICPR
+  name: International Conference on Pattern Recognition
+  domain: icpr2026.org
+  area: AI
+  dblp: icpr
+  conf_date: 8
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: ICTAI
+  name: International Conference on Tools with Artificial Intellignce
+  domain: ictai.computer.org
+  area: AI
+  dblp: ictai
+  conf_date: 11
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: IJCB
+  name: International Joint Conference on Biometrics
+  domain: ijcb2026.ieee-biometrics.org
+  area: AI
+  dblp: icb
+  conf_date: 9
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: IJCNN
+  name: International Joint Conference on Neural Networks
+  domain: attend.ieee.org
+  area: AI
+  dblp: ijcnn
+  conf_date: 6
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: IROS
+  name: IEEE/RSJ International Conference on Intelligent Robots and Systems
+  domain: 2026.ieee-iros.org
+  area: AI
+  dblp: iros
+  conf_date: 9
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: KSEM
+  name: International Conference on Knowledge Science, Engineering and Management
+  domain: ksem2026.rosc.org.cn
+  area: AI
+  dblp: ksem
+  conf_date: 7
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: NLPCC
+  name: CCF International Conference on Natural Language Processing and Chinese Computing
+  domain: tcci.ccf.org.cn
+  area: AI
+  dblp: nlpcc
+  conf_date: 8
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: PRICAI
+  name: Pacific Rim International Conference on Artificial Intelligence
+  domain: www.pricai.org
+  area: AI
+  dblp: pricai
+  conf_date: 0
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: CEC
+  name: IEEE Congress on Evolutionary Computation
+  domain: www.cec2025.org
+  area: AI
+  dblp: cec
+  conf_date: 6
+  rank:
+    ccf: '-'
+    core: B
+    thcpl: '-'
+- short: CICAI
+  name: CAAI International Conference on Artificial Intelligence
+  domain: cicai.caai.cn
+  area: AI
+  dblp: cicai
+  conf_date: 7
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: COLM
+  name: Conference on Language Modeling
+  domain: colmweb.org
+  area: AI
+  dblp: colm
+  conf_date: 10
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: CPAL
+  name: The Conference on Parsimony and Learning
+  domain: cpal.cc
+  area: AI
+  dblp: cpal
+  conf_date: 3
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: CoRL
+  name: The Conference on Robot Learning
+  domain: www.corl.org
+  area: AI
+  dblp: corl
+  conf_date: 9
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: EACL
+  name: The Annual Conference of the European Chapter of the Association for Computational
+    Linguistics
+  domain: 2026.eacl.org
+  area: AI
+  dblp: eacl
+  conf_date: 3
+  rank:
+    ccf: '-'
+    core: A
+    thcpl: '-'
+- short: ESANN
+  name: European Symposium on Artificial Neural Networks, Computational Intelligence
+    and Machine Learning
+  domain: www.esann.org
+  area: AI
+  dblp: esann
+  conf_date: 4
+  rank:
+    ccf: '-'
+    core: B
+    thcpl: '-'
+- short: ICLR
+  name: International Conference on Learning Representations
+  domain: iclr.cc
+  area: AI
+  dblp: iclr
+  conf_date: 5
+  rank:
+    ccf: '-'
+    core: A*
+    thcpl: A
+- short: IJCNLP
+  name: International Joint Conference on Natural Language Processing
+  domain: www.afnlp.org
+  area: AI
+  dblp: ijcnlp
+  conf_date: 0
+  rank:
+    ccf: '-'
+    core: B
+    thcpl: '-'
+- short: LOG
+  name: Learning on Graphs Conference
+  domain: logconference.org
+  area: AI
+  dblp: log
+  conf_date: 12
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: RSS
+  name: Robotics Science and Systems
+  domain: roboticsconference.org
+  area: AI
+  dblp: rss
+  conf_date: 7
+  rank:
+    ccf: '-'
+    core: A*
+    thcpl: A
+- short: RuleML+RR
+  name: International Joint Conference on Rules and Reasoning
+  domain: 2026.declarativeai.net
+  area: AI
+  dblp: rulemlrr
+  conf_date: 8
+  rank:
+    ccf: '-'
+    core: B
+    thcpl: '-'
+- short: WACV
+  name: IEEE/CVF Winter Conference on Applications of Computer Vision
+  domain: wacv.thecvf.com
+  area: AI
+  dblp: wacv
+  conf_date: 2
+  rank:
+    ccf: '-'
+    core: A
+    thcpl: '-'
+- short: ACM MM
+  name: ACM International Conference on Multimedia
+  domain: 2026.acmmm.org
+  area: CG
+  dblp: mm
+  conf_date: 11
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ACM SIGGRAPH
+  name: ACM SIGGRAPH Annual Conference
+  domain: s2026.siggraph.org
+  area: CG
+  dblp: siggraph
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ACM SIGGRAPH ASIA
+  name: ACM SIGGRAPH Annual Conference in Asia
+  domain: asia.siggraph.org
+  area: CG
+  dblp: siggrapha
+  conf_date: 12
+  rank:
+    ccf: A
+    core: '-'
+    thcpl: '-'
+- short: IEEE VIS
+  name: IEEE Visualization Conference
+  domain: ieeevis.org
+  area: CG
+  dblp: visualization
+  conf_date: 11
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: IEEE VR
+  name: IEEE Virtual Reality
+  domain: ieeevr.org
+  area: CG
+  dblp: vr
+  conf_date: 3
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: EGSR
+  name: Eurographics Symposium on Rendering
+  domain: egsr2026.inria.fr
+  area: CG
+  dblp: rt
+  conf_date: 7
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: '-'
+- short: EuroVis
+  name: Eurographics Conference on Visualization
+  domain: www.eurovis.org.uk
+  area: CG
+  dblp: vissym
+  conf_date: 6
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: Eurographics
+  name: Eurographics
+  domain: eg2026.github.io
+  area: CG
+  dblp: eurographics
+  conf_date: 5
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: ICASSP
+  name: IEEE International Conference on Acoustics, Speech, and Signal Processing
+  domain: 2026.ieeeicassp.org
+  area: CG
+  dblp: icassp
+  conf_date: 5
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: ICME
+  name: The IEEE International Conference on Multimedia & Expo
+  domain: 2026.ieeeicme.org
+  area: CG
+  dblp: icme
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: ICMR
+  name: ACM SIGMM International Conference on Multimedia Retrieval
+  domain: icmr2026.org
+  area: CG
+  dblp: mir
+  conf_date: 6
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: ISMAR
+  name: International Symposium on Mixed and Augmented Reality
+  domain: www.ieeeismar.net
+  area: CG
+  dblp: ismar
+  conf_date: 0
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: PG
+  name: Pacific Graphics, The Pacific Conference on Computer Graphics and Applications
+  domain: pg2025.nccu.edu.tw
+  area: CG
+  dblp: pg
+  conf_date: 10
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: SCA
+  name: ACM SIGGRAPH/Eurographics Symposium on Computer Animation
+  domain: computeranimation.org
+  area: CG
+  dblp: sca
+  conf_date: 8
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: SGP
+  name: Eurographics Symposium on Geometry Processing
+  domain: sgp2025.my.canva.site
+  area: CG
+  dblp: sgp
+  conf_date: 6
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: SPM
+  name: Symposium on Solid and Physical Modeling
+  domain: spmconf2025.github.io
+  area: CG
+  dblp: sma
+  conf_date: 10
+  rank:
+    ccf: B
+    core: C
+    thcpl: B
+- short: 3DV
+  name: International Conference on 3D Vision
+  domain: 3dvconf.github.io
+  area: CG
+  dblp: 3dim
+  conf_date: 3
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: CASA
+  name: International Conference on Computer Animation and Social Agents
+  domain: casa2025.sciencesconf.org
+  area: CG
+  dblp: ca
+  conf_date: 6
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: CGI
+  name: Computer Graphics International
+  domain: www.cgs-network.org
+  area: CG
+  dblp: cgi
+  conf_date: 7
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: CVM
+  name: The international conference on Computational Visual Media
+  domain: iccvm.org
+  area: CG
+  dblp: cvm
+  conf_date: 4
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: GMP
+  name: International Conference on Geometric Modeling and Processing
+  domain: gmp2026.kma.zcu.cz
+  area: CG
+  dblp: gmp
+  conf_date: 5
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ICIP
+  name: The IEEE International Conference on Image Processing
+  domain: 2026.ieeeicip.org
+  area: CG
+  dblp: icip
+  conf_date: 0
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: ICVRV
+  name: International Conference on Virtual Reality and Visualization
+  domain: icvrv2025.aconf.org
+  area: CG
+  dblp: icvrv
+  conf_date: 12
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: InterSpeech
+  name: Conference of the International Speech Communication Association
+  domain: interspeech2026.org
+  area: CG
+  dblp: interspeech
+  conf_date: 9
+  rank:
+    ccf: C
+    core: A
+    thcpl: '-'
+- short: MMAsia
+  name: ACM Multimedia Asia
+  domain: mmasia2025.org
+  area: CG
+  dblp: mmasia
+  conf_date: 12
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: MMM
+  name: International Conference on Multimedia Modeling
+  domain: mmm2026.cz
+  area: CG
+  dblp: mmm
+  conf_date: 1
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: PRCV
+  name: Chinese Conference on Pattern Recognition and Computer Vision
+  domain: 2025.prcv.cn
+  area: CG
+  dblp: prcv
+  conf_date: 0
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: PacificVis
+  name: IEEE Pacific Visualization Symposium
+  domain: pacificvis2026.github.io
+  area: CG
+  dblp: pacificvis
+  conf_date: 4
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: SMI
+  name: Shape Modeling International
+  domain: smiconf.github.io
+  area: CG
+  dblp: smi
+  conf_date: 10
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: VINCI
+  name: International Symposium on Visual Information Communication and Interaction
+  domain: vinci2025.games.cg.jku.at
+  area: CG
+  dblp: vinci
+  conf_date: 12
+  rank:
+    ccf: '-'
+    core: C
+    thcpl: '-'
+- short: CAV
+  name: International Conference on Computer-Aided Verification
+  domain: conferences.i-cav.org
+  area: CT
+  dblp: cav
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: FOCS
+  name: IEEE Symposium on Foundations of Computer Science
+  domain: focs.computer.org
+  area: CT
+  dblp: focs
+  conf_date: 12
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: LICS
+  name: IEEE Symposium on Logic in Computer Science
+  domain: lics.siglog.org
+  area: CT
+  dblp: lics
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: SODA
+  name: ACM-SIAM Symposium on Discrete Algorithms
+  domain: www.siam.org
+  area: CT
+  dblp: soda
+  conf_date: 1
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: STOC
+  name: ACM Symposium on the Theory of Computing
+  domain: acm-stoc.org
+  area: CT
+  dblp: stoc
+  conf_date: 6
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CADE
+  name: The Conference on Automated Deduction (CADE)
+  domain: www.dhbw-stuttgart.de
+  area: CT
+  dblp: cade
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: COCOON
+  name: International Computing and Combinatorics Conference
+  domain: tcsuestc.com
+  area: CT
+  dblp: cocoon
+  conf_date: 8
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: '-'
+- short: CONCUR
+  name: International Conference on Concurrency Theory
+  domain: conferences.au.dk
+  area: CT
+  dblp: concur
+  conf_date: 0
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: HSCC
+  name: 'International Conference on Hybrid Systems: Computation and Control'
+  domain: www.isis.vanderbilt.edu
+  area: CT
+  dblp: hybrid
+  conf_date: 5
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: ICALP
+  name: EATCS International Colloquium on Automata, Languages, and Programming
+  domain: icalppodcspaa2026.cs.rhul.ac.uk
+  area: CT
+  dblp: icalp
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: SOCG
+  name: International Symposium on Computational Geometry
+  domain: cgweek26.computational-geometry.org
+  area: CT
+  dblp: compgeom
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: FMCAD
+  name: Formal Methods in Computer-Aided Design
+  domain: fmcad.forsyte.at
+  area: CT
+  dblp: fmcad
+  conf_date: 0
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: SETTA
+  name: 'Symposium on Dependable Software Engineering: Theories, Tools and Applications'
+  domain: www.setta2025.uk
+  area: CT
+  dblp: setta
+  conf_date: 0
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ISIT
+  name: IEEE International Symposium on Information Theory
+  domain: 2026.ieee-isit.org
+  area: CT
+  dblp: isit
+  conf_date: 6
+  rank:
+    ccf: '-'
+    core: B
+    thcpl: B
+- short: ICDE
+  name: IEEE International Conference on Data Engineering
+  domain: icde2026.github.io
+  area: DB
+  dblp: icde
+  conf_date: 5
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: SIGIR
+  name: International Conference on Research on Development in Information Retrieval
+  domain: sigir2026.org
+  area: DB
+  dblp: sigir
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: SIGKDD
+  name: ACM Knowledge Discovery and Data Mining
+  domain: kdd2026.kdd.org
+  area: DB
+  dblp: kdd
+  conf_date: 8
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: SIGMOD
+  name: ACM Conference on Management of Data
+  domain: 2027.sigmod.org
+  area: DB
+  dblp: sigmod
+  conf_date: 6
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: VLDB
+  name: International Conference on Very Large Data Bases
+  domain: www.vldb.org
+  area: DB
+  dblp: vldb
+  conf_date: 8
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CIDR
+  name: International Conference on Innovative Data Systems Research
+  domain: www.cidrdb.org
+  area: DB
+  dblp: cidr
+  conf_date: 0
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: CIKM
+  name: ACM International Conference on Information and Knowledge Management
+  domain: cikm2025.org
+  area: DB
+  dblp: cikm
+  conf_date: 11
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: DASFAA
+  name: Database Systems for Advanced Applications
+  domain: dasfaa2026.github.io
+  area: DB
+  dblp: dasfaa
+  conf_date: 4
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: ECML-PKDD
+  name: European Conference on Machine Learning and 25th Principles and Practice of
+    Knowledge Discovery in Databases
+  domain: ecmlpkdd.org
+  area: DB
+  dblp: pkdd
+  conf_date: 9
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: EDBT
+  name: International Conference on Extending Database Technology
+  domain: edbticdt2026.github.io
+  area: DB
+  dblp: edbt
+  conf_date: 3
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICDM
+  name: IEEE International Conference on Data Mining
+  domain: icdm2026.neu.edu.cn
+  area: DB
+  dblp: icdm
+  conf_date: 11
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: ICDT
+  name: International Conference on Database Theory
+  domain: edbticdt2026.github.io
+  area: DB
+  dblp: icdt
+  conf_date: 3
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ISWC
+  name: International Semantic Web Conference
+  domain: iswc2026.semanticweb.org
+  area: DB
+  dblp: semweb
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: PODS
+  name: ACM Symposium on Principles of Database Systems
+  domain: 2025.sigmod.org
+  area: DB
+  dblp: pods
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: RecSys
+  name: ACM Conference on Recommender Systems
+  domain: recsys.acm.org
+  area: DB
+  dblp: recsys
+  conf_date: 9
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: SDM
+  name: SIAM International Conference on Data Mining
+  domain: www.siam.org
+  area: DB
+  dblp: sdm
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: WSDM
+  name: International Conference on Web Search and Data Mining
+  domain: wsdm-conference.org
+  area: DB
+  dblp: wsdm
+  conf_date: 2
+  rank:
+    ccf: B
+    core: A
+    thcpl: A
+- short: ADMA
+  name: The International Conference on Advanced Data Mining and Applications
+  domain: adma2026.github.io
+  area: DB
+  dblp: adma
+  conf_date: 11
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: APWeb-WAIM
+  name: APWeb-WAIM joint international conference on Web and Big Data
+  domain: apweb2025.sau.edu.cn
+  area: DB
+  dblp: APWeb
+  conf_date: 8
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ECIR
+  name: European Conference on Information Retrieval
+  domain: ecir2026.eu
+  area: DB
+  dblp: ecir
+  conf_date: 3
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: PAKDD
+  name: Pacific-Asia Conference on Knowledge Discovery and Data Mining
+  domain: www.pakdd2026.org
+  area: DB
+  dblp: pakdd
+  conf_date: 6
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: ASPLOS
+  name: International Conference on Architectural Support for Programming Languages
+    and Operating Systems
+  domain: www.asplos-conference.org
+  area: DS
+  dblp: asplos
+  conf_date: 3
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: DAC
+  name: Design Automation Conference
+  domain: dac.com
+  area: DS
+  dblp: dac
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: EuroSys
+  name: European Conference on Computer Systems
+  domain: 2026.eurosys.org
+  area: DS
+  dblp: eurosys
+  conf_date: 4
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: FAST
+  name: USENIX Conference on File and Storage Technologies
+  domain: www.usenix.org
+  area: DS
+  dblp: fast
+  conf_date: 2
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: HPCA
+  name: IEEE International Symposium on High-Performance Computer Architecture
+  domain: hpca-conf.org
+  area: DS
+  dblp: hpca
+  conf_date: 3
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ISCA
+  name: International Symposium on Computer Architecture
+  domain: iscaconf.org
+  area: DS
+  dblp: isca
+  conf_date: 6
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: MICRO
+  name: IEEE/ACM International Symposium on Microarchitecture
+  domain: microarch.org
+  area: DS
+  dblp: micro
+  conf_date: 10
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: PPoPP
+  name: ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming
+  domain: ppopp26.sigplan.org
+  area: DS
+  dblp: ppopp
+  conf_date: 2
+  rank:
+    ccf: A
+    core: B
+    thcpl: A
+- short: SC
+  name: International Conference for High Performance Computing, Networking, Storage,
+    and Analysis
+  domain: sc26.supercomputing.org
+  area: DS
+  dblp: sc
+  conf_date: 11
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: USENIX ATC
+  name: USENIX Annual Technical Conference
+  domain: www.usenix.org
+  area: DS
+  dblp: usenix
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: CLUSTER
+  name: IEEE International Conference on Cluster Computing
+  domain: clustercomp.org
+  area: DS
+  dblp: cluster
+  conf_date: 9
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: DATE
+  name: Design, Automation & Test in Europe
+  domain: www.date-conference.com
+  area: DS
+  dblp: date
+  conf_date: 4
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: DCC
+  name: Data Compression Conference
+  domain: datacompressionconference.org
+  area: DS
+  dblp: dcc
+  conf_date: 3
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: Euro-Par
+  name: European Conference on Parallel and Distributed Computing
+  domain: 2026.euro-par.org
+  area: DS
+  dblp: europar
+  conf_date: 8
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: FPGA
+  name: ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  domain: www.isfpga.org
+  area: DS
+  dblp: fpga
+  conf_date: 2
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: A
+- short: HPDC
+  name: ACM Symposium on High-Performance Parallel and Distributed Computing
+  domain: hpdc.sci.utah.edu
+  area: DS
+  dblp: hpdc
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: Hot Chips
+  name: 'Hot Chips: A Symposium on High Performance Chips'
+  domain: www.hotchips.org
+  area: DS
+  dblp: hotchips
+  conf_date: 8
+  rank:
+    ccf: B
+    core: C
+    thcpl: B
+- short: ICCAD
+  name: IEEE/ACM International Conference on Computer-Aided Design
+  domain: iccad.com
+  area: DS
+  dblp: iccad
+  conf_date: 11
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICCD
+  name: International Conference on Computer Design
+  domain: www.iccd-conf.com
+  area: DS
+  dblp: iccd
+  conf_date: 11
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: ICDCS
+  name: IEEE International Conference on Distributed Computing Systems
+  domain: icdcs2026.icdcs.org
+  area: DS
+  dblp: icdcs
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICPP
+  name: International Conference on Parallel Processing
+  domain: icpp2026.github.io
+  area: DS
+  dblp: icpp
+  conf_date: 9
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: ICS
+  name: ACM International Conference on Supercomputing
+  domain: dipsa-qub.github.io
+  area: DS
+  dblp: ics
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: IEEE/ACM CGO
+  name: The International Symposium on Code Generation and Optimization
+  domain: conf.researchr.org
+  area: DS
+  dblp: cgo
+  conf_date: 1
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: IPDPS
+  name: IEEE International Parallel and Distributed Processing Symposium
+  domain: www.ipdps.org
+  area: DS
+  dblp: ipps
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: MSST
+  name: International Conference on Massive Storage Systems and Technology
+  domain: storageconference.us
+  area: DS
+  dblp: mss
+  conf_date: 6
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: PACT
+  name: International Conference on Parallel Architectures and Compilation Techniques
+  domain: pact2025.github.io
+  area: DS
+  dblp: pact
+  conf_date: 11
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: PODC
+  name: ACM Symposium on Principles of Distributed Computing
+  domain: www.podc.org
+  area: DS
+  dblp: podc
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: RTAS
+  name: IEEE Real-Time and Embedded Technology and Applications Symposium
+  domain: 2026.rtas.org
+  area: DS
+  dblp: rtas
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: SIGMETRICS
+  name: ACM Special Interest Group on Measurement and Evaluation
+  domain: www.sigmetrics.org
+  area: DS
+  dblp: sigmetrics
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: SPAA
+  name: ACM Symposium on Parallelism in Algorithms and Architectures
+  domain: spaa.acm.org
+  area: DS
+  dblp: spaa
+  conf_date: 7
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: SoCC
+  name: ACM Symposium on Cloud Computing
+  domain: acmsocc.org
+  area: DS
+  dblp: cloud
+  conf_date: 11
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: VEE
+  name: Virtual Execution Environments
+  domain: conf.researchr.org
+  area: DS
+  dblp: vee
+  conf_date: 3
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: ASAP
+  name: IEEE International Conference on Application-Specific Systems, Architectures,
+    and Processors
+  domain: 2026.asap-conf.org
+  area: DS
+  dblp: asap
+  conf_date: 9
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ASP-DAC
+  name: Asia and South Pacific Design Automation Conference
+  domain: www.aspdac.com
+  area: DS
+  dblp: aspdac
+  conf_date: 0
+  rank:
+    ccf: C
+    core: C
+    thcpl: B
+- short: CF
+  name: ACM International Conference on Computing Frontiers
+  domain: www.computingfrontiers.org
+  area: DS
+  dblp: cf
+  conf_date: 5
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ETS
+  name: IEEE European Test Symposium
+  domain: ets24.ewi.tudelft.nl
+  area: DS
+  dblp: ets
+  conf_date: 5
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: FCCM
+  name: IEEE Symposium on Field-Programmable Custom Computing Machines
+  domain: www.fccm.org
+  area: DS
+  dblp: fccm
+  conf_date: 5
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: FPT
+  name: International Conference on Field Programmable Technology
+  domain: fpt2025.shanghaitech.edu.cn
+  area: DS
+  dblp: fpt
+  conf_date: 12
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: GLSVLSI
+  name: Great Lakes Symposium on VLSI
+  domain: www.glsvlsi.org
+  area: DS
+  dblp: glvlsi
+  conf_date: 6
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: HPCC
+  name: IEEE International Conference on High Performance Computing and Communications
+  domain: hpcn.exeter.ac.uk
+  area: DS
+  dblp: hpcc
+  conf_date: 8
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ICA3PP
+  name: International Conference on Algorithms and Architectures for Parallel Processing
+  domain: ieee-cybermatics.org
+  area: DS
+  dblp: ica3pp
+  conf_date: 10
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ICPADS
+  name: IEEE International Conference on Parallel and Distributed Systems
+  domain: ieee-icpads.org.cn
+  area: DS
+  dblp: icpads
+  conf_date: 12
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ISCAS
+  name: IEEE International Symposium on Circuits and Systems
+  domain: 2026.ieee-iscas.org
+  area: DS
+  dblp: iscas
+  conf_date: 5
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: B
+- short: ISPA
+  name: IEEE International Symposium on Parallel and Distributed Processing with Applications
+  domain: www.cloud-conf.net
+  area: DS
+  dblp: ispa
+  conf_date: 9
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: SYSTOR
+  name: The ACM International Systems and Storage Conference
+  domain: www.systor.org
+  area: DS
+  dblp: systor
+  conf_date: 9
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: APSys
+  name: ACM SIGOPS Asia-Pacific Workshop on Systems
+  domain: apsys2025.github.io
+  area: DS
+  dblp: apsys
+  conf_date: 10
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: IISWC
+  name: IEEE International Symposium on Workload Characterization
+  domain: iiswc.org
+  area: DS
+  dblp: iiswc
+  conf_date: 10
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: NETYS
+  name: The International Conference on Networked Systems
+  domain: netys.net
+  area: DS
+  dblp: netys
+  conf_date: 5
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: PDCAT
+  name: International Conference on Parallel and Distributed Computing, Applications
+    and Technologies
+  domain: www.pd-cat.org
+  area: DS
+  dblp: pdcat
+  conf_date: 11
+  rank:
+    ccf: '-'
+    core: C
+    thcpl: '-'
+- short: CHI
+  name: ACM Conference on Human Factors in Computing Systems
+  domain: chi2026.acm.org
+  area: HI
+  dblp: chi
+  conf_date: 4
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CSCW
+  name: ACM Conference on Computer Supported Cooperative Work and Social Computing
+  domain: cscw.acm.org
+  area: HI
+  dblp: cscw
+  conf_date: 10
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: UIST
+  name: ACM Symposium on User Interface Software and Technology
+  domain: uist.acm.org
+  area: HI
+  dblp: uist
+  conf_date: 11
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: UbiComp/ISWC
+  name: ACM International Joint Conference on Pervasive and Ubiquitous Computing
+  domain: www.ubicomp.org
+  area: HI
+  dblp: huc
+  conf_date: 10
+  rank:
+    ccf: A
+    core: '-'
+    thcpl: A
+- short: ECSCW
+  name: European Conference on Computer Supported Cooperative Work
+  domain: ecscw.eusset.eu
+  area: HI
+  dblp: ecscw
+  conf_date: 6
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: GROUP
+  name: ACM International Conference on Supporting Group Work
+  domain: group.acm.org
+  area: HI
+  dblp: group
+  conf_date: 1
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: ICWSM
+  name: The International AAAI Conference on Web and Social Media
+  domain: www.icwsm.org
+  area: HI
+  dblp: icwsm
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: ISS
+  name: ACM International Conference on Interactive Surfaces and Spaces
+  domain: iss.acm.org
+  area: HI
+  dblp: tabletop
+  conf_date: 0
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: '-'
+- short: IUI
+  name: ACM Conference on Intelligent User Interfaces
+  domain: iui.hosting.acm.org
+  area: HI
+  dblp: iui
+  conf_date: 3
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: PerCom
+  name: IEEE International Conference on Pervasive Computing and Communications
+  domain: percom.org
+  area: HI
+  dblp: percom
+  conf_date: 3
+  rank:
+    ccf: B
+    core: A*
+    thcpl: B
+- short: ASSETS
+  name: ACM SIGACCESS Conference on Computers and Accessibility
+  domain: assets25.sigaccess.org
+  area: HI
+  dblp: assets
+  conf_date: 0
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: CSCWD
+  name: International Conference on Computer Supported Cooperative Work in Design
+  domain: 2025.cscwd.org
+  area: HI
+  dblp: cscwd
+  conf_date: 5
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: CollaborateCom
+  name: 'International Conference on Collaborative Computing: Networking, Applications
+    and Worksharing'
+  domain: collaboratecom.eai-conferences.org
+  area: HI
+  dblp: colcom
+  conf_date: 11
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: DIS
+  name: ACM Conference on Designing Interactive Systems
+  domain: dis.acm.org
+  area: HI
+  dblp: ACMdis
+  conf_date: 6
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: ICMI
+  name: ACM International Conference on Multimodal Interaction
+  domain: icmi.acm.org
+  area: HI
+  dblp: icmi
+  conf_date: 0
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: UIC
+  name: IEEE International Conference on Ubiquitous Intelligence and Computing
+  domain: www.ieee-smart-world.org
+  area: HI
+  dblp: uic
+  conf_date: 0
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: RTSS
+  name: The IEEE Real-Time Systems Symposium
+  domain: 2026.rtss.org
+  area: MX
+  dblp: rtss
+  conf_date: 12
+  rank:
+    ccf: A
+    core: A*
+    thcpl: B
+- short: WINE
+  name: Conference on Web and Internet Economics
+  domain: wine2023.shanghaitech.edu.cn
+  area: MX
+  dblp: wine
+  conf_date: 0
+  rank:
+    ccf: A
+    core: '-'
+    thcpl: '-'
+- short: WWW
+  name: International World Wide Web Conferences
+  domain: www2027.thewebconf.org
+  area: MX
+  dblp: www
+  conf_date: 4
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: BIBM
+  name: IEEE International Conference on Bioinformatics and Biomedicine
+  domain: ieeebibm.org
+  area: MX
+  dblp: bibm
+  conf_date: 0
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: '-'
+- short: CogSci
+  name: Annual Meeting of the Cognitive Science Society
+  domain: cognitivesciencesociety.org
+  area: MX
+  dblp: cogsci
+  conf_date: 7
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: EMSOFT
+  name: International Conference on Embedded Software
+  domain: esweek.org
+  area: MX
+  dblp: emsoft
+  conf_date: 9
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: MICCAI
+  name: International Conference on Medical Image Computing and Computer Assisted
+    Intervention
+  domain: conferences.miccai.org
+  area: MX
+  dblp: miccai
+  conf_date: 0
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: RECOMB
+  name: International Conference on Research inComputational Molecular Biology
+  domain: recomb.org
+  area: MX
+  dblp: recomb
+  conf_date: 5
+  rank:
+    ccf: B
+    core: B
+    thcpl: A
+- short: APBC
+  name: Asia Pacific Bioinformatics Conference
+  domain: bioinfo.nuaa.edu.cn
+  area: MX
+  dblp: apbc
+  conf_date: 9
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: BigData
+  name: IEEE International Conference on Big Data
+  domain: conferences.cis.um.edu.mo
+  area: MX
+  dblp: bigdataconf
+  conf_date: 12
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: Cloud
+  name: IEEE International Conference on Cloud Computing
+  domain: services.conferences.computer.org
+  area: MX
+  dblp: IEEEcloud
+  conf_date: 7
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: ICIC
+  name: International Conference on Intelligent Computing
+  domain: www.ic-icc.cn
+  area: MX
+  dblp: icic
+  conf_date: 7
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ISBRA
+  name: International Symposium on Bioinformatics Research and Applications
+  domain: www.helsinki.fi
+  area: MX
+  dblp: isbra
+  conf_date: 8
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: SIGSPATIAL
+  name: ACM SIGSPATIAL International Conference on Advances in Geographic Information
+    Systems
+  domain: sigspatial2025.sigspatial.org
+  area: MX
+  dblp: sigspatial
+  conf_date: 11
+  rank:
+    ccf: C
+    core: A
+    thcpl: '-'
+- short: SMC
+  name: IEEE International Conference on Systems, Man, and Cybernetics
+  domain: www.ieeesmc2026.org
+  area: MX
+  dblp: smc
+  conf_date: 10
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: BIS
+  name: International Conference on Business Information Systems
+  domain: bisconf.org
+  area: MX
+  dblp: bis
+  conf_date: 6
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: MLSys
+  name: Conference on Machine Learning and Systems
+  domain: mlsys.org
+  area: MX
+  dblp: mlsys
+  conf_date: 5
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: INFOCOM
+  name: IEEE International Conference on Computer Communications
+  domain: infocom2026.ieee-infocom.org
+  area: NW
+  dblp: infocom
+  conf_date: 5
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: MobiCom
+  name: ACM Annual International Conference On Mobile Computing And Networking
+  domain: sigmobile.org
+  area: NW
+  dblp: mobicom
+  conf_date: 11
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: NSDI
+  name: USENIX Symposium on Networked Systems Design and Implementation
+  domain: www.usenix.org
+  area: NW
+  dblp: nsdi
+  conf_date: 5
+  rank:
+    ccf: A
+    core: '-'
+    thcpl: A
+- short: SIGCOMM
+  name: ACM International Conference on Applications, Technologies, Architectures,
+    and Protocols for Computer Communication
+  domain: conferences.sigcomm.org
+  area: NW
+  dblp: sigcomm
+  conf_date: 9
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CoNEXT
+  name: International Conference on Emerging Networking Experiments and Technologies
+  domain: conferences.sigcomm.org
+  area: NW
+  dblp: conext
+  conf_date: 12
+  rank:
+    ccf: B
+    core: A
+    thcpl: A
+- short: ICNP
+  name: IEEE International Conference on Network Protocols
+  domain: icnp26.cs.ucr.edu
+  area: NW
+  dblp: icnp
+  conf_date: 10
+  rank:
+    ccf: B
+    core: B
+    thcpl: A
+- short: IMC
+  name: ACM Internet Measurement Conference
+  domain: conferences.sigcomm.org
+  area: NW
+  dblp: imc
+  conf_date: 11
+  rank:
+    ccf: B
+    core: A
+    thcpl: A
+- short: IPSN
+  name: ACM/IEEE International Conference on Information Processing in Sensor Networks
+  domain: ipsn.acm.org
+  area: NW
+  dblp: ipsn
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: IWQoS
+  name: IEEE/ACM International Symposium on Quality of Service
+  domain: iwqos2026.ieee-iwqos.org
+  area: NW
+  dblp: iwqos
+  conf_date: 6
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: MobiHoc
+  name: International Symposium on Mobile Ad Hoc Networking and Computing
+  domain: www.sigmobile.org
+  area: NW
+  dblp: mobihoc
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: MobiSys
+  name: ACM International Conference on Mobile Systems, Applications, and Services
+  domain: www.sigmobile.org
+  area: NW
+  dblp: mobisys
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A
+    thcpl: A
+- short: NOSSDAV
+  name: International Workshop on Network and Operating System Support for Digital
+    Audio and Video
+  domain: nossdav.org
+  area: NW
+  dblp: nossdav
+  conf_date: 3
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: SECON
+  name: IEEE International Conference on Sensing, Communication, and Networking
+  domain: secon2026.ieee-secon.org
+  area: NW
+  dblp: secon
+  conf_date: 4
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: SenSys
+  name: ACM Conference on Embedded Networked Sensor Systems
+  domain: sensys.acm.org
+  area: NW
+  dblp: sensys
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A*
+    thcpl: A
+- short: APNet
+  name: Asia-Pacific Workshop on Networking
+  domain: conferences.sigcomm.org
+  area: NW
+  dblp: apnet
+  conf_date: 8
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: FORTE
+  name: International Conference on Formal Techniques for (Networked and) Distributed
+    Systems
+  domain: www.discotec.org
+  area: NW
+  dblp: forte
+  conf_date: 6
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: GLOBECOM
+  name: IEEE Global Communications Conference
+  domain: globecom2026.ieee-globecom.org
+  area: NW
+  dblp: globecom
+  conf_date: 12
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: ICC
+  name: IEEE International Conference on Communications
+  domain: icc2026.ieee-icc.org
+  area: NW
+  dblp: icc
+  conf_date: 5
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: B
+- short: ICCCN
+  name: IEEE International Conference on Computer Communications and Networks
+  domain: www.icccn.org
+  area: NW
+  dblp: icccn
+  conf_date: 7
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: ISCC
+  name: IEEE Symposium on Computers and Communications
+  domain: ieee-iscc.computer.org
+  area: NW
+  dblp: iscc
+  conf_date: 6
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: LCN
+  name: IEEE Conference on Local Computer Networks
+  domain: www.ieeelcn.org
+  area: NW
+  dblp: lcn
+  conf_date: 10
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: MSN
+  name: International Conference on Mobility, Sensing and Networking
+  domain: ieee-msn.org
+  area: NW
+  dblp: msn
+  conf_date: 12
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: MSWiM
+  name: International Conference on Modeling, Analysis and Simulation of Wireless
+    and Mobile Systems
+  domain: mswimconf.com
+  area: NW
+  dblp: mswim
+  conf_date: 10
+  rank:
+    ccf: C
+    core: A
+    thcpl: '-'
+- short: Networking
+  name: IFIP International Conference on Networking
+  domain: networking.ifip.org
+  area: NW
+  dblp: networking
+  conf_date: 5
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: WASA
+  name: International Conference on Wireless Algorithms, Systems, and Applications
+  domain: wasa-conference.org
+  area: NW
+  dblp: wasa
+  conf_date: 7
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: WCNC
+  name: Wireless Communications and Networking Conference
+  domain: wcnc2026.ieee-wcnc.org
+  area: NW
+  dblp: wcnc
+  conf_date: 4
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: WoWMoM
+  name: IEEE International Symposium on a World of Wireless, Mobile and Multimedia
+    Networks
+  domain: www.cs.unibo.it
+  area: NW
+  dblp: wowmom
+  conf_date: 6
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: MMSys
+  name: ACM International Conference on Multimedia Systems
+  domain: 2026.acmmmsys.org
+  area: NW
+  dblp: mmsys
+  conf_date: 4
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: WiCON
+  name: International Wireless Internet Conference
+  domain: wicon.eai-conferences.org
+  area: NW
+  dblp: wicon
+  conf_date: 12
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: CCS
+  name: ACM Conference on Computer and Communications Security
+  domain: www.sigsac.org
+  area: SC
+  dblp: ccs
+  conf_date: 11
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CRYPTO
+  name: International Cryptology Conference
+  domain: crypto.iacr.org
+  area: SC
+  dblp: crypto
+  conf_date: 8
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: EUROCRYPT
+  name: European Cryptology Conference
+  domain: eurocrypt.iacr.org
+  area: SC
+  dblp: eurocrypt
+  conf_date: 5
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: NDSS
+  name: Network and Distributed System Security (NDSS) Symposium
+  domain: www.ndss-symposium.org
+  area: SC
+  dblp: ndss
+  conf_date: 2
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: S&P
+  name: IEEE Symposium on Security and Privacy
+  domain: www.ieee-security.org
+  area: SC
+  dblp: sp
+  conf_date: 5
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: USENIX Security
+  name: USENIX Security Symposium
+  domain: www.usenix.org
+  area: SC
+  dblp: uss
+  conf_date: 8
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ACSAC
+  name: Annual Computer Security Applications Conference
+  domain: www.acsac.org
+  area: SC
+  dblp: acsac
+  conf_date: 12
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ASIACRYPT
+  name: International Conference on the Theory and Application of Cryptology and Information
+    Security
+  domain: asiacrypt.iacr.org
+  area: SC
+  dblp: asiacrypt
+  conf_date: 12
+  rank:
+    ccf: B
+    core: A
+    thcpl: A
+- short: CHES
+  name: International Conference on Cryptographic Hardware and Embedded Systems
+  domain: ches.iacr.org
+  area: SC
+  dblp: ches
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: A
+- short: CSFW
+  name: IEEE Computer Security Foundations Workshop
+  domain: csf2026.ieee-security.org
+  area: SC
+  dblp: csfw
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: DSN
+  name: International Conference on Dependable Systems and Networks
+  domain: dsn2026.github.io
+  area: SC
+  dblp: dsn
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ESORICS
+  name: European Symposium on Research in Computer Security
+  domain: sites.google.com
+  area: SC
+  dblp: esorics
+  conf_date: 9
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: FSE
+  name: Fast Software Encryption
+  domain: fse.iacr.org
+  area: SC
+  dblp: fse
+  conf_date: 3
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: PKC
+  name: International Conference on Practice and Theory of Public-Key Cryptography
+  domain: pkc.iacr.org
+  area: SC
+  dblp: pkc
+  conf_date: 5
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: RAID
+  name: International Symposium on Recent Advances in Intrusion Detection
+  domain: raid2025.github.io
+  area: SC
+  dblp: raid
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: SRDS
+  name: IEEE International Symposium on Reliable Distributed Systems
+  domain: srds-conference.org
+  area: SC
+  dblp: srds
+  conf_date: 9
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: TCC
+  name: Theory of Cryptography Conference
+  domain: tcc.iacr.org
+  area: SC
+  dblp: tcc
+  conf_date: 12
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ACISP
+  name: Australasia Conference on Information Security and Privacy
+  domain: acisp-conference.github.io
+  area: SC
+  dblp: acisp
+  conf_date: 7
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ACNS
+  name: Applied Cryptography and Network Security
+  domain: acns2026.github.io
+  area: SC
+  dblp: acns
+  conf_date: 6
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: AsiaCCS
+  name: Asia Conference on Computer and Communications Security
+  domain: asiaccs2026.cse.iitkgp.ac.in
+  area: SC
+  dblp: ccs
+  conf_date: 6
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: CT-RSA
+  name: Cryptographer's Track at RSA Conference
+  domain: conference.wsu.edu
+  area: SC
+  dblp: ctrsa
+  conf_date: 3
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: DFRWS
+  name: Digital Forensic Research Workshop
+  domain: dfrws.org
+  area: SC
+  dblp: dfrws
+  conf_date: 3
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: DFRWS APAC
+  name: Digital Forensic Research Workshop Asia Pacific
+  domain: dfrws.org
+  area: SC
+  dblp: di
+  conf_date: 11
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: DIMVA
+  name: Detection of Intrusions and Malware & Vulnerability Assessment
+  domain: www.dimva.org
+  area: SC
+  dblp: dimva
+  conf_date: 7
+  rank:
+    ccf: C
+    core: C
+    thcpl: B
+- short: EuroS&P
+  name: IEEE European Symposium on Security and Privacy
+  domain: eurosp2026.ieee-security.org
+  area: SC
+  dblp: eurosp
+  conf_date: 7
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: FC
+  name: Financial Cryptography and Data Security
+  domain: fc26.ifca.ai
+  area: SC
+  dblp: fc
+  conf_date: 3
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: HotSec
+  name: USENIX Workshop on Hot Topics in Security
+  domain: www.usenix.org
+  area: SC
+  dblp: events
+  conf_date: 0
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ICDF2C
+  name: International Conference on Digital Forensics & Cyber Crime
+  domain: icdf2c.eai-conferences.org
+  area: SC
+  dblp: icdf2c
+  conf_date: 9
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ICICS
+  name: International Conference on Information and Communications Security
+  domain: sulab-sever.u-aizu.ac.jp
+  area: SC
+  dblp: icics
+  conf_date: 10
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: IFIP WG 11.9
+  name: IFIP WG 11.9 International Conference on Digital Forensics
+  domain: www.ifip119.org
+  area: SC
+  dblp: NO DBLP
+  conf_date: 1
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: IH&MMSec
+  name: ACM Workshop on Information Hiding and Multimedia Security
+  domain: www.ihmmsec.org
+  area: SC
+  dblp: ih
+  conf_date: 6
+  rank:
+    ccf: C
+    core: C
+    thcpl: B
+- short: INSCRYPT
+  name: International Conference on Information Security and Cryptology
+  domain: inscrypt2025.xidian.edu.cn
+  area: SC
+  dblp: cisc
+  conf_date: 10
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: ISC
+  name: Information Security Conference
+  domain: isc25.skku.edu
+  area: SC
+  dblp: isw
+  conf_date: 10
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: NSPW
+  name: New Security Paradigms Workshop
+  domain: www.nspw.org
+  area: SC
+  dblp: nspw
+  conf_date: 8
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: PAM
+  name: Passive and Active Measurement Conference
+  domain: pam2026.at
+  area: SC
+  dblp: pam
+  conf_date: 3
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: PETS
+  name: Privacy Enhancing Technologies Symposium
+  domain: petsymposium.org
+  area: SC
+  dblp: pet
+  conf_date: 7
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: SAC
+  name: Selected Areas in Cryptography
+  domain: sacworkshop.org
+  area: SC
+  dblp: sacrypt
+  conf_date: 8
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: SACMAT
+  name: ACM Symposium on Access Control Models and Technologies
+  domain: www.sacmat.org
+  area: SC
+  dblp: sacmat
+  conf_date: 7
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: SEC
+  name: IFIP International Information Security Conference
+  domain: ifipsec.org
+  area: SC
+  dblp: sec
+  conf_date: 6
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: B
+- short: SOUPS
+  name: Symposium On Usable Privacy and Security
+  domain: soups.page
+  area: SC
+  dblp: soups
+  conf_date: 8
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: SecureComm
+  name: International Conference on Security and Privacy in Communication Networks
+  domain: securecomm.eai-conferences.org
+  area: SC
+  dblp: securecomm
+  conf_date: 7
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: TrustCom
+  name: IEEE International Conference on Trust, Security and Privacy in Computing
+    and Communications
+  domain: collaboratecom.eai-conferences.org
+  area: SC
+  dblp: trustcom
+  conf_date: 11
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: WiSec
+  name: ACM Conference on Security and Privacy in Wireless and Mobile Networks
+  domain: wisec26.events.cispa.de
+  area: SC
+  dblp: wisec
+  conf_date: 6
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: INDOCRYPT
+  name: International Conference on Cryptology in India
+  domain: www.indocrypt2025.in
+  area: SC
+  dblp: indocrypt
+  conf_date: 12
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: NOMS
+  name: IEEE/IFIP Network Operations and Management Symposium
+  domain: noms2026.ieee-noms.org
+  area: SC
+  dblp: noms
+  conf_date: 5
+  rank:
+    ccf: '-'
+    core: B
+    thcpl: B
+- short: SATML
+  name: IEEE Conference on Secure and Trustworthy Machine Learning
+  domain: www.satml.org
+  area: SC
+  dblp: satml
+  conf_date: 3
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'
+- short: ASE
+  name: International Conference on Automated Software Engineering
+  domain: conf.researchr.org
+  area: SE
+  dblp: kbse
+  conf_date: 10
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: FM
+  name: International Symposium on Formal Methods
+  domain: conf.researchr.org
+  area: SE
+  dblp: fm
+  conf_date: 5
+  rank:
+    ccf: A
+    core: A
+    thcpl: B
+- short: FSE
+  name: ACM International Conference on the Foundations of Software Engineering
+  domain: conf.researchr.org
+  area: SE
+  dblp: sigsoft
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ICSE
+  name: International Conference on Software Engineering
+  domain: conf.researchr.org
+  area: SE
+  dblp: icse
+  conf_date: 4
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: ISSTA
+  name: ACM SIGSOFT International Symposium on Software Testing and Analysis
+  domain: conf.researchr.org
+  area: SE
+  dblp: issta
+  conf_date: 10
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: OOPSLA
+  name: Conference on Object-Oriented Programming Systems, Languages, and Applications
+  domain: conf.researchr.org
+  area: SE
+  dblp: oopsla
+  conf_date: 10
+  rank:
+    ccf: A
+    core: A
+    thcpl: A
+- short: OSDI
+  name: USENIX Symposium on Operating Systems Design and Implementation
+  domain: www.usenix.org
+  area: SE
+  dblp: osdi
+  conf_date: 7
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: PLDI
+  name: ACM SIGPLAN Conference on Programming Language Design & Implementation
+  domain: pldi26.sigplan.org
+  area: SE
+  dblp: pldi
+  conf_date: 6
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: POPL
+  name: ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages
+  domain: popl26.sigplan.org
+  area: SE
+  dblp: popl
+  conf_date: 1
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: SOSP
+  name: ACM Symposium on Operating Systems Principles
+  domain: sigops.org
+  area: SE
+  dblp: sosp
+  conf_date: 9
+  rank:
+    ccf: A
+    core: A*
+    thcpl: A
+- short: CAiSE
+  name: International Conference on Advanced Information Systems Engineering
+  domain: caise26.polimi.it
+  area: SE
+  dblp: caise
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: CP
+  name: International Conference on Principles and Practice of Constraint Programming
+  domain: cp2026.a4cp.org
+  area: SE
+  dblp: cp
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ECOOP
+  name: European Conference on Object-Oriented Programming
+  domain: 2025.ecoop.org
+  area: SE
+  dblp: ecoop
+  conf_date: 6
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ESEM
+  name: International Symposium on Empirical Software Engineering and Measurement
+  domain: conf.researchr.org
+  area: SE
+  dblp: esem
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ETAPS
+  name: European Joint Conferences on Theory and Practice of Software
+  domain: etaps.org
+  area: SE
+  dblp: etaps
+  conf_date: 4
+  rank:
+    ccf: B
+    core: '-'
+    thcpl: B
+- short: HotOS
+  name: USENIX Workshop on Hot Topics in Operating Systems
+  domain: sigops.org
+  area: SE
+  dblp: hotos
+  conf_date: 5
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICFP
+  name: International Conference on Function Programming
+  domain: icfp26.sigplan.org
+  area: SE
+  dblp: icfp
+  conf_date: 8
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICPC
+  name: IEEE International Conference on Program Comprehension
+  domain: conf.researchr.org
+  area: SE
+  dblp: icpc
+  conf_date: 4
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICSME
+  name: International Conference on Software Maintenance and Evolution
+  domain: conf.researchr.org
+  area: SE
+  dblp: icsm
+  conf_date: 9
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ICSOC
+  name: International Conference on Service Oriented Computing
+  domain: icsoc2025.hit.edu.cn
+  area: SE
+  dblp: icsoc
+  conf_date: 12
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: ICWS
+  name: IEEE International Conference on Web Services (Research Track)
+  domain: services.conferences.computer.org
+  area: SE
+  dblp: icws
+  conf_date: 7
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: ISSRE
+  name: International Symposium on Software Reliability Engineering
+  domain: issre.github.io
+  area: SE
+  dblp: issre
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: LCTES
+  name: International Conference on Languages, Compilers and Tools for Embedded Systems
+  domain: pldi24.sigplan.org
+  area: SE
+  dblp: lctrts
+  conf_date: 6
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: Middleware
+  name: International Middleware Conference
+  domain: middleware-conf.github.io
+  area: SE
+  dblp: middleware
+  conf_date: 11
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: MoDELS
+  name: International Conference on Model Driven Engineering Languages and Systems
+  domain: conf.researchr.org
+  area: SE
+  dblp: models
+  conf_date: 10
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: RE
+  name: IEEE International Requirements Engineering Conference
+  domain: conf.researchr.org
+  area: SE
+  dblp: re
+  conf_date: 9
+  rank:
+    ccf: B
+    core: A
+    thcpl: '-'
+- short: SANER
+  name: IEEE International Conference on Software Analysis, Evolution and Reengineering
+  domain: conf.researchr.org
+  area: SE
+  dblp: wcre
+  conf_date: 3
+  rank:
+    ccf: B
+    core: A
+    thcpl: B
+- short: SAS
+  name: International Static Analysis Symposium
+  domain: 2025.splashcon.org
+  area: SE
+  dblp: sas
+  conf_date: 10
+  rank:
+    ccf: B
+    core: B
+    thcpl: '-'
+- short: VMCAI
+  name: International Conference on Verification, Model Checking, and Abstract Interpretation
+  domain: conf.researchr.org
+  area: SE
+  dblp: vmcai
+  conf_date: 1
+  rank:
+    ccf: B
+    core: B
+    thcpl: B
+- short: APLAS
+  name: Asian Symposium on Programming Languages and Systems
+  domain: conf.researchr.org
+  area: SE
+  dblp: aplas
+  conf_date: 10
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: APSEC
+  name: Asia-Pacific Software Engineering Conference
+  domain: conf.researchr.org
+  area: SE
+  dblp: apsec
+  conf_date: 12
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ATVA
+  name: International Symposium on Automated Technology for Verification and Analysis
+  domain: conf.researchr.org
+  area: SE
+  dblp: atva
+  conf_date: 10
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: COMPSAC
+  name: International Computer Software and Applications Conference
+  domain: ieeecompsac.computer.org
+  area: SE
+  dblp: compsac
+  conf_date: 7
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: EASE
+  name: International Conference on Evaluation and Assessment in Software Engineering
+  domain: conf.researchr.org
+  area: SE
+  dblp: ease
+  conf_date: 6
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: ICECCS
+  name: International Conference on Engineering of Complex Computer Systems
+  domain: cyprusconferences.org
+  area: SE
+  dblp: iceccs
+  conf_date: 6
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: ICFEM
+  name: International Conference on Formal Engineering Methods
+  domain: icfem2025.github.io
+  area: SE
+  dblp: icfem
+  conf_date: 11
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: ISPASS
+  name: International Symposium on Performance Analysis of Systems and Software
+  domain: ispass.org
+  area: SE
+  dblp: ispass
+  conf_date: 4
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: Internetware
+  name: Asia-Pacific Symposium on Internetware
+  domain: conf.researchr.org
+  area: SE
+  dblp: internetware
+  conf_date: 6
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: MSR
+  name: International Conference on Mining Software Repositories
+  domain: 2026.msrconf.org
+  area: SE
+  dblp: msr
+  conf_date: 4
+  rank:
+    ccf: C
+    core: A
+    thcpl: B
+- short: QRS
+  name: IEEE International Conference on Software Quality, Reliability and Security
+  domain: qrs25.techconf.org
+  area: SE
+  dblp: qrs
+  conf_date: 7
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: REFSQ
+  name: 'Requirements Engineering: Foundation for Software Quality'
+  domain: 2026.refsq.org
+  area: SE
+  dblp: refsq
+  conf_date: 3
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: RV
+  name: International Conference on Runtime Verification
+  domain: rv25.isec.tugraz.at
+  area: SE
+  dblp: rv
+  conf_date: 9
+  rank:
+    ccf: C
+    core: B
+    thcpl: '-'
+- short: SCAM
+  name: IEEE International Working Conference on Source Code Analysis and Manipulation
+  domain: conf.researchr.org
+  area: SE
+  dblp: scam
+  conf_date: 9
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: SEKE
+  name: International Conference on Software Engineering and Knowledge Engineering
+  domain: ksiresearch.org
+  area: SE
+  dblp: seke
+  conf_date: 10
+  rank:
+    ccf: C
+    core: C
+    thcpl: '-'
+- short: SSE
+  name: IEEE International Conference on Software Services Engineering
+  domain: services.conferences.computer.org
+  area: SE
+  dblp: IEEEscc
+  conf_date: 7
+  rank:
+    ccf: C
+    core: B
+    thcpl: B
+- short: TASE
+  name: Theoretical Aspects of Software Engineering
+  domain: cyprusconferences.org
+  area: SE
+  dblp: tase
+  conf_date: 7
+  rank:
+    ccf: C
+    core: '-'
+    thcpl: '-'
+- short: EUSIPCO
+  name: European Signal Processing Conference
+  domain: eusipco2026.org
+  area: SE
+  dblp: eusipcolyon
+  conf_date: 8
+  rank:
+    ccf: '-'
+    core: '-'
+    thcpl: '-'

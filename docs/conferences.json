@@ -1,0 +1,2891 @@
+[
+  {
+    "short": "AAAI",
+    "name": "AAAI Conference on Artificial Intelligence",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "aaai"
+  },
+  {
+    "short": "ACL",
+    "name": "Annual Meeting of the Association for Computational Linguistics",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "acl"
+  },
+  {
+    "short": "CVPR",
+    "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "cvpr"
+  },
+  {
+    "short": "ICCV",
+    "name": "IEEE International Conference on Computer Vision",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "iccv"
+  },
+  {
+    "short": "ICML",
+    "name": "International Conference on Machine Learning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "icml"
+  },
+  {
+    "short": "IJCAI",
+    "name": "International Joint Conference on Artificial Intelligence",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "ijcai"
+  },
+  {
+    "short": "NeurIPS",
+    "name": "Conference on Neural Information Processing Systems",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "nips"
+  },
+  {
+    "short": "AAMAS",
+    "name": "International Conference on Autonomous Agents and Multiagent Systems",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "ifaamas"
+  },
+  {
+    "short": "COLING",
+    "name": "INTERNATIONNAL CONFERENCE ON COMPUTATIONAL LINGUISTICS",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "coling"
+  },
+  {
+    "short": "COLT",
+    "name": "Annual Conference on Learning Theory",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "colt"
+  },
+  {
+    "short": "ECAI",
+    "name": "European Conference on Artificial Intelligence",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "ecai"
+  },
+  {
+    "short": "ECCV",
+    "name": "European Conference on Computer Vision",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "eccv"
+  },
+  {
+    "short": "EMNLP",
+    "name": "The annual Conference on Empirical Methods in Natural Language Processing",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "emnlp"
+  },
+  {
+    "short": "ICAPS",
+    "name": "International Conference on Automated Planning and Scheduling",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "icaps"
+  },
+  {
+    "short": "ICCBR",
+    "name": "International Conference on Case-Based Reasoning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "C",
+    "dblp": "iccbr"
+  },
+  {
+    "short": "ICRA",
+    "name": "IEEE International Conference on Robotics and Automation",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "icra"
+  },
+  {
+    "short": "KR",
+    "name": "International Conference on Principles of Knowledge Representation and Reasoning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "kr"
+  },
+  {
+    "short": "NAACL",
+    "name": "The Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "naacl"
+  },
+  {
+    "short": "PPSN",
+    "name": "International Conference on Parallel Problem Solving From Nature",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "ppsn"
+  },
+  {
+    "short": "UAI",
+    "name": "Conference on Uncertainty in Artificial Intelligence",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "uai"
+  },
+  {
+    "short": "ACCV",
+    "name": "Asian Conference on Computer Vision",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "accv"
+  },
+  {
+    "short": "ACML",
+    "name": "Asian Conference on Machine Learning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "acml"
+  },
+  {
+    "short": "AISTATS",
+    "name": "International Conference on Artificial Intelligence and Statistics",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "aistats"
+  },
+  {
+    "short": "ALT",
+    "name": "International Conference on Algorithmic Learning Theory",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "alt"
+  },
+  {
+    "short": "BMVC",
+    "name": "British Machine Vision Conference",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "bmvc"
+  },
+  {
+    "short": "CoNLL",
+    "name": "Conference on Computational Natural Language Learning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "conll"
+  },
+  {
+    "short": "FG",
+    "name": "International Conference on Automatic Face and Gesture Recognition",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "fg"
+  },
+  {
+    "short": "GECCO",
+    "name": "Genetic and Evolutionary Computation Conference",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "gecco"
+  },
+  {
+    "short": "ICANN",
+    "name": "International Conference on Artificial Neural Networks",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "icann"
+  },
+  {
+    "short": "ICDAR",
+    "name": "International Conference on Document Analysis and Recognition",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "icdar"
+  },
+  {
+    "short": "ICONIP",
+    "name": "International Conference on Neural Information Processing",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "iconip"
+  },
+  {
+    "short": "ICPR",
+    "name": "International Conference on Pattern Recognition",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "icpr"
+  },
+  {
+    "short": "ICTAI",
+    "name": "International Conference on Tools with Artificial Intellignce",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "ictai"
+  },
+  {
+    "short": "IJCB",
+    "name": "International Joint Conference on Biometrics",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "icb"
+  },
+  {
+    "short": "IJCNN",
+    "name": "International Joint Conference on Neural Networks",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "ijcnn"
+  },
+  {
+    "short": "IROS",
+    "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "iros"
+  },
+  {
+    "short": "KSEM",
+    "name": "International Conference on Knowledge Science, Engineering and Management",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "ksem"
+  },
+  {
+    "short": "NLPCC",
+    "name": "CCF International Conference on Natural Language Processing and Chinese Computing",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "nlpcc"
+  },
+  {
+    "short": "PRICAI",
+    "name": "Pacific Rim International Conference on Artificial Intelligence",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "pricai"
+  },
+  {
+    "short": "CEC",
+    "name": "IEEE Congress on Evolutionary Computation",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "B",
+    "dblp": "cec"
+  },
+  {
+    "short": "CICAI",
+    "name": "CAAI International Conference on Artificial Intelligence",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "cicai"
+  },
+  {
+    "short": "COLM",
+    "name": "Conference on Language Modeling",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "colm"
+  },
+  {
+    "short": "CPAL",
+    "name": "The Conference on Parsimony and Learning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "cpal"
+  },
+  {
+    "short": "CoRL",
+    "name": "The Conference on Robot Learning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "corl"
+  },
+  {
+    "short": "EACL",
+    "name": "The Annual Conference of the European Chapter of the Association for Computational Linguistics",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "A",
+    "dblp": "eacl"
+  },
+  {
+    "short": "ESANN",
+    "name": "European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "B",
+    "dblp": "esann"
+  },
+  {
+    "short": "ICLR",
+    "name": "International Conference on Learning Representations",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "A*",
+    "dblp": "iclr"
+  },
+  {
+    "short": "IJCNLP",
+    "name": "International Joint Conference on Natural Language Processing",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "B",
+    "dblp": "ijcnlp"
+  },
+  {
+    "short": "LOG",
+    "name": "Learning on Graphs Conference",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "log"
+  },
+  {
+    "short": "RSS",
+    "name": "Robotics Science and Systems",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "A*",
+    "dblp": "rss"
+  },
+  {
+    "short": "RuleML+RR",
+    "name": "International Joint Conference on Rules and Reasoning",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "B",
+    "dblp": "rulemlrr"
+  },
+  {
+    "short": "WACV",
+    "name": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+    "area": "Artificial Intelligence",
+    "area_code": "AI",
+    "ccf": "-",
+    "core": "A",
+    "dblp": "wacv"
+  },
+  {
+    "short": "ACM MM",
+    "name": "ACM International Conference on Multimedia",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "mm"
+  },
+  {
+    "short": "ACM SIGGRAPH",
+    "name": "ACM SIGGRAPH Annual Conference",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "siggraph"
+  },
+  {
+    "short": "ACM SIGGRAPH ASIA",
+    "name": "ACM SIGGRAPH Annual Conference in Asia",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "A",
+    "core": "-",
+    "dblp": "siggrapha"
+  },
+  {
+    "short": "IEEE VIS",
+    "name": "IEEE Visualization Conference",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "visualization"
+  },
+  {
+    "short": "IEEE VR",
+    "name": "IEEE Virtual Reality",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "vr"
+  },
+  {
+    "short": "EGSR",
+    "name": "Eurographics Symposium on Rendering",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "rt"
+  },
+  {
+    "short": "EuroVis",
+    "name": "Eurographics Conference on Visualization",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "vissym"
+  },
+  {
+    "short": "Eurographics",
+    "name": "Eurographics",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "eurographics"
+  },
+  {
+    "short": "ICASSP",
+    "name": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "icassp"
+  },
+  {
+    "short": "ICME",
+    "name": "The IEEE International Conference on Multimedia & Expo",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icme"
+  },
+  {
+    "short": "ICMR",
+    "name": "ACM SIGMM International Conference on Multimedia Retrieval",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "mir"
+  },
+  {
+    "short": "ISMAR",
+    "name": "International Symposium on Mixed and Augmented Reality",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "ismar"
+  },
+  {
+    "short": "PG",
+    "name": "Pacific Graphics, The Pacific Conference on Computer Graphics and Applications",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "pg"
+  },
+  {
+    "short": "SCA",
+    "name": "ACM SIGGRAPH/Eurographics Symposium on Computer Animation",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "sca"
+  },
+  {
+    "short": "SGP",
+    "name": "Eurographics Symposium on Geometry Processing",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "sgp"
+  },
+  {
+    "short": "SPM",
+    "name": "Symposium on Solid and Physical Modeling",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "B",
+    "core": "C",
+    "dblp": "sma"
+  },
+  {
+    "short": "3DV",
+    "name": "International Conference on 3D Vision",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "3dim"
+  },
+  {
+    "short": "CASA",
+    "name": "International Conference on Computer Animation and Social Agents",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "ca"
+  },
+  {
+    "short": "CGI",
+    "name": "Computer Graphics International",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "cgi"
+  },
+  {
+    "short": "CVM",
+    "name": "The international conference on Computational Visual Media",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "cvm"
+  },
+  {
+    "short": "GMP",
+    "name": "International Conference on Geometric Modeling and Processing",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "gmp"
+  },
+  {
+    "short": "ICIP",
+    "name": "The IEEE International Conference on Image Processing",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "icip"
+  },
+  {
+    "short": "ICVRV",
+    "name": "International Conference on Virtual Reality and Visualization",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "icvrv"
+  },
+  {
+    "short": "InterSpeech",
+    "name": "Conference of the International Speech Communication Association",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "interspeech"
+  },
+  {
+    "short": "MMAsia",
+    "name": "ACM Multimedia Asia",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "mmasia"
+  },
+  {
+    "short": "MMM",
+    "name": "International Conference on Multimedia Modeling",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "mmm"
+  },
+  {
+    "short": "PRCV",
+    "name": "Chinese Conference on Pattern Recognition and Computer Vision",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "prcv"
+  },
+  {
+    "short": "PacificVis",
+    "name": "IEEE Pacific Visualization Symposium",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "pacificvis"
+  },
+  {
+    "short": "SMI",
+    "name": "Shape Modeling International",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "smi"
+  },
+  {
+    "short": "VINCI",
+    "name": "International Symposium on Visual Information Communication and Interaction",
+    "area": "Computer Graphics & Multimedia",
+    "area_code": "CG",
+    "ccf": "-",
+    "core": "C",
+    "dblp": "vinci"
+  },
+  {
+    "short": "CAV",
+    "name": "International Conference on Computer-Aided Verification",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "cav"
+  },
+  {
+    "short": "FOCS",
+    "name": "IEEE Symposium on Foundations of Computer Science",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "focs"
+  },
+  {
+    "short": "LICS",
+    "name": "IEEE Symposium on Logic in Computer Science",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "lics"
+  },
+  {
+    "short": "SODA",
+    "name": "ACM-SIAM Symposium on Discrete Algorithms",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "soda"
+  },
+  {
+    "short": "STOC",
+    "name": "ACM Symposium on the Theory of Computing",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "stoc"
+  },
+  {
+    "short": "CADE",
+    "name": "The Conference on Automated Deduction (CADE)",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "cade"
+  },
+  {
+    "short": "COCOON",
+    "name": "International Computing and Combinatorics Conference",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "cocoon"
+  },
+  {
+    "short": "CONCUR",
+    "name": "International Conference on Concurrency Theory",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "concur"
+  },
+  {
+    "short": "HSCC",
+    "name": "International Conference on Hybrid Systems: Computation and Control",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "hybrid"
+  },
+  {
+    "short": "ICALP",
+    "name": "EATCS International Colloquium on Automata, Languages, and Programming",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icalp"
+  },
+  {
+    "short": "SOCG",
+    "name": "International Symposium on Computational Geometry",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "compgeom"
+  },
+  {
+    "short": "FMCAD",
+    "name": "Formal Methods in Computer-Aided Design",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "fmcad"
+  },
+  {
+    "short": "SETTA",
+    "name": "Symposium on Dependable Software Engineering: Theories, Tools and Applications",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "setta"
+  },
+  {
+    "short": "ISIT",
+    "name": "IEEE International Symposium on Information Theory",
+    "area": "Computing Theory",
+    "area_code": "CT",
+    "ccf": "-",
+    "core": "B",
+    "dblp": "isit"
+  },
+  {
+    "short": "ICDE",
+    "name": "IEEE International Conference on Data Engineering",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "icde"
+  },
+  {
+    "short": "SIGIR",
+    "name": "International Conference on Research on Development in Information Retrieval",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "sigir"
+  },
+  {
+    "short": "SIGKDD",
+    "name": "ACM Knowledge Discovery and Data Mining",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "kdd"
+  },
+  {
+    "short": "SIGMOD",
+    "name": "ACM Conference on Management of Data",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "sigmod"
+  },
+  {
+    "short": "VLDB",
+    "name": "International Conference on Very Large Data Bases",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "vldb"
+  },
+  {
+    "short": "CIDR",
+    "name": "International Conference on Innovative Data Systems Research",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "cidr"
+  },
+  {
+    "short": "CIKM",
+    "name": "ACM International Conference on Information and Knowledge Management",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "cikm"
+  },
+  {
+    "short": "DASFAA",
+    "name": "Database Systems for Advanced Applications",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "dasfaa"
+  },
+  {
+    "short": "ECML-PKDD",
+    "name": "European Conference on Machine Learning and 25th Principles and Practice of Knowledge Discovery in Databases",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "pkdd"
+  },
+  {
+    "short": "EDBT",
+    "name": "International Conference on Extending Database Technology",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "edbt"
+  },
+  {
+    "short": "ICDM",
+    "name": "IEEE International Conference on Data Mining",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "icdm"
+  },
+  {
+    "short": "ICDT",
+    "name": "International Conference on Database Theory",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icdt"
+  },
+  {
+    "short": "ISWC",
+    "name": "International Semantic Web Conference",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "semweb"
+  },
+  {
+    "short": "PODS",
+    "name": "ACM Symposium on Principles of Database Systems",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "pods"
+  },
+  {
+    "short": "RecSys",
+    "name": "ACM Conference on Recommender Systems",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "recsys"
+  },
+  {
+    "short": "SDM",
+    "name": "SIAM International Conference on Data Mining",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "sdm"
+  },
+  {
+    "short": "WSDM",
+    "name": "International Conference on Web Search and Data Mining",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "wsdm"
+  },
+  {
+    "short": "ADMA",
+    "name": "The International Conference on Advanced Data Mining and Applications",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "adma"
+  },
+  {
+    "short": "APWeb-WAIM",
+    "name": "APWeb-WAIM joint international conference on Web and Big Data",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "APWeb"
+  },
+  {
+    "short": "ECIR",
+    "name": "European Conference on Information Retrieval",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "ecir"
+  },
+  {
+    "short": "PAKDD",
+    "name": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+    "area": "Databases & Data Mining",
+    "area_code": "DB",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "pakdd"
+  },
+  {
+    "short": "ASPLOS",
+    "name": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "asplos"
+  },
+  {
+    "short": "DAC",
+    "name": "Design Automation Conference",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "dac"
+  },
+  {
+    "short": "EuroSys",
+    "name": "European Conference on Computer Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "eurosys"
+  },
+  {
+    "short": "FAST",
+    "name": "USENIX Conference on File and Storage Technologies",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "fast"
+  },
+  {
+    "short": "HPCA",
+    "name": "IEEE International Symposium on High-Performance Computer Architecture",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "hpca"
+  },
+  {
+    "short": "ISCA",
+    "name": "International Symposium on Computer Architecture",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "isca"
+  },
+  {
+    "short": "MICRO",
+    "name": "IEEE/ACM International Symposium on Microarchitecture",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "micro"
+  },
+  {
+    "short": "PPoPP",
+    "name": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "B",
+    "dblp": "ppopp"
+  },
+  {
+    "short": "SC",
+    "name": "International Conference for High Performance Computing, Networking, Storage, and Analysis",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "sc"
+  },
+  {
+    "short": "USENIX ATC",
+    "name": "USENIX Annual Technical Conference",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "usenix"
+  },
+  {
+    "short": "CLUSTER",
+    "name": "IEEE International Conference on Cluster Computing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "cluster"
+  },
+  {
+    "short": "DATE",
+    "name": "Design, Automation & Test in Europe",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "date"
+  },
+  {
+    "short": "DCC",
+    "name": "Data Compression Conference",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "dcc"
+  },
+  {
+    "short": "Euro-Par",
+    "name": "European Conference on Parallel and Distributed Computing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "europar"
+  },
+  {
+    "short": "FPGA",
+    "name": "ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "fpga"
+  },
+  {
+    "short": "HPDC",
+    "name": "ACM Symposium on High-Performance Parallel and Distributed Computing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "hpdc"
+  },
+  {
+    "short": "Hot Chips",
+    "name": "Hot Chips: A Symposium on High Performance Chips",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "C",
+    "dblp": "hotchips"
+  },
+  {
+    "short": "ICCAD",
+    "name": "IEEE/ACM International Conference on Computer-Aided Design",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "iccad"
+  },
+  {
+    "short": "ICCD",
+    "name": "International Conference on Computer Design",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "iccd"
+  },
+  {
+    "short": "ICDCS",
+    "name": "IEEE International Conference on Distributed Computing Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icdcs"
+  },
+  {
+    "short": "ICPP",
+    "name": "International Conference on Parallel Processing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "icpp"
+  },
+  {
+    "short": "ICS",
+    "name": "ACM International Conference on Supercomputing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "ics"
+  },
+  {
+    "short": "IEEE/ACM CGO",
+    "name": "The International Symposium on Code Generation and Optimization",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "cgo"
+  },
+  {
+    "short": "IPDPS",
+    "name": "IEEE International Parallel and Distributed Processing Symposium",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "ipps"
+  },
+  {
+    "short": "MSST",
+    "name": "International Conference on Massive Storage Systems and Technology",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "mss"
+  },
+  {
+    "short": "PACT",
+    "name": "International Conference on Parallel Architectures and Compilation Techniques",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "pact"
+  },
+  {
+    "short": "PODC",
+    "name": "ACM Symposium on Principles of Distributed Computing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "podc"
+  },
+  {
+    "short": "RTAS",
+    "name": "IEEE Real-Time and Embedded Technology and Applications Symposium",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "rtas"
+  },
+  {
+    "short": "SIGMETRICS",
+    "name": "ACM Special Interest Group on Measurement and Evaluation",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "sigmetrics"
+  },
+  {
+    "short": "SPAA",
+    "name": "ACM Symposium on Parallelism in Algorithms and Architectures",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "spaa"
+  },
+  {
+    "short": "SoCC",
+    "name": "ACM Symposium on Cloud Computing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "cloud"
+  },
+  {
+    "short": "VEE",
+    "name": "Virtual Execution Environments",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "vee"
+  },
+  {
+    "short": "ASAP",
+    "name": "IEEE International Conference on Application-Specific Systems, Architectures, and Processors",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "asap"
+  },
+  {
+    "short": "ASP-DAC",
+    "name": "Asia and South Pacific Design Automation Conference",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "aspdac"
+  },
+  {
+    "short": "CF",
+    "name": "ACM International Conference on Computing Frontiers",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "cf"
+  },
+  {
+    "short": "ETS",
+    "name": "IEEE European Test Symposium",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "ets"
+  },
+  {
+    "short": "FCCM",
+    "name": "IEEE Symposium on Field-Programmable Custom Computing Machines",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "fccm"
+  },
+  {
+    "short": "FPT",
+    "name": "International Conference on Field Programmable Technology",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "fpt"
+  },
+  {
+    "short": "GLSVLSI",
+    "name": "Great Lakes Symposium on VLSI",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "glvlsi"
+  },
+  {
+    "short": "HPCC",
+    "name": "IEEE International Conference on High Performance Computing and Communications",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "hpcc"
+  },
+  {
+    "short": "ICA3PP",
+    "name": "International Conference on Algorithms and Architectures for Parallel Processing",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "ica3pp"
+  },
+  {
+    "short": "ICPADS",
+    "name": "IEEE International Conference on Parallel and Distributed Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "icpads"
+  },
+  {
+    "short": "ISCAS",
+    "name": "IEEE International Symposium on Circuits and Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "iscas"
+  },
+  {
+    "short": "ISPA",
+    "name": "IEEE International Symposium on Parallel and Distributed Processing with Applications",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "ispa"
+  },
+  {
+    "short": "SYSTOR",
+    "name": "The ACM International Systems and Storage Conference",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "systor"
+  },
+  {
+    "short": "APSys",
+    "name": "ACM SIGOPS Asia-Pacific Workshop on Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "apsys"
+  },
+  {
+    "short": "IISWC",
+    "name": "IEEE International Symposium on Workload Characterization",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "iiswc"
+  },
+  {
+    "short": "NETYS",
+    "name": "The International Conference on Networked Systems",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "netys"
+  },
+  {
+    "short": "PDCAT",
+    "name": "International Conference on Parallel and Distributed Computing, Applications and Technologies",
+    "area": "Computer Architecture & Parallel Computing",
+    "area_code": "DS",
+    "ccf": "-",
+    "core": "C",
+    "dblp": "pdcat"
+  },
+  {
+    "short": "CHI",
+    "name": "ACM Conference on Human Factors in Computing Systems",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "chi"
+  },
+  {
+    "short": "CSCW",
+    "name": "ACM Conference on Computer Supported Cooperative Work and Social Computing",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "cscw"
+  },
+  {
+    "short": "UIST",
+    "name": "ACM Symposium on User Interface Software and Technology",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "uist"
+  },
+  {
+    "short": "UbiComp/ISWC",
+    "name": "ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "A",
+    "core": "-",
+    "dblp": "huc"
+  },
+  {
+    "short": "ECSCW",
+    "name": "European Conference on Computer Supported Cooperative Work",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "ecscw"
+  },
+  {
+    "short": "GROUP",
+    "name": "ACM International Conference on Supporting Group Work",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "group"
+  },
+  {
+    "short": "ICWSM",
+    "name": "The International AAAI Conference on Web and Social Media",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icwsm"
+  },
+  {
+    "short": "ISS",
+    "name": "ACM International Conference on Interactive Surfaces and Spaces",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "tabletop"
+  },
+  {
+    "short": "IUI",
+    "name": "ACM Conference on Intelligent User Interfaces",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "iui"
+  },
+  {
+    "short": "PerCom",
+    "name": "IEEE International Conference on Pervasive Computing and Communications",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "percom"
+  },
+  {
+    "short": "ASSETS",
+    "name": "ACM SIGACCESS Conference on Computers and Accessibility",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "assets"
+  },
+  {
+    "short": "CSCWD",
+    "name": "International Conference on Computer Supported Cooperative Work in Design",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "cscwd"
+  },
+  {
+    "short": "CollaborateCom",
+    "name": "International Conference on Collaborative Computing: Networking, Applications and Worksharing",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "colcom"
+  },
+  {
+    "short": "DIS",
+    "name": "ACM Conference on Designing Interactive Systems",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "ACMdis"
+  },
+  {
+    "short": "ICMI",
+    "name": "ACM International Conference on Multimodal Interaction",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "icmi"
+  },
+  {
+    "short": "UIC",
+    "name": "IEEE International Conference on Ubiquitous Intelligence and Computing",
+    "area": "Human-Computer Interaction",
+    "area_code": "HI",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "uic"
+  },
+  {
+    "short": "RTSS",
+    "name": "The IEEE Real-Time Systems Symposium",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "rtss"
+  },
+  {
+    "short": "WINE",
+    "name": "Conference on Web and Internet Economics",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "A",
+    "core": "-",
+    "dblp": "wine"
+  },
+  {
+    "short": "WWW",
+    "name": "International World Wide Web Conferences",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "www"
+  },
+  {
+    "short": "BIBM",
+    "name": "IEEE International Conference on Bioinformatics and Biomedicine",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "bibm"
+  },
+  {
+    "short": "CogSci",
+    "name": "Annual Meeting of the Cognitive Science Society",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "cogsci"
+  },
+  {
+    "short": "EMSOFT",
+    "name": "International Conference on Embedded Software",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "emsoft"
+  },
+  {
+    "short": "MICCAI",
+    "name": "International Conference on Medical Image Computing and Computer Assisted Intervention",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "miccai"
+  },
+  {
+    "short": "RECOMB",
+    "name": "International Conference on Research inComputational Molecular Biology",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "recomb"
+  },
+  {
+    "short": "APBC",
+    "name": "Asia Pacific Bioinformatics Conference",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "apbc"
+  },
+  {
+    "short": "BigData",
+    "name": "IEEE International Conference on Big Data",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "bigdataconf"
+  },
+  {
+    "short": "Cloud",
+    "name": "IEEE International Conference on Cloud Computing",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "IEEEcloud"
+  },
+  {
+    "short": "ICIC",
+    "name": "International Conference on Intelligent Computing",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "icic"
+  },
+  {
+    "short": "ISBRA",
+    "name": "International Symposium on Bioinformatics Research and Applications",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "isbra"
+  },
+  {
+    "short": "SIGSPATIAL",
+    "name": "ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "sigspatial"
+  },
+  {
+    "short": "SMC",
+    "name": "IEEE International Conference on Systems, Man, and Cybernetics",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "smc"
+  },
+  {
+    "short": "BIS",
+    "name": "International Conference on Business Information Systems",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "bis"
+  },
+  {
+    "short": "MLSys",
+    "name": "Conference on Machine Learning and Systems",
+    "area": "Interdisciplinary & Emerging",
+    "area_code": "MX",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "mlsys"
+  },
+  {
+    "short": "INFOCOM",
+    "name": "IEEE International Conference on Computer Communications",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "infocom"
+  },
+  {
+    "short": "MobiCom",
+    "name": "ACM Annual International Conference On Mobile Computing And Networking",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "mobicom"
+  },
+  {
+    "short": "NSDI",
+    "name": "USENIX Symposium on Networked Systems Design and Implementation",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "A",
+    "core": "-",
+    "dblp": "nsdi"
+  },
+  {
+    "short": "SIGCOMM",
+    "name": "ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "sigcomm"
+  },
+  {
+    "short": "CoNEXT",
+    "name": "International Conference on Emerging Networking Experiments and Technologies",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "conext"
+  },
+  {
+    "short": "ICNP",
+    "name": "IEEE International Conference on Network Protocols",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "icnp"
+  },
+  {
+    "short": "IMC",
+    "name": "ACM Internet Measurement Conference",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "imc"
+  },
+  {
+    "short": "IPSN",
+    "name": "ACM/IEEE International Conference on Information Processing in Sensor Networks",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "ipsn"
+  },
+  {
+    "short": "IWQoS",
+    "name": "IEEE/ACM International Symposium on Quality of Service",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "iwqos"
+  },
+  {
+    "short": "MobiHoc",
+    "name": "International Symposium on Mobile Ad Hoc Networking and Computing",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "mobihoc"
+  },
+  {
+    "short": "MobiSys",
+    "name": "ACM International Conference on Mobile Systems, Applications, and Services",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "mobisys"
+  },
+  {
+    "short": "NOSSDAV",
+    "name": "International Workshop on Network and Operating System Support for Digital Audio and Video",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "nossdav"
+  },
+  {
+    "short": "SECON",
+    "name": "IEEE International Conference on Sensing, Communication, and Networking",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "secon"
+  },
+  {
+    "short": "SenSys",
+    "name": "ACM Conference on Embedded Networked Sensor Systems",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "B",
+    "core": "A*",
+    "dblp": "sensys"
+  },
+  {
+    "short": "APNet",
+    "name": "Asia-Pacific Workshop on Networking",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "apnet"
+  },
+  {
+    "short": "FORTE",
+    "name": "International Conference on Formal Techniques for (Networked and) Distributed Systems",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "forte"
+  },
+  {
+    "short": "GLOBECOM",
+    "name": "IEEE Global Communications Conference",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "globecom"
+  },
+  {
+    "short": "ICC",
+    "name": "IEEE International Conference on Communications",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "icc"
+  },
+  {
+    "short": "ICCCN",
+    "name": "IEEE International Conference on Computer Communications and Networks",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "icccn"
+  },
+  {
+    "short": "ISCC",
+    "name": "IEEE Symposium on Computers and Communications",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "iscc"
+  },
+  {
+    "short": "LCN",
+    "name": "IEEE Conference on Local Computer Networks",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "lcn"
+  },
+  {
+    "short": "MSN",
+    "name": "International Conference on Mobility, Sensing and Networking",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "msn"
+  },
+  {
+    "short": "MSWiM",
+    "name": "International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "mswim"
+  },
+  {
+    "short": "Networking",
+    "name": "IFIP International Conference on Networking",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "networking"
+  },
+  {
+    "short": "WASA",
+    "name": "International Conference on Wireless Algorithms, Systems, and Applications",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "wasa"
+  },
+  {
+    "short": "WCNC",
+    "name": "Wireless Communications and Networking Conference",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "wcnc"
+  },
+  {
+    "short": "WoWMoM",
+    "name": "IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "wowmom"
+  },
+  {
+    "short": "MMSys",
+    "name": "ACM International Conference on Multimedia Systems",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "mmsys"
+  },
+  {
+    "short": "WiCON",
+    "name": "International Wireless Internet Conference",
+    "area": "Computer Networks",
+    "area_code": "NW",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "wicon"
+  },
+  {
+    "short": "CCS",
+    "name": "ACM Conference on Computer and Communications Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "ccs"
+  },
+  {
+    "short": "CRYPTO",
+    "name": "International Cryptology Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "crypto"
+  },
+  {
+    "short": "EUROCRYPT",
+    "name": "European Cryptology Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "eurocrypt"
+  },
+  {
+    "short": "NDSS",
+    "name": "Network and Distributed System Security (NDSS) Symposium",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "ndss"
+  },
+  {
+    "short": "S&P",
+    "name": "IEEE Symposium on Security and Privacy",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "sp"
+  },
+  {
+    "short": "USENIX Security",
+    "name": "USENIX Security Symposium",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "uss"
+  },
+  {
+    "short": "ACSAC",
+    "name": "Annual Computer Security Applications Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "acsac"
+  },
+  {
+    "short": "ASIACRYPT",
+    "name": "International Conference on the Theory and Application of Cryptology and Information Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "asiacrypt"
+  },
+  {
+    "short": "CHES",
+    "name": "International Conference on Cryptographic Hardware and Embedded Systems",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "ches"
+  },
+  {
+    "short": "CSFW",
+    "name": "IEEE Computer Security Foundations Workshop",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "csfw"
+  },
+  {
+    "short": "DSN",
+    "name": "International Conference on Dependable Systems and Networks",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "dsn"
+  },
+  {
+    "short": "ESORICS",
+    "name": "European Symposium on Research in Computer Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "esorics"
+  },
+  {
+    "short": "FSE",
+    "name": "Fast Software Encryption",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "fse"
+  },
+  {
+    "short": "PKC",
+    "name": "International Conference on Practice and Theory of Public-Key Cryptography",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "pkc"
+  },
+  {
+    "short": "RAID",
+    "name": "International Symposium on Recent Advances in Intrusion Detection",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "raid"
+  },
+  {
+    "short": "SRDS",
+    "name": "IEEE International Symposium on Reliable Distributed Systems",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "srds"
+  },
+  {
+    "short": "TCC",
+    "name": "Theory of Cryptography Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "tcc"
+  },
+  {
+    "short": "ACISP",
+    "name": "Australasia Conference on Information Security and Privacy",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "acisp"
+  },
+  {
+    "short": "ACNS",
+    "name": "Applied Cryptography and Network Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "acns"
+  },
+  {
+    "short": "AsiaCCS",
+    "name": "Asia Conference on Computer and Communications Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "ccs"
+  },
+  {
+    "short": "CT-RSA",
+    "name": "Cryptographer's Track at RSA Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "ctrsa"
+  },
+  {
+    "short": "DFRWS",
+    "name": "Digital Forensic Research Workshop",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "dfrws"
+  },
+  {
+    "short": "DFRWS APAC",
+    "name": "Digital Forensic Research Workshop Asia Pacific",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "di"
+  },
+  {
+    "short": "DIMVA",
+    "name": "Detection of Intrusions and Malware & Vulnerability Assessment",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "dimva"
+  },
+  {
+    "short": "EuroS&P",
+    "name": "IEEE European Symposium on Security and Privacy",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "eurosp"
+  },
+  {
+    "short": "FC",
+    "name": "Financial Cryptography and Data Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "fc"
+  },
+  {
+    "short": "HotSec",
+    "name": "USENIX Workshop on Hot Topics in Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "events"
+  },
+  {
+    "short": "ICDF2C",
+    "name": "International Conference on Digital Forensics & Cyber Crime",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "icdf2c"
+  },
+  {
+    "short": "ICICS",
+    "name": "International Conference on Information and Communications Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "icics"
+  },
+  {
+    "short": "IFIP WG 11.9",
+    "name": "IFIP WG 11.9 International Conference on Digital Forensics",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "NO DBLP"
+  },
+  {
+    "short": "IH&MMSec",
+    "name": "ACM Workshop on Information Hiding and Multimedia Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "ih"
+  },
+  {
+    "short": "INSCRYPT",
+    "name": "International Conference on Information Security and Cryptology",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "cisc"
+  },
+  {
+    "short": "ISC",
+    "name": "Information Security Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "isw"
+  },
+  {
+    "short": "NSPW",
+    "name": "New Security Paradigms Workshop",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "nspw"
+  },
+  {
+    "short": "PAM",
+    "name": "Passive and Active Measurement Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "pam"
+  },
+  {
+    "short": "PETS",
+    "name": "Privacy Enhancing Technologies Symposium",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "pet"
+  },
+  {
+    "short": "SAC",
+    "name": "Selected Areas in Cryptography",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "sacrypt"
+  },
+  {
+    "short": "SACMAT",
+    "name": "ACM Symposium on Access Control Models and Technologies",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "sacmat"
+  },
+  {
+    "short": "SEC",
+    "name": "IFIP International Information Security Conference",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "sec"
+  },
+  {
+    "short": "SOUPS",
+    "name": "Symposium On Usable Privacy and Security",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "soups"
+  },
+  {
+    "short": "SecureComm",
+    "name": "International Conference on Security and Privacy in Communication Networks",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "securecomm"
+  },
+  {
+    "short": "TrustCom",
+    "name": "IEEE International Conference on Trust, Security and Privacy in Computing and Communications",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "trustcom"
+  },
+  {
+    "short": "WiSec",
+    "name": "ACM Conference on Security and Privacy in Wireless and Mobile Networks",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "wisec"
+  },
+  {
+    "short": "INDOCRYPT",
+    "name": "International Conference on Cryptology in India",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "indocrypt"
+  },
+  {
+    "short": "NOMS",
+    "name": "IEEE/IFIP Network Operations and Management Symposium",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "-",
+    "core": "B",
+    "dblp": "noms"
+  },
+  {
+    "short": "SATML",
+    "name": "IEEE Conference on Secure and Trustworthy Machine Learning",
+    "area": "Security & Cryptography",
+    "area_code": "SC",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "satml"
+  },
+  {
+    "short": "ASE",
+    "name": "International Conference on Automated Software Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "kbse"
+  },
+  {
+    "short": "FM",
+    "name": "International Symposium on Formal Methods",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "fm"
+  },
+  {
+    "short": "FSE",
+    "name": "ACM International Conference on the Foundations of Software Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "sigsoft"
+  },
+  {
+    "short": "ICSE",
+    "name": "International Conference on Software Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "icse"
+  },
+  {
+    "short": "ISSTA",
+    "name": "ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "issta"
+  },
+  {
+    "short": "OOPSLA",
+    "name": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A",
+    "dblp": "oopsla"
+  },
+  {
+    "short": "OSDI",
+    "name": "USENIX Symposium on Operating Systems Design and Implementation",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "osdi"
+  },
+  {
+    "short": "PLDI",
+    "name": "ACM SIGPLAN Conference on Programming Language Design & Implementation",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "pldi"
+  },
+  {
+    "short": "POPL",
+    "name": "ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "popl"
+  },
+  {
+    "short": "SOSP",
+    "name": "ACM Symposium on Operating Systems Principles",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "A",
+    "core": "A*",
+    "dblp": "sosp"
+  },
+  {
+    "short": "CAiSE",
+    "name": "International Conference on Advanced Information Systems Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "caise"
+  },
+  {
+    "short": "CP",
+    "name": "International Conference on Principles and Practice of Constraint Programming",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "cp"
+  },
+  {
+    "short": "ECOOP",
+    "name": "European Conference on Object-Oriented Programming",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "ecoop"
+  },
+  {
+    "short": "ESEM",
+    "name": "International Symposium on Empirical Software Engineering and Measurement",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "esem"
+  },
+  {
+    "short": "ETAPS",
+    "name": "European Joint Conferences on Theory and Practice of Software",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "-",
+    "dblp": "etaps"
+  },
+  {
+    "short": "HotOS",
+    "name": "USENIX Workshop on Hot Topics in Operating Systems",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "hotos"
+  },
+  {
+    "short": "ICFP",
+    "name": "International Conference on Function Programming",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icfp"
+  },
+  {
+    "short": "ICPC",
+    "name": "IEEE International Conference on Program Comprehension",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icpc"
+  },
+  {
+    "short": "ICSME",
+    "name": "International Conference on Software Maintenance and Evolution",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icsm"
+  },
+  {
+    "short": "ICSOC",
+    "name": "International Conference on Service Oriented Computing",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icsoc"
+  },
+  {
+    "short": "ICWS",
+    "name": "IEEE International Conference on Web Services (Research Track)",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "icws"
+  },
+  {
+    "short": "ISSRE",
+    "name": "International Symposium on Software Reliability Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "issre"
+  },
+  {
+    "short": "LCTES",
+    "name": "International Conference on Languages, Compilers and Tools for Embedded Systems",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "lctrts"
+  },
+  {
+    "short": "Middleware",
+    "name": "International Middleware Conference",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "middleware"
+  },
+  {
+    "short": "MoDELS",
+    "name": "International Conference on Model Driven Engineering Languages and Systems",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "models"
+  },
+  {
+    "short": "RE",
+    "name": "IEEE International Requirements Engineering Conference",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "re"
+  },
+  {
+    "short": "SANER",
+    "name": "IEEE International Conference on Software Analysis, Evolution and Reengineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "A",
+    "dblp": "wcre"
+  },
+  {
+    "short": "SAS",
+    "name": "International Static Analysis Symposium",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "sas"
+  },
+  {
+    "short": "VMCAI",
+    "name": "International Conference on Verification, Model Checking, and Abstract Interpretation",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "B",
+    "core": "B",
+    "dblp": "vmcai"
+  },
+  {
+    "short": "APLAS",
+    "name": "Asian Symposium on Programming Languages and Systems",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "aplas"
+  },
+  {
+    "short": "APSEC",
+    "name": "Asia-Pacific Software Engineering Conference",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "apsec"
+  },
+  {
+    "short": "ATVA",
+    "name": "International Symposium on Automated Technology for Verification and Analysis",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "atva"
+  },
+  {
+    "short": "COMPSAC",
+    "name": "International Computer Software and Applications Conference",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "compsac"
+  },
+  {
+    "short": "EASE",
+    "name": "International Conference on Evaluation and Assessment in Software Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "ease"
+  },
+  {
+    "short": "ICECCS",
+    "name": "International Conference on Engineering of Complex Computer Systems",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "iceccs"
+  },
+  {
+    "short": "ICFEM",
+    "name": "International Conference on Formal Engineering Methods",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "icfem"
+  },
+  {
+    "short": "ISPASS",
+    "name": "International Symposium on Performance Analysis of Systems and Software",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "ispass"
+  },
+  {
+    "short": "Internetware",
+    "name": "Asia-Pacific Symposium on Internetware",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "internetware"
+  },
+  {
+    "short": "MSR",
+    "name": "International Conference on Mining Software Repositories",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "A",
+    "dblp": "msr"
+  },
+  {
+    "short": "QRS",
+    "name": "IEEE International Conference on Software Quality, Reliability and Security",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "qrs"
+  },
+  {
+    "short": "REFSQ",
+    "name": "Requirements Engineering: Foundation for Software Quality",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "refsq"
+  },
+  {
+    "short": "RV",
+    "name": "International Conference on Runtime Verification",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "rv"
+  },
+  {
+    "short": "SCAM",
+    "name": "IEEE International Working Conference on Source Code Analysis and Manipulation",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "scam"
+  },
+  {
+    "short": "SEKE",
+    "name": "International Conference on Software Engineering and Knowledge Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "C",
+    "dblp": "seke"
+  },
+  {
+    "short": "SSE",
+    "name": "IEEE International Conference on Software Services Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "B",
+    "dblp": "IEEEscc"
+  },
+  {
+    "short": "TASE",
+    "name": "Theoretical Aspects of Software Engineering",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "C",
+    "core": "-",
+    "dblp": "tase"
+  },
+  {
+    "short": "EUSIPCO",
+    "name": "European Signal Processing Conference",
+    "area": "Software Engineering",
+    "area_code": "SE",
+    "ccf": "-",
+    "core": "-",
+    "dblp": "eusipcolyon"
+  }
+]

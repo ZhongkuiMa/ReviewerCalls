@@ -1,0 +1,513 @@
+"""Static reference data: keyword lists, patterns, filter constants."""
+
+from __future__ import annotations
+
+import re
+
+STEP2_LINK_FILTER_KEYWORDS = [
+    "call",
+    "calls",
+    "reviewer",
+    "reviewers",
+    "pc",
+    "committee",
+    "member",
+    "members",
+    "workshop",
+    "workshops",
+    "nomination",
+    "nominations",
+    "nominate",
+    "recruitment",
+    "recruit",
+    "invite",
+    "invitation",
+    "area-chair",
+    "area chair",
+    "spc",
+    "aec",
+    "artifact",
+    "shadow",
+    "volunteer",
+    "emergency",
+    "join",
+    "participate",
+    "contribute",
+    "apply",
+    "register",
+    "signup",
+    "sign-up",
+    "program-committee",
+    "programme-committee",
+    "track",
+    "tracks",
+]
+
+STEP2_STOP_WORDS = [
+    "about",
+    "contact",
+    "news",
+    "blog",
+    "venue",
+    "location",
+    "travel",
+    "sponsor",
+    "proceedings",
+    "paper-submission",
+    "tutorial",
+    "keynote",
+    "award",
+    "hotel",
+    "registration-form",
+    "accepted-papers",
+    "program-schedule",
+]
+
+STEP2_PROMISING_KEYWORDS = [
+    "call",
+    "reviewer",
+    "review",
+    "pc",
+    "program committee",
+    "spc",
+    "senior program committee",
+    "area chair",
+    "ac",
+    "nomination",
+    "nominate",
+    "recruitment",
+    "recruit",
+    "application",
+    "apply",
+    "registration",
+    "register",
+    "committee",
+    "member",
+    "shadow",
+    "artifact",
+    "volunteer",
+    "invitation",
+    "invite",
+]
+
+
+STEP4_CONTENT_KEYWORDS = [
+    "self-nomination",
+    "self nomination",
+    "nominate yourself",
+    "reviewer application",
+    "apply to be a reviewer",
+    "apply as reviewer",
+    "sign up as reviewer",
+    "register as reviewer",
+    "reviewer registration",
+    "register as a reviewer",
+    "reviewer signup form",
+    "call for reviewers",
+    "reviewer recruitment",
+    "recruiting reviewers",
+    "external reviewer call",
+    "reviewer invitation",
+    "pc nomination",
+    "pc member",
+    "pc call",
+    "program committee nomination",
+    "program committee member",
+    "join the program committee",
+    "pc member nomination",
+    "become a pc member",
+    "pc recruitment",
+    "spc member",
+    "spc nomination",
+    "senior program committee",
+    "area chair nomination",
+    "area chair call",
+    "call for area chairs",
+    "senior area chair",
+    "area reviewer",
+    "ac nomination",
+    "sac recruitment",
+    "artifact evaluation committee",
+    "aec application",
+    "aec member",
+    "reviewer pool",
+    "join reviewer pool",
+    "join the reviewer pool",
+    "reviewer pool registration",
+    "reviewer database",
+    "reviewer signup",
+    "ARR reviewer",
+    "rolling review reviewer",
+    "external reviewer",
+    "volunteer as reviewer",
+    "become a reviewer",
+    "subreviewer",
+    "sub reviewer",
+    "sub-reviewer",
+    "secondary reviewer",
+    "emergency reviewer",
+    "take part in reviewing",
+    "contribute as reviewer",
+    "join as reviewer",
+    "nominations open",
+    "nomination period",
+    "open nominations",
+    "reviewer invite",
+    "reviewer needed",
+    "shadow reviewer",
+    "review panel",
+    "meta-review",
+    "meta review",
+    "workshop reviewer",
+    "workshop pc",
+    "workshop program committee",
+    "call for workshop reviewers",
+    "workshop review committee",
+    "workshop area chair",
+    "become a workshop reviewer",
+    "join workshop pc",
+    "co-chair",
+    "cochair",
+    "chair recruitment",
+    "chair nomination",
+    "volunteer as pc member",
+    "reviewer volunteer",
+    "pc volunteer",
+    "student reviewer",
+    "junior reviewer",
+    "shadow pc",
+    "additional reviewers",
+    "seeking reviewers",
+    "seeking additional reviewers",
+]
+
+
+def keyword_to_regex(keyword: str) -> str:
+    r"""
+    Convert keyword to flexible regex pattern.
+    Handles spacing, hyphen, punctuation variations, and plural forms.
+
+    :param keyword: Keyword string to convert
+    :return: Regex pattern string
+
+    Examples:
+      "self-nomination" -> r'\bself[\s\-]+nominations?\b'
+      "pc member" -> r'\bpc[\s\-]+members?\b'
+      "reviewer" -> r'\breviewers?\b'
+    """
+    words = keyword.split()
+
+    if len(words) == 1:
+        word = re.escape(words[0])
+        if not words[0].endswith("s"):
+            return rf"\b{word}s?\b"
+        else:
+            return rf"\b{word}\b"
+    else:
+        escaped_words = [re.escape(word) for word in words]
+        if not words[-1].endswith("s"):
+            escaped_words[-1] = escaped_words[-1] + "s?"
+
+        pattern = r"[\s\-]+".join(escaped_words)
+        return rf"\b{pattern}\b"
+
+
+KEYWORD_PATTERNS = [
+    re.compile(keyword_to_regex(kw), re.IGNORECASE) for kw in STEP4_CONTENT_KEYWORDS
+]
+
+ROLE_GUESSES = [
+    ("external reviewer", "External Reviewer"),
+    ("artifact evaluation", "AEC"),
+    ("aec", "AEC"),
+    ("senior area chair", "SAC"),
+    ("area chair", "AC"),
+    ("senior program committee", "SPC"),
+    ("spc", "SPC"),
+    ("program committee", "PC"),
+    ("pc nomination", "PC"),
+    ("emergency reviewer", "Emergency Reviewer"),
+    ("reviewer", "Reviewer"),
+]
+
+SKIP_KEYWORDS = [
+    "about",
+    "contact",
+    "news",
+    "blog",
+    "press",
+    "archive",
+    "past",
+    "previous",
+    "venue",
+    "location",
+    "travel",
+    "hotel",
+    "accommodation",
+    "sponsor",
+    "exhibitor",
+    "pricing",
+    "fees",
+    "proceedings",
+    "paper",
+    "publication",
+    "author",
+    "camera-ready",
+    "submission guideline",
+    "tutorial",
+    "keynote",
+    "invited talk",
+    "award",
+    "best paper",
+    "job",
+    "career",
+    "hiring",
+    "privacy",
+    "terms",
+    "cookie",
+]
+
+USELESS_EXTENSIONS = [
+    ".pdf",
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".gif",
+    ".svg",
+    ".zip",
+    ".tar",
+    ".gz",
+    ".bz2",
+    ".doc",
+    ".docx",
+    ".ppt",
+    ".pptx",
+    ".xls",
+    ".xlsx",
+    ".mp4",
+    ".mp3",
+    ".avi",
+    ".mov",
+    ".css",
+    ".js",
+    ".xml",
+    ".json",
+    ".csv",
+    ".txt",
+    ".ics",
+]
+
+USELESS_URL_PATTERNS = [
+    "mailto:",
+    "tel:",
+    "javascript:",
+    "ftp:",
+    "#",
+    "/login",
+    "/signin",
+    "/signup",
+    "/register",
+    "/logout",
+    "/accounts/",
+    "/set_timezone",
+    "/preferences",
+    "/settings",
+    "/profile",
+    "/sponsorportal",
+    "/sponsor-portal",
+    "/feed",
+    "/rss",
+    "/atom",
+    "/privacy",
+    "/terms",
+    "/cookie",
+    "/gdpr",
+    "/sitemap",
+    "/robots.txt",
+    "linkedin.com",
+    "twitter.com",
+    "facebook.com",
+    "youtube.com",
+    "instagram.com",
+    "weibo.com",
+]
+
+NEVER_REVIEWER_CALL_PATHS = [
+    "/about",
+    "/about-",
+    "/about_",
+    "/contact",
+    "/contact-",
+    "/contact_",
+    "/news",
+    "/blog",
+    "/press",
+    "/archive",
+    "/past",
+    "/previous",
+    "/history",
+    "/venue",
+    "/location",
+    "/travel",
+    "/hotel",
+    "/accommodation",
+    "/directions",
+    "/sponsors",
+    "/sponsorship",
+    "/exhibitors",
+    "/registration",
+    "/pricing",
+    "/fees",
+    "/proceedings",
+    "/papers",
+    "/publications",
+    "/author",
+    "/camera-ready",
+    "/submission",
+    "/tutorial",
+    "/workshop-list",
+    "/keynote",
+    "/invited",
+    "/program",
+    "/schedule",
+    "/agenda",
+    "/awards",
+    "/best-paper",
+    "/student",
+    "/volunteer",
+    "/job",
+    "/career",
+    "/hiring",
+]
+
+COMMITTEE_LISTING_PATTERNS = [
+    "/committee",
+    "/committees/",
+    "/program-committee",
+    "/organizing-committee",
+    "/conference-committee",
+    "/steering-committee",
+    "/executive-committee",
+    "/area-committee",
+]
+
+RECRUITMENT_TERMS_FOR_COMMITTEE = [
+    "call-for",
+    "nomination",
+    "recruitment",
+    "self-nomination",
+    "join",
+    "become",
+    "volunteer",
+    "application",
+]
+
+TRACK_EXCEPTIONS = ["shadow", "junior", "artifact"]
+
+CALL_FOR_PAPER_PATTERNS = [
+    "call-for-research-track",
+    "call-for-industrial-track",
+    "call-for-papers",
+    "submit-a-paper",
+    "paper-submission",
+]
+
+REVIEWER_CONTEXT_TERMS_FOR_CFP = ["artifact", "reviewer", "review", "pc", "committee"]
+
+GENERIC_HOMEPAGE_PATTERNS = ["/home", "/welcome/", "/index.html", "/index.php"]
+
+FALSE_POSITIVE_PATHS = [
+    "/tutorial",
+    "/tutorials",
+    "/workshop-proposal",
+    "/call-for-workshop",
+    "/call-for-panels",
+    "/panel-proposal",
+    "/doctoral-consortium",
+    "/student-consortium",
+    "/call-for-demonstration",
+    "/demo-proposal",
+    "/registration-form",
+    "/attend",
+]
+
+NEGATIVE_SIGNALS = [
+    "call for tutorial proposals",
+    "call for workshop proposals",
+    "call for panel proposals",
+    "call for demonstration proposals",
+    "call for demo proposals",
+    "tutorial submission",
+    "workshop submission",
+    "submit your tutorial",
+    "submit your workshop",
+    "organizing committee members",
+    "current committee members",
+]
+
+REVIEWER_RECOVERY_TERMS = [
+    "reviewer nomination",
+    "pc nomination",
+    "shadow pc",
+    "shadow reviewer",
+    "become a reviewer",
+    "become a pc member",
+    "call for reviewers",
+    "call for pc",
+    "recruiting reviewers",
+    "reviewer application",
+    "pc application",
+]
+
+HIGH_CONFIDENCE_SIGNALS = [
+    "self-nomination",
+    "self nomination",
+    "nominate yourself",
+    "nomination form",
+    "call for reviewer",
+    "call for pc member",
+    "call for spc",
+    "call for participants",
+    "recruiting reviewer",
+    "recruiting pc member",
+    "reviewer recruitment",
+    "pc recruitment",
+    "reviewer application",
+    "pc application",
+    "join the committee",
+    "join the program committee",
+    "become a reviewer",
+    "become a pc member",
+    "invitation to serve",
+    "invite you to serve",
+    "volunteer to review",
+    "volunteer as",
+    "shadow pc",
+    "junior reviewer",
+    "student reviewer",
+    "expression of interest",
+    "workshop reviewer",
+    "workshop pc",
+    "workshop program committee",
+    "workshop review committee",
+    "call for workshop reviewers",
+    "workshop area chair",
+    "become a workshop reviewer",
+    "join workshop pc",
+]
+
+MEDIUM_CONFIDENCE_SIGNALS = [
+    ("application form", ["reviewer", "committee", "pc member", "aec"]),
+    ("application deadline", ["reviewer", "committee", "pc member", "aec"]),
+    ("apply to join", ["reviewer", "committee", "pc member", "aec"]),
+    (
+        "we are looking for",
+        ["reviewer", "pc member", "committee member", "aec member", "aec"],
+    ),
+    ("we are seeking", ["reviewer", "pc member", "committee member", "aec"]),
+    ("seeking additional", ["reviewer", "pc member", "committee member", "aec"]),
+    ("we invite", ["reviewer", "committee", "pc member", "area chair", "aec"]),
+    ("interested in serving", ["reviewer", "committee", "pc", "aec"]),
+]
+
+YEAR_FILTER_START = 2020
