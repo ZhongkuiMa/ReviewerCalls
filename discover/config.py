@@ -21,3 +21,4 @@ CONCURRENT_REQUESTS = 10
 
 CONFERENCES_FILE = "data/conferences.yaml"
 CALLS_FILE = "data/calls.yaml"
+REJECTED_URLS_FILE = "data/rejected_urls.yaml"

@@ -1,721 +1,101 @@
+# False positive URLs that should not be added to calls.yaml
+# Entries older than 1 month are automatically cleaned during discovery
+# Format: url, date (YYYY-MM-DD)
+
 rejected_urls:
-- url: https://2026.ijcai.org/primary-paper-initiative/
-  reason: Submission fee policy (not reviewer call)
-  conference: ECAI
-  date: '2026-02-11'
-- url: http://wikicfp.com/cfp/servlet/event.showcfp?eventid=191131&copyownerid=320
-  reason: Call for papers only (no reviewer recruitment)
-  conference: CoNLL
-  date: '2026-02-11'
-- url: https://github.com/jiahaoli57/Call-for-Reviewers
-  reason: Community collection (IJCNN 2026 not listed)
-  conference: IJCNN
-  date: '2026-02-11'
-- url: https://kdd2026.kdd.org/call-for-lecture-style-tutorials
-  reason: Tutorial proposals (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-11'
-- url: https://kdd2026.kdd.org/call-for-hands-on-tutorials
-  reason: Tutorial proposals (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-11'
-- url: https://kdd2026.kdd.org/call-for-kdd-cup-proposals
-  reason: Competition proposals (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-11'
-- url: https://kdd2026.kdd.org/undergraduate-and-masters-consortium-call-for-submission
-  reason: Student submissions (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-11'
-- url: https://kdd2026.kdd.org/acm-kdd-2026-organizing-committee
-  reason: Committee listing (not recruitment)
-  conference: SIGKDD
-  date: '2026-02-11'
-- url: https://sswr.org/2026-conference-home/2025-conference-cluster-chairs/
-  reason: Wrong domain (Society for Social Work Research)
-  conference: CLUSTER
-  date: '2026-02-11'
-- url: https://scienceguru.org/Conference/8966/ICSE/
-  reason: Conference aggregator (links only)
-  conference: DATE
-  date: '2026-02-11'
-- url: https://www.aconf.org/conf_212927.html
-  reason: Conference aggregator (lists 2025 PC only)
-  conference: IPDPS
-  date: '2026-02-11'
-- url: https://sigmetrics.hosting.acm.org/awards.shtml
-  reason: Awards page (not reviewer recruitment)
-  conference: SIGMETRICS
-  date: '2026-02-11'
-- url: https://grokipedia.com/page/sigmetrics
-  reason: Wiki page (no reviewer information)
-  conference: SIGMETRICS
-  date: '2026-02-11'
-- url: https://fptshop.com.vn/
-  reason: Wrong domain (Vietnamese electronics retail store)
-  conference: FPT
-  date: '2026-02-11'
-- url: https://cognitivesciencesociety.org/fabbs-early-career-impact-award
-  reason: Awards page (not reviewer recruitment)
-  conference: CogSci
-  date: '2026-02-11'
-- url: https://conferences.miccai.org/2026/en/call-for-challenges.html
-  reason: Challenge proposals (not reviewer recruitment)
-  conference: MICCAI
-  date: '2026-02-11'
-- url: https://asiaccs2026.cse.iitkgp.ac.in/test-of-time-award-2
-  reason: Awards page (test-of-time award)
-  conference: AsiaCCS
-  date: '2026-02-11'
-- url: https://aguea.net/DIMVAConf
-  reason: Twitter archive (not official conference website)
-  conference: DIMVA
-  date: '2026-02-11'
-- url: https://petsymposium.org/reviews-2025.php
-  reason: Wrong year (2025 page, not 2026)
-  conference: PETS
-  date: '2026-02-11'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-artifact-evaluation
-  reason: Track description (committee already finalized)
-  conference: ICSE
-  date: '2026-02-11'
-- url: https://conf.researchr.org/home/icse-2026/uise-2026
-  reason: Workshop homepage (not reviewer call)
-  conference: ICSE
-  date: '2026-02-11'
-- url: https://conf.researchr.org/committee/icse-2026/icse-2026-student-volunteers
-  reason: Student volunteers (not reviewers)
-  conference: ICSE
-  date: '2026-02-11'
-- url: https://www.linkedin.com/posts/ali-f-al-ramadan_i-recently-received-the-distinguished-reviewer-activity-7394890499179933696-rizY
-  reason: Personal achievement post (not recruitment)
-  conference: ICSE
-  date: '2026-02-11'
-- url: https://www.econometricsociety.org/regional-activities/schedule/2026/08/17/2026-European-Summer-Meeting-ESEM-Dublin-Ireland
-  reason: Wrong domain (Economics conference, not CS)
-  conference: ESEM
-  date: '2026-02-11'
-- url: http://conferences.i-cav.org/2026/
-  reason: Generic homepage (not specific call page)
-  conference: CAV
-  date: '2026-02-10'
-- url: https://www.dimva.org/
-  reason: Generic homepage, redirects to Google Form (cannot auto-validate)
-  conference: DIMVA
-  date: '2026-02-10'
-- url: https://2026.eurosys.org/pc.html
-  reason: PC member listing (not recruitment call)
-  conference: EuroSys
-  date: '2026-02-10'
-- url: https://www.usenix.org/conference/vehiclesec26
-  reason: Wrong conference (VehicleSec, not USENIX ATC)
-  conference: USENIX ATC
-  date: '2026-02-10'
-- url: https://2026.ijcai.org/conference-committee
-  reason: Committee listing page (not recruitment call)
-  conference: IJCAI
-  date: '2026-02-10'
-- url: https://2026.ijcai.org/program-committee
-  reason: Committee listing page (not recruitment call)
-  conference: IJCAI
-  date: '2026-02-10'
-- url: https://2026.ijcai.org/principles-of-peer-review-and-recognition
-  reason: Committee listing page (not recruitment call)
-  conference: IJCAI
-  date: '2026-02-10'
-- url: https://github.com/jiahaoli57/Call-for-Reviewers
-  reason: External repository (competitor tracking site)
-  conference: ACL
-  date: '2026-02-10'
-- url: https://www.linkedin.com/posts/yunyao-li_interest-to-serve-on-acl-2026-industry-track-activity-7417371167419727872-ywYz
-  reason: External forum (LinkedIn post, not official)
-  conference: ACL
-  date: '2026-02-10'
-- url: https://forum.cspaper.org/topic/152.rss
-  reason: RSS feed (not direct page)
-  conference: CVPR
-  date: '2026-02-10'
-- url: https://kdd2026.kdd.org/call-for-lecture-style-tutorials
-  reason: Tutorial/workshop proposals (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-10'
-- url: https://kdd2026.kdd.org/call-for-hands-on-tutorials
-  reason: Tutorial/workshop proposals (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-10'
-- url: https://kdd2026.kdd.org/call-for-kdd-cup-proposals
-  reason: Tutorial/workshop proposals (not reviewer call)
-  conference: SIGKDD
-  date: '2026-02-10'
-- url: https://kdd2026.kdd.org/undergraduate-and-masters-consortium-call-for-submission
-  reason: Awards/consortium page (not reviewer recruitment)
-  conference: SIGKDD
-  date: '2026-02-10'
-- url: https://www.linkedin.com/pulse/engineering-future-dac-2026-place-frank-schirrmeister-czncc
-  reason: External forum (LinkedIn post, not official)
-  conference: DAC
-  date: '2026-02-10'
-- url: https://www.linkedin.com/posts/shiqing-ma-6590b086_acm-ccs-2026-pc-nomination-form-activity-7371738177721507840-R84f
-  reason: External forum (LinkedIn post, not official)
-  conference: CCS
-  date: '2026-02-10'
-- url: https://www.linkedin.com/posts/stockben_usenix-security-26-activity-7330664077226045440-mUBh
-  reason: External forum (LinkedIn post, not official)
-  conference: USENIX Security
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/icse-2026-doctoral-symposium-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/icse-2026-shadow-research-track-program-committee-shadow-pc
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/agent-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/ai-sqe-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/botse-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/deeptest-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/designing-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/dse-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/encycris-2026-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/finanse-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/ftw-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/gas-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/ide-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/iwsib-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/jaws-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/larc-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/mo2re-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/nse-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/q-se-2026-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/raie-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/raise-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/seigs-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/sers-2026-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/sesos-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/static-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/svm-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/swebok-2026-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/uise-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/wetseb-2026-papers-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/committee/icse-2026/wsese-2026-program-committee
-  reason: Committee listing page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/90/an-eye-for-ai-eye-tracking-the-micro-interruptions-of-genai-code-suggestions
-  reason: Individual paper page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/5/generating-energy-efficient-code-via-large-language-models-where-are-we-now-
-  reason: Individual paper page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/280/meta-v2v-revealing-behavioural-deviations-under-mutual-perception-in-multi-vehicle-a
-  reason: Individual paper page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/137/storfuzz-using-data-diversity-to-overcome-fuzzing-plateaus
-  reason: Individual paper page (not recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://2026.ijcai.org/conference-committee
-  reason: Committee listing page (not recruitment call)
-  conference: IJCAI
-  date: '2026-02-10'
-- url: https://2026.ijcai.org/program-committee
-  reason: Committee listing page (not recruitment call)
-  conference: IJCAI
-  date: '2026-02-10'
-- url: https://2026.ijcai.org/principles-of-peer-review-and-recognition
-  reason: Committee listing page (not recruitment call)
-  conference: IJCAI
-  date: '2026-02-10'
-- url: https://kdd2026.kdd.org/acm-kdd-2026-organizing-committee
-  reason: Organizer listing page
-  conference: SIGKDD
-  date: '2026-02-10'
-- url: https://www.vldb.org/2026/pvldb-review-board.html
-  reason: Review board listing (not recruitment)
-  conference: VLDB
-  date: '2026-02-10'
-- url: https://www.vldb.org/2026/call-for-research-track.html
-  reason: Call for papers (not reviewers)
-  conference: VLDB
-  date: '2026-02-10'
-- url: https://www.vldb.org/2026/call-for-industrial-track.html
-  reason: Call for papers (not reviewers)
-  conference: VLDB
-  date: '2026-02-10'
-- url: https://vldb.org/2026/
-  reason: Generic homepage (not specific call)
-  conference: VLDB
-  date: '2026-02-10'
-- url: https://interspeech2026.org/en-AU/pages/calls/submit-a-paper
-  reason: Call for papers (not reviewers)
-  conference: ISCA
-  date: '2026-02-10'
-- url: https://www.isca-speech.org/home
-  reason: Generic homepage (not specific call)
-  conference: ISCA
-  date: '2026-02-10'
-- url: https://www.usenix.org/conference/vehiclesec26/call-for-artifacts
-  reason: Wrong conference (VehicleSec, not USENIX ATC)
-  conference: USENIX ATC
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-research-track
-  reason: Track page (not reviewer recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-software-engineering-in-practice
-  reason: Track page (not reviewer recruitment)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-artifact-evaluation
-  reason: Committee already finalized, no call for new members
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-industry-challenge-track
-  reason: Industry track (separate from reviewer calls)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-new-faculty-symposium
-  reason: Faculty symposium/consortium (not reviewers)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-src
-  reason: Student volunteers or SRC (not reviewers)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-student-volunteers
-  reason: Student volunteers or SRC (not reviewers)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://conf.researchr.org/home/icse-2026/uise-2026
-  reason: Conference home page (not specific call)
-  conference: ICSE
-  date: '2026-02-10'
-- url: https://cecconvention.org/call-reviewers
-  reason: Wrong domain (not CS conference)
-  conference: CEC
-  date: '2026-02-10'
-- url: https://ieeevr.org/2026/awards/vgtc/
-  reason: Awards page (not reviewer recruitment)
-  conference: ISMAR
-  date: '2026-02-10'
-- url: https://dac.com/2026/dac-under-40-awards
-  reason: Awards page (not reviewer recruitment)
-  conference: DAC
-  date: '2026-02-10'
-- url: https://dmatheorynet.blogspot.com/2026/01/dmanet-cfp-euro-par-2026-32nd.html
-  reason: External forum (mailing list/blog, not official)
-  conference: Euro-Par
-  date: '2026-02-10'
-- url: https://www.iscc-system.org/news/event-recap-3rd-iscc-technical-stakeholder-meeting-renewable-fuels-of-non-biological-origin/
-  reason: Wrong domain (not CS conference)
-  conference: ISCC
-  date: '2026-02-10'
-- url: https://2026.aclweb.org/calls/main_conference_papers/
-  reason: Call for papers (author submissions)
-  conference: ACL
-  date: '2026-02-09'
-- url: https://2026.aclweb.org/calls/main_conference_papers/#site-nav
-  reason: Call for papers (author submissions)
-  conference: ACL
-  date: '2026-02-09'
-- url: https://groups.google.com/g/spc-l/c/RUl_vpZefws
-  reason: External forum/group (not official conference)
-  conference: CVPR
-  date: '2026-02-09'
-- url: https://github.com/jiahaoli57/Call-for-Reviewers
-  reason: External forum/group (not official conference)
-  conference: ICCV
-  date: '2026-02-09'
-- url: https://www.researchgate.net/post/Are_you_interested_in_becoming_an_external_reviewer
-  reason: External forum/group (not official conference)
-  conference: ICCV
-  date: '2026-02-09'
-- url: https://icde2026.github.io/cf-industry-track.html
-  reason: Industry track (separate from reviewer calls)
-  conference: ICDE
-  date: '2026-02-09'
-- url: https://icml.cc
-  reason: Generic homepage (not specific call)
-  conference: ICML
-  date: '2026-02-09'
-- url: https://icml.cc/Conferences/2026/AreaChairInstructions
-  reason: Instructions for existing members (not recruitment)
-  conference: ICML
-  date: '2026-02-09'
-- url: https://icml.cc/Conferences/2026/SeniorAreaChairInstructions
-  reason: Instructions for existing members (not recruitment)
-  conference: ICML
-  date: '2026-02-09'
-- url: https://conf.researchr.org/home/icse-2026/uise-2026
-  reason: Conference home page (not specific call)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-industry-challenge-track
-  reason: Industry track (separate from reviewer calls)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-new-faculty-symposium
-  reason: Faculty symposium/consortium (not reviewers)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-src
-  reason: Student volunteers or SRC (not reviewers)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-student-volunteers
-  reason: Student volunteers or SRC (not reviewers)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://ieeevis.org/year/2026/info/call-participation/review-instructions
-  reason: Instructions for existing members (not recruitment)
-  conference: IEEE VIS
-  date: '2026-02-09'
-- url: https://2026.ijcai.org/ijcai-ecai-2026-call-for-workshop-proposals/
-  reason: Workshop/tutorial proposals (not main conference reviewers)
-  conference: IJCAI
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/splash-issta-2026/splash-issta-2026-rebase-industry-track
-  reason: Industry track (separate from reviewer calls)
-  conference: ISSTA
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/splash-issta-2026/splash-issta-2026-student-volunteers
-  reason: Student volunteers or SRC (not reviewers)
-  conference: ISSTA
-  date: '2026-02-09'
-- url: https://neurips.cc/Conferences/2025/SAC-Guidelines
-  reason: Instructions for existing members (not recruitment)
-  conference: NeurIPS
-  date: '2026-02-09'
-- url: https://conf.researchr.org/home/gpce-2021
-  reason: Conference home page (not specific call)
-  conference: OOPSLA
-  date: '2026-02-09'
-- url: https://kdd2026.kdd.org/acm-kdd-2026-organizing-committee
-  reason: Organizer listing page
-  conference: SIGKDD
-  date: '2026-02-09'
-- url: https://kdd2026.kdd.org/call-for-hands-on-tutorials
-  reason: Workshop/tutorial proposals (not main conference reviewers)
-  conference: SIGKDD
-  date: '2026-02-09'
-- url: https://kdd2026.kdd.org/call-for-kdd-cup-proposals
-  reason: Workshop/tutorial proposals (not main conference reviewers)
-  conference: SIGKDD
-  date: '2026-02-09'
-- url: https://kdd2026.kdd.org/call-for-lecture-style-tutorials
-  reason: Workshop/tutorial proposals (not main conference reviewers)
-  conference: SIGKDD
-  date: '2026-02-09'
-- url: https://kdd2026.kdd.org/call-for-workshop-proposals
-  reason: Workshop/tutorial proposals (not main conference reviewers)
-  conference: SIGKDD
-  date: '2026-02-09'
-- url: https://kdd2026.kdd.org/undergraduate-and-masters-consortium-call-for-submission
-  reason: Faculty symposium/consortium (not reviewers)
-  conference: SIGKDD
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/fm-2026/fm-2026-invited_talks
-  reason: FM track page (call for papers, not AEC)
-  conference: FM
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/fm-2026/fm-2026-research-paper
-  reason: FM track page (call for papers, not AEC)
-  conference: FM
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/fm-2026/fm-2026-tap
-  reason: FM track page (call for papers, not AEC)
-  conference: FM
-  date: '2026-02-09'
-- url: https://icde2026.github.io/cf-research-papers.html
-  reason: Call for papers (not reviewers)
-  conference: ICDE
-  date: '2026-02-09'
-- url: https://blog.icml.cc/2026/01/08/whats-new-in-icml-2026-peer-review
-  reason: Blog post (announcement, not recruitment form)
-  conference: ICML
-  date: '2026-02-09'
-- url: https://blog.icml.cc/2026/01/12/introducing-icml-2026-policy-for-self-ranking-in-reviews
-  reason: Blog post (announcement, not recruitment form)
-  conference: ICML
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-research-track
-  reason: Track page (not reviewer recruitment)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-software-engineering-in-practice
-  reason: Track page (not reviewer recruitment)
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://iscaconf.org/isca2026/committees/pc.php
-  reason: PC member listing (not recruitment)
-  conference: ISCA
-  date: '2026-02-09'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/137/storfuzz-using-data-diversity-to-overcome-fuzzing-plateaus
-  reason: ICSE individual paper page
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/280/meta-v2v-revealing-behavioural-deviations-under-mutual-perception-in-multi-vehicle-a
-  reason: ICSE individual paper page
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/5/generating-energy-efficient-code-via-large-language-models-where-are-we-now-
-  reason: ICSE individual paper page
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://conf.researchr.org/details/icse-2026/icse-2026-research-track/90/an-eye-for-ai-eye-tracking-the-micro-interruptions-of-genai-code-suggestions
-  reason: ICSE individual paper page
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://eurocrypt.iacr.org/2026/callforpapers.php
-  reason: Call for papers (author submissions), not reviewers
-  conference: EUROCRYPT
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/fm-2026/fm-2026-artifact-evaluation
-  reason: Committee already finalized, no call for new members
-  conference: FM
-  date: '2026-02-09'
-- url: https://conf.researchr.org/track/icse-2026/icse-2026-artifact-evaluation
-  reason: Committee already finalized, no call for new members
-  conference: ICSE
-  date: '2026-02-09'
-- url: https://ieeevis.org/year/2026/info/call-participation/junior-reviewer-guide
-  reason: Guide for existing reviewers, not recruitment call
-  conference: IEEE VIS
-  date: '2026-02-09'
-- url: https://www.usenix.org/conference/nsdi26/call-for-artifacts
-  reason: Committee already finalized, no call for new members
-  conference: NSDI
-  date: '2026-02-09'
-- url: https://dac.com/2026/dac-under-40-awards
-  reason: Awards/consortium page (not reviewer recruitment)
-  conference: DAC
-  date: '2026-02-09'
-- url: https://hpdc.sci.utah.edu/2026/calls-awards.html
-  reason: Awards page (not reviewer recruitment)
-  conference: HPDC
-  date: '2026-02-06'
-- url: https://ieeevis.org/year/2026/blog/2026-02-03-vis-2026-OPC-blog/
-  reason: Blog post (not recruitment call)
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/welcome/
-  reason: Generic homepage (not specific call)
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/open-practices/open-practices
-  reason: Open practices page (not recruitment)
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/call-participation/junior-reviewer-guide
-  reason: Guide for existing reviewers (not recruitment)
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/committees/conference-committee
-  reason: Committee listing page
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/committees/program-committees
-  reason: Committee listing page
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/committees/steering-committees
-  reason: Committee listing page
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/committees/vis-executive-committee
-  reason: Committee listing page
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://ieeevis.org/year/2026/info/committees/area-committee
-  reason: Committee listing page
-  conference: IEEE VIS
-  date: '2026-02-03'
-- url: https://sensys.acm.org/2026/
-  reason: Generic homepage or track page (not specific call)
-  conference: IPSN
-  date: '2026-02-02'
-- url: https://sensys.acm.org/2026/call_demo_poster.html
-  reason: Call for papers/workshops (not reviewer recruitment)
-  conference: SenSys
-  date: '2026-02-02'
-- url: https://sensys.acm.org/2026/tpc_committee.html
-  reason: Committee listing page (not recruitment)
-  conference: SenSys
-  date: '2026-02-02'
-- url: https://sensys.acm.org/2026/acm_publishing_model_2026.html
-  reason: Publishing guidelines (not reviewer call)
-  conference: SenSys
-  date: '2026-02-02'
-- url: http://wisec26.events.cispa.de/call-for-artifacts
-  reason: Duplicate of confirmed entry
-  conference: WiSec
-  date: '2026-01-29'
-- url: https://icaps26.icaps-conference.org/calls/cfp
-  reason: Call for papers/workshops (not reviewer recruitment)
-  conference: ICAPS
-  date: '2026-01-28'
-- url: https://icaps26.icaps-conference.org/calls/special_tracks
-  reason: Call for papers/workshops (not reviewer recruitment)
-  conference: ICAPS
-  date: '2026-01-28'
-- url: https://icaps26.icaps-conference.org/calls/workshops
-  reason: Call for papers/workshops (not reviewer recruitment)
-  conference: ICAPS
-  date: '2026-01-28'
-- url: https://icaps26.icaps-conference.org/calls/dc_call
-  reason: Student/doctoral program (not main reviewers)
-  conference: ICAPS
-  date: '2026-01-28'
-- url: https://icaps26.icaps-conference.org/calls/launchpad_call
-  reason: Student/doctoral program (not main reviewers)
-  conference: ICAPS
-  date: '2026-01-28'
-- url: https://icaps26.icaps-conference.org/organisation/reviewing
-  reason: Reviewing guide (not recruitment call)
-  conference: ICAPS
-  date: '2026-01-28'
-- url: https://www.cs.ubc.ca/~bestchai/
-  reason: Personal homepage (not official conference page)
-  conference: NSDI
-  date: '2026-01-26'
-- url: https://shawnshanksgui.github.io/
-  reason: Personal homepage (not official conference page)
-  conference: NSDI
-  date: '2026-01-23'
-- url: https://www.aib.world/news/review-for-aib-2026-new-reviewer-development-resources-make-giving-great-feedback-easy/
-  reason: Wrong domain (not CS conference)
-  conference: WWW
-  date: '2026-01-13'
-- url: https://listserv.uni-tuebingen.de/pipermail/ieee_vis/2025/003110.html
-  reason: External forum (mailing list, not official)
-  conference: IEEE VIS
-  date: '2025-12-18'
-- url: https://listserv.uni-tuebingen.de/pipermail/ieee_vis/2025/003110.html
-  reason: External forum (mailing list/blog, not official)
-  conference: IEEE VIS
-  date: '2025-12-18'
-- url: https://listserv.uni-tuebingen.de/pipermail/ieee_vis/2025/003106.html
-  reason: External forum (mailing list/blog, not official)
-  conference: PacificVis
-  date: '2025-08-27'
-- url: https://callforpaper.org/cfp/blp-2026-bangla-language-processing-workshop-at-aacl-ijcnlp-2025_4920
-  reason: Workshop call for papers (2025 event, not reviewer recruitment)
-  conference: IJCNLP
-  date: '2026-02-13'
-- url: https://aguea.net/ACMSigmetrics
-  reason: Illegal/fraudulent website
-  conference: SIGMETRICS
-  date: '2026-02-13'
-- url: https://www.cs.sfu.ca/~tzwang/service.html
-  reason: Personal academic service page (not conference call)
-  conference: SoCC
-  date: '2026-02-13'
-- url: https://www.sigcomm.org/news/november-2025-sigcomm-newsletter
-  reason: Newsletter (not reviewer recruitment)
-  conference: NSDI
-  date: '2026-02-13'
-- url: https://www.linkedin.com/posts/mehilshah_as-2025-draws-to-a-close-i-am-looking-back-activity-7410512287666569216-IJo0
-  reason: Personal achievement post (not recruitment)
-  conference: ICSME
-  date: '2026-02-13'
-- url: https://eai.eu/feed/
-  reason: RSS feed (not reviewer call)
-  conference: CollaborateCom
-  date: '2026-02-13'
-- url: https://icaps26.icaps-conference.org/calls/previously_published_research
-  reason: Call for paper submissions (not reviewer call)
-  conference: ICAPS
-  date: '2026-02-13'
-- url: https://ieee-biometrics.org/2026-award-nominations-open/
-  reason: Award nominations (not reviewer recruitment)
-  conference: IJCB
-  date: '2026-02-13'
-- url: https://asia.siggraph.org/2025/submissions/technical-papers/
-  reason: Wrong year (2025) and call for papers (not reviewers)
-  conference: ACM SIGGRAPH ASIA
-  date: '2026-02-13'
+  - url: https://2026.ijcai.org/primary-paper-initiative/
+    date: '2026-02-11'
+  - url: http://wikicfp.com/cfp/servlet/event.showcfp?eventid=191131&copyownerid=320
+    date: '2026-02-11'
+  - url: https://github.com/jiahaoli57/Call-for-Reviewers
+    date: '2026-02-11'
+  - url: https://kdd2026.kdd.org/call-for-lecture-style-tutorials
+    date: '2026-02-11'
+  - url: https://kdd2026.kdd.org/call-for-hands-on-tutorials
+    date: '2026-02-11'
+  - url: https://kdd2026.kdd.org/call-for-kdd-cup-proposals
+    date: '2026-02-11'
+  - url: https://kdd2026.kdd.org/undergraduate-and-masters-consortium-call-for-submission
+    date: '2026-02-11'
+  - url: https://kdd2026.kdd.org/acm-kdd-2026-organizing-committee
+    date: '2026-02-11'
+  - url: https://sswr.org/2026-conference-home/2025-conference-cluster-chairs/
+    date: '2026-02-11'
+  - url: https://scienceguru.org/Conference/8966/ICSE/
+    date: '2026-02-11'
+  - url: https://www.aconf.org/conf_212927.html
+    date: '2026-02-11'
+  - url: https://sigmetrics.hosting.acm.org/awards.shtml
+    date: '2026-02-11'
+  - url: https://grokipedia.com/page/sigmetrics
+    date: '2026-02-11'
+  - url: https://servicelearningpartnership.org/uvm/
+    date: '2026-02-11'
+  - url: https://www.sigcomm.org/ccrinfo/
+    date: '2026-02-11'
+  - url: https://www.sigmobile.org/mobisys/2026/calls/rtas
+    date: '2026-02-11'
+  - url: https://www.usenix.org/conference/usenixsecurity26/call-for-hands-workshops
+    date: '2026-02-11'
+  - url: https://www.usenix.org/conference/usenixsecurity26/call-for-tutorials
+    date: '2026-02-11'
+  - url: https://www.usenix.org/system/files/login/articles/10_021_07_041_a_05_final.pdf
+    date: '2026-02-11'
+  - url: https://www.usenix.org/conference/usenixsecurity26/call-for-lightning-talks
+    date: '2026-02-11'
+  - url: https://issuu.com/sigcomm/
+    date: '2026-02-11'
+  - url: https://acm-ieee.github.io/
+    date: '2026-02-11'
+  - url: https://www.w3.org/wiki/Tracking_Prevention
+    date: '2026-02-11'
+  - url: https://www.vldb.org/2026/call-for-research-papers/
+    date: '2026-02-11'
+  - url: https://wisec26.events.cispa.de/
+    date: '2026-02-11'
+  - url: https://popl26.sigplan.org/track/POPL-2026-research-papers
+    date: '2026-02-11'
+  - url: https://csf2026.ieee-security.org/cfp.html
+    date: '2026-02-11'
+  - url: http://www.asplos-conference.org/call-for-papers/
+    date: '2026-02-11'
+  - url: https://www.usenix.org/conference/osdi26/call-papers
+    date: '2026-02-11'
+  - url: https://www.usenix.org/conference/fast26/call-papers
+    date: '2026-02-11'
+  - url: https://soups.org/wp-content/uploads/2024/11/soups2026-cfp.pdf
+    date: '2026-02-11'
+  - url: https://ndss2026.ndss.io/call-for-papers/
+    date: '2026-02-11'
+  - url: https://www.usenix.org/conference/usenixsecurity26/call-papers
+    date: '2026-02-11'
+  - url: https://eurysec.di.uniroma1.it/call-for-papers/
+    date: '2026-02-11'
+  - url: https://conference.ccs.org/cfp/
+    date: '2026-02-11'
+  - url: https://www.ieee-security.org/TC/CSF/2026/program.html
+    date: '2026-02-11'
+  - url: https://esorics2026.conf.kau.se/calls/cfp/
+    date: '2026-02-11'
+  - url: https://petsymposium.org/2026/cfp.php
+    date: '2026-02-11'
+  - url: https://forum.cspaper.org/topic/149/aaai-2026-call-for-reviewers-pc-members-spc-members-ac-members-for-the-knowledge-reasoning-and-planning-area
+    date: '2026-02-11'
+  - url: https://callforpaper.org/cfp/blp-2026-bangla-language-processing-workshop-at-aacl-ijcnlp-2025_4920
+    date: '2026-02-13'
+  - url: https://aguea.net/ACMSigmetrics
+    date: '2026-02-13'
+  - url: https://www.cs.sfu.ca/~tzwang/service.html
+    date: '2026-02-13'
+  - url: https://www.sigcomm.org/news/november-2025-sigcomm-newsletter
+    date: '2026-02-13'
+  - url: https://www.linkedin.com/posts/mehilshah_as-2025-draws-to-a-close-i-am-looking-back-activity-7410512287666569216-IJo0
+    date: '2026-02-13'
+  - url: https://eai.eu/feed/
+    date: '2026-02-13'
+  - url: https://icaps26.icaps-conference.org/calls/previously_published_research
+    date: '2026-02-13'
+  - url: https://ieee-biometrics.org/2026-award-nominations-open/
+    date: '2026-02-13'
+  - url: https://asia.siggraph.org/2025/submissions/technical-papers/
+    date: '2026-02-13'

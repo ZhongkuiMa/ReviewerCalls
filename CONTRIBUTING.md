@@ -114,7 +114,7 @@ ReviewerCalls/
 │   ├── conferences.yaml          321 CCF/CORE conferences (from ccfddl)
 │   ├── calls.yaml                Curated reviewer calls
 │   ├── calls.yaml.backup         Auto-created backup
-│   └── rejected_urls.yaml        False positives from discovery
+│   └── rejected_urls.yaml        False positives (auto-cleaned monthly)
 ├── discover/                     Discovery system
 │   ├── __main__.py               Entry point (python -m discover)
 │   ├── main.py                   CLI parsing + orchestrator

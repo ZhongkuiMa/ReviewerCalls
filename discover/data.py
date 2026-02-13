@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import datetime
+import os
 from typing import Any
 
 import yaml
@@ -87,21 +88,72 @@ def extract_normalized_urls_from_calls(calls: list[dict[str, Any]]) -> set[str]:
     return urls
 
 
+def load_rejected_urls(path: str) -> set[str]:
+    """Load and normalize rejected URLs.
+
+    :param path: Path to rejected_urls.yaml file
+    :return: Set of normalized rejected URLs
+    """
+    try:
+        data = read_yaml(path)
+        rejected = data.get("rejected_urls", [])
+        return {normalize_url(entry["url"]) for entry in rejected}
+    except FileNotFoundError:
+        return set()
+
+
+def clean_rejected_urls(path: str) -> None:
+    """Remove rejected URLs older than 1 month.
+
+    :param path: Path to rejected_urls.yaml file
+    """
+    try:
+        data = read_yaml(path)
+        rejected = data.get("rejected_urls", [])
+
+        today = datetime.date.today()
+        one_month_ago = today - datetime.timedelta(days=30)
+
+        kept = [
+            entry
+            for entry in rejected
+            if datetime.date.fromisoformat(entry.get("date", "1900-01-01"))
+            >= one_month_ago
+        ]
+
+        if len(kept) < len(rejected):
+            data["rejected_urls"] = kept
+            header = (
+                "# False positive URLs that should not be added to calls.yaml\n"
+                "# Entries older than 1 month are automatically cleaned during discovery\n"
+                "# Format: url, date (YYYY-MM-DD)\n"
+                "\n"
+            )
+            write_yaml(path, data, header)
+    except FileNotFoundError:
+        pass
+
+
 def filter_new_candidates(
     candidates: list[dict[str, Any]],
     existing_urls: set[str],
+    rejected_urls: set[str] | None = None,
 ) -> list[dict[str, Any]]:
-    """Filter candidates to only new ones (not already in calls.yaml).
+    """Filter candidates to only new ones (not already in calls.yaml or rejected).
 
     :param candidates: List of candidate dictionaries
     :param existing_urls: Set of normalized URLs already in calls.yaml
+    :param rejected_urls: Set of normalized rejected URLs (optional)
     :return: List of new candidates (not duplicates)
     """
+    if rejected_urls is None:
+        rejected_urls = set()
+
     new_entries = []
 
     for candidate in candidates:
         candidate_url = normalize_url(candidate["url"])
-        if candidate_url not in existing_urls:
+        if candidate_url not in existing_urls and candidate_url not in rejected_urls:
             candidate_clean = {
                 k: v
                 for k, v in candidate.items()
@@ -184,11 +236,17 @@ def write_to_calls_yaml(candidates: list[dict[str, Any]], calls_path: str) -> in
 
     backup_file(calls_path)
 
+    # Load and clean rejected URLs
+    repo_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    rejected_path = os.path.join(repo_root, config.REJECTED_URLS_FILE)
+    rejected_urls = load_rejected_urls(rejected_path)
+    clean_rejected_urls(rejected_path)
+
     data = read_yaml(calls_path)
     existing_calls = data.get("calls", [])
 
     existing_urls = extract_normalized_urls_from_calls(existing_calls)
-    new_entries = filter_new_candidates(candidates, existing_urls)
+    new_entries = filter_new_candidates(candidates, existing_urls, rejected_urls)
 
     if not new_entries:
         print("    No new unique entries to add")
