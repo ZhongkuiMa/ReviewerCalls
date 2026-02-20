@@ -13,7 +13,7 @@ class TestFullDiscoveryPipeline:
 
     @patch("discover.pipeline.search")
     def test_step1_finds_homepage(self, mock_search):
-        """Step 1 should find homepage from search results."""
+        """Step 1 should find homepage from multi-query search results."""
         mock_search.return_value = [
             {
                 "title": "IJCAI 2026",
@@ -24,6 +24,8 @@ class TestFullDiscoveryPipeline:
         conf = {"short": "IJCAI", "name": "IJCAI", "domain": "ijcai.org"}
         homepage, reviewer_links = step1_search_homepage(conf, 2026)
         assert homepage is not None
+        # 4 queries issued (homepage, reviewer, pc, call)
+        assert mock_search.call_count == 4
 
     def test_recruitment_window_boundary(self):
         """Test recruitment window in/out boundaries."""

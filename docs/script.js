@@ -10,6 +10,43 @@
   let allData = [];
   const nowrapStyle = { "white-space": "nowrap" };
 
+  /* ==================== GitHub Stars ==================== */
+
+  /**
+   * Fetch GitHub stars count and update button
+   */
+  async function loadGitHubStars() {
+    try {
+      const response = await fetch("https://api.github.com/repos/ZhongkuiMa/ReviewerCalls", {
+        headers: {
+          "Accept": "application/vnd.github.v3+json"
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const stars = data.stargazers_count;
+        const button = document.querySelector(".github-star-button");
+
+        if (button && stars) {
+          // Format stars (e.g., 1200 -> 1.2k)
+          let starDisplay = stars.toString();
+          if (stars >= 1000) {
+            starDisplay = (stars / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+          } else if (stars >= 100) {
+            starDisplay = stars.toString();
+          }
+
+          button.textContent = `⭐ ${starDisplay}`;
+          button.setAttribute("title", `${stars} stars on GitHub - Star this project!`);
+        }
+      }
+    } catch (error) {
+      console.debug("Could not fetch GitHub stars:", error);
+      // Silently fail - button will show default text
+    }
+  }
+
   /* ==================== Theme Management ==================== */
 
   /**
@@ -59,6 +96,19 @@
     return `<span class="badge ${cls}">${rank}</span>`;
   }
 
+  /**
+   * Check if a call is new (added within last 7 days)
+   * @param {string} dateStr - Date string in YYYY-MM format
+   * @returns {boolean}
+   */
+  function isNew(dateStr) {
+    if (!dateStr) return false;
+    const callDate = new Date(`${dateStr}-01`);
+    const today = new Date();
+    const ageInDays = (today - callDate) / (1000 * 60 * 60 * 24);
+    return ageInDays <= 7;
+  }
+
   /* ==================== Filters ==================== */
 
   /**
@@ -70,12 +120,30 @@
   function populateFilter(selectId, data, key) {
     const select = document.getElementById(selectId);
     const values = [...new Set(data.map((d) => d[key]))].filter(Boolean).sort();
-    values.forEach((v) => {
-      const opt = document.createElement("option");
-      opt.value = v;
-      opt.textContent = v;
-      select.appendChild(opt);
-    });
+
+    // Special handling for area filter: show "CODE - Full Name"
+    if (selectId === "filter-area") {
+      const areaMap = {};
+      data.forEach((call) => {
+        if (call.area_code && call.area) {
+          areaMap[call.area_code] = call.area;
+        }
+      });
+
+      values.forEach((v) => {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = areaMap[v] ? `${v} - ${areaMap[v]}` : v;
+        select.appendChild(opt);
+      });
+    } else {
+      values.forEach((v) => {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = v;
+        select.appendChild(opt);
+      });
+    }
   }
 
   /**
@@ -128,7 +196,7 @@
   function filteredData() {
     const f = getFilters();
     return allData.filter((d) => {
-      if (f.area && d.area !== f.area) return false;
+      if (f.area && d.area_code !== f.area) return false;
       if (f.ccf && d.ccf !== f.ccf) return false;
       if (f.core && d.core !== f.core) return false;
       if (f.role && d.role !== f.role) return false;
@@ -143,9 +211,9 @@
    */
   function toGridRows(data) {
     return data.map((d) => [
-      d.conference,
+      { abbr: d.conference, date: d.date },
       d.name,
-      d.area,
+      d.area_code,
       d.date,
       d.ccf,
       d.core,
@@ -194,7 +262,7 @@
     const banner = document.getElementById("stats-banner");
     if (!banner) return;
     const confs = new Set(data.map((d) => d.conference));
-    const areas = new Set(data.map((d) => d.area));
+    const areas = new Set(data.map((d) => d.area_code));
     banner.innerHTML = `<strong>${data.length}</strong> active call${data.length !== 1 ? "s" : ""} ` +
       `across <strong>${confs.size}</strong> conference${confs.size !== 1 ? "s" : ""} ` +
       `in <strong>${areas.size}</strong> area${areas.size !== 1 ? "s" : ""}`;
@@ -252,6 +320,67 @@
     }
   }
 
+  /* ==================== Data Loading ==================== */
+
+  const CACHE_KEY = "rc-calls-cache";
+  const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
+  const FETCH_TIMEOUT = 10000; // 10 seconds
+
+  /**
+   * Get cached data from localStorage if still valid
+   * @returns {Object|null} Cached data or null
+   */
+  function getCachedData() {
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (!cached) return null;
+      const { data, timestamp } = JSON.parse(cached);
+      if (Date.now() - timestamp > CACHE_DURATION) {
+        localStorage.removeItem(CACHE_KEY);
+        return null;
+      }
+      return data;
+    } catch (e) {
+      console.warn("Failed to read cache:", e);
+      return null;
+    }
+  }
+
+  /**
+   * Save data to localStorage cache
+   * @param {Object} data - Data to cache
+   */
+  function setCachedData(data) {
+    try {
+      const cacheEntry = {
+        data: data,
+        timestamp: Date.now()
+      };
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cacheEntry));
+    } catch (e) {
+      console.warn("Failed to write cache:", e);
+    }
+  }
+
+  /**
+   * Fetch data with timeout
+   * @param {string} url - URL to fetch
+   * @param {number} timeout - Timeout in milliseconds
+   * @returns {Promise<Response>}
+   */
+  async function fetchWithTimeout(url, timeout) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeoutId);
+      return response;
+    } catch (e) {
+      clearTimeout(timeoutId);
+      throw e;
+    }
+  }
+
   /* ==================== Initialization ==================== */
 
   /**
@@ -266,19 +395,38 @@
     }
 
     const loadingState = document.getElementById("loading-state");
+    const emptyState = document.getElementById("empty-state");
 
-    let payload;
-    try {
-      const resp = await fetch("calls.json");
-      payload = await resp.json();
-    } catch (e) {
-      console.error("Failed to load calls.json:", e);
+    // Try cache first
+    let payload = getCachedData();
+    if (payload) {
+      console.log("Using cached data");
       if (loadingState) loadingState.style.display = "none";
-      document.getElementById("empty-state").hidden = false;
-      return;
-    }
+    } else {
+      // Fetch from network
+      try {
+        const resp = await fetchWithTimeout("calls.json", FETCH_TIMEOUT);
+        if (!resp.ok) {
+          throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
+        }
+        payload = await resp.json();
+        setCachedData(payload);
+      } catch (e) {
+        console.error("Failed to load calls.json:", e);
+        if (loadingState) loadingState.style.display = "none";
 
-    if (loadingState) loadingState.style.display = "none";
+        const isTimeout = e.name === "AbortError";
+        const errorMsg = isTimeout
+          ? "Request timed out. Please check your connection and <a href=\"#\" onclick=\"location.reload(); return false;\">try again</a>."
+          : "Failed to load data. Please <a href=\"#\" onclick=\"location.reload(); return false;\">refresh the page</a> or try again later.";
+
+        emptyState.innerHTML = `<p>${errorMsg}</p>`;
+        emptyState.hidden = false;
+        return;
+      }
+
+      if (loadingState) loadingState.style.display = "none";
+    }
 
     allData = Array.isArray(payload) ? payload : payload.calls || [];
 
@@ -291,7 +439,7 @@
       return;
     }
 
-    populateFilter("filter-area", allData, "area");
+    populateFilter("filter-area", allData, "area_code");
     populateFilter("filter-role", allData, "role");
     urlToFilters();
     updateStats(filteredData());
@@ -302,7 +450,14 @@
         {
           name: "Abbr",
           width: "170px",
-          attributes: { "data-column": "0", style: nowrapStyle }
+          attributes: { "data-column": "0", style: nowrapStyle },
+          formatter: (cell) => {
+            if (!cell || !cell.abbr) return cell;
+            const badge = isNew(cell.date)
+              ? '<span class="badge-new">NEW</span>'
+              : '';
+            return gridjs.html(`${cell.abbr}${badge}`);
+          },
         },
         {
           name: "Conference",
@@ -332,7 +487,13 @@
           formatter: (cell) => {
             if (!cell || !cell.url) return cell.role || "";
             return gridjs.html(
-              `<a class="view-link" href="${cell.url}" target="_blank" rel="noopener">${cell.role}</a>`
+              `<a href="${cell.url}"
+                  class="role-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View ${cell.role} call (opens in new tab)">
+                ${cell.role}<span class="external-icon" aria-hidden="true">↗</span>
+              </a>`
             );
           },
         },
@@ -365,6 +526,9 @@
     if (pageSizeEl) {
       pageSizeEl.addEventListener("change", onPageSizeChange);
     }
+
+    // Load GitHub stars count
+    loadGitHubStars();
   }
 
   init();

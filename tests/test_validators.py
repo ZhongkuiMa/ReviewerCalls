@@ -184,17 +184,27 @@ class TestHasPositiveSignals:
         assert has_positive_signals(content) is False
 
 
+def _make_mock_response(status_code=200, url="", html=""):
+    """Create a mock response with proper content.decode() setup."""
+    mock_response = MagicMock()
+    mock_response.status_code = status_code
+    mock_response.url = url
+    mock_response.content = MagicMock()
+    mock_response.content.decode.return_value = html
+    return mock_response
+
+
 class TestCheckPageContent:
     """Tests for check_page_content function."""
 
     @patch("discover.http.get")
     def test_check_page_content_valid_call(self, mock_get):
         """Should detect valid reviewer call."""
-        mock_response = MagicMock()
-        mock_response.status_code = 200
-        mock_response.url = "https://example.com/reviewer-call"
-        mock_response.text = "Call for reviewers now open! Please nominate yourself."
-        mock_get.return_value = mock_response
+        mock_get.return_value = _make_mock_response(
+            status_code=200,
+            url="https://example.com/reviewer-call",
+            html="Call for reviewers now open! Please nominate yourself.",
+        )
 
         result = check_page_content("https://example.com/reviewer-call")
         assert result is not None
@@ -220,9 +230,7 @@ class TestCheckPageContent:
     @patch("discover.http.get")
     def test_check_page_content_non_200_status(self, mock_get):
         """Should reject non-200 status codes."""
-        mock_response = MagicMock()
-        mock_response.status_code = 404
-        mock_get.return_value = mock_response
+        mock_get.return_value = _make_mock_response(status_code=404)
 
         result = check_page_content("https://example.com/page")
         assert result is None
@@ -230,11 +238,11 @@ class TestCheckPageContent:
     @patch("discover.http.get")
     def test_check_page_content_no_positive_signals(self, mock_get):
         """Should reject content without positive signals."""
-        mock_response = MagicMock()
-        mock_response.status_code = 200
-        mock_response.url = "https://example.com/page"
-        mock_response.text = "General conference information"
-        mock_get.return_value = mock_response
+        mock_get.return_value = _make_mock_response(
+            status_code=200,
+            url="https://example.com/page",
+            html="General conference information",
+        )
 
         result = check_page_content("https://example.com/page")
         assert result is None
@@ -242,13 +250,11 @@ class TestCheckPageContent:
     @patch("discover.http.get")
     def test_check_page_content_returns_matched_keywords(self, mock_get):
         """Should return matched keyword information."""
-        mock_response = MagicMock()
-        mock_response.status_code = 200
-        mock_response.url = "https://example.com/reviewer-call"
-        mock_response.text = (
-            "Call for reviewers. Please nominate yourself for our review committee."
+        mock_get.return_value = _make_mock_response(
+            status_code=200,
+            url="https://example.com/reviewer-call",
+            html="Call for reviewers. Please nominate yourself for our review committee.",
         )
-        mock_get.return_value = mock_response
 
         result = check_page_content("https://example.com/reviewer-call")
         assert result is not None

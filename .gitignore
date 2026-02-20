@@ -32,3 +32,6 @@ tmp/
 # Backup files
 *.backup
 *.pre-organize
+
+# Validate module
+validate/config.yaml

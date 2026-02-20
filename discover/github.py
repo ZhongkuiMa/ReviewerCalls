@@ -5,9 +5,12 @@ Uses ``gh`` CLI (available in GitHub Actions and locally if installed).
 
 from __future__ import annotations
 
+import logging
 import subprocess
 import json
 import re
+
+logger = logging.getLogger(__name__)
 
 
 def get_github_issues(repo: str, dry_run: bool = False) -> set[str]:
@@ -21,7 +24,7 @@ def get_github_issues(repo: str, dry_run: bool = False) -> set[str]:
         return set()
 
     if dry_run:
-        print(f"[INFO] Dry Run: Fetch existing issue URLs from {repo}")
+        logger.info("Dry Run: Fetch existing issue URLs from %s", repo)
         return set()
 
     try:
@@ -56,7 +59,7 @@ def get_github_issues(repo: str, dry_run: bool = False) -> set[str]:
         for match in re.finditer(r"https?://[^\s\)>]+", issue.get("body", "")):
             urls.add(match.group().lower().rstrip("/"))
 
-    print(f"[INFO] Fetched {len(urls)} URLs from existing issues in {repo}")
+    logger.info("Fetched %d URLs from existing issues in %s", len(urls), repo)
     return urls
 
 
@@ -102,7 +105,7 @@ def create_issue(candidates: list[dict], repo: str, dry_run: bool = False) -> bo
         return False
 
     if not repo:
-        print("[INFO] No --repo provided, skipping GitHub issue creation")
+        logger.info("No --repo provided, skipping GitHub issue creation")
         return False
 
     title = f"[Discovery] {len(candidates)} new candidate(s) found"
@@ -123,10 +126,14 @@ Found **{len(candidates)}** new candidate reviewer call(s).
 """
 
     if dry_run:
-        print(f"[DRY-RUN] Would create issue: {title}")
+        logger.info("[DRY-RUN] Would create issue: %s", title)
         for c in candidates:
-            print(
-                f"  - {c['conference']} {c.get('year', '')} | {c.get('role', 'Reviewer')} | {c['url']}"
+            logger.debug(
+                "  - %s %s | %s | %s",
+                c["conference"],
+                c.get("year", ""),
+                c.get("role", "Reviewer"),
+                c["url"],
             )
         return True
 
@@ -150,13 +157,13 @@ Found **{len(candidates)}** new candidate reviewer call(s).
             timeout=30,
         )
     except (subprocess.TimeoutExpired, FileNotFoundError):
-        print("[ERROR] Failed to create issue: gh CLI not available or timed out")
+        logger.error("Failed to create issue: gh CLI not available or timed out")
         return False
 
     if result.returncode == 0:
         issue_url = result.stdout.strip()
-        print(f"[INFO] Created issue: {issue_url}")
+        logger.info("Created issue: %s", issue_url)
         return True
 
-    print(f"[ERROR] Failed to create issue: {result.stderr.strip()}")
+    logger.error("Failed to create issue: %s", result.stderr.strip())
     return False

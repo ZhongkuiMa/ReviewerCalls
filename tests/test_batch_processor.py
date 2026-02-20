@@ -14,7 +14,7 @@ class TestAsyncFetchPage:
         """Should fetch page content successfully."""
         mock_response = MagicMock()
         mock_response.status = 200
-        mock_response.text = AsyncMock(return_value="<html>Content</html>")
+        mock_response.read = AsyncMock(return_value=b"<html>Content</html>")
 
         async_cm = AsyncMock()
         async_cm.__aenter__.return_value = mock_response
@@ -71,7 +71,7 @@ class TestAsyncFetchPage:
         """Should use custom timeout parameter."""
         mock_response = MagicMock()
         mock_response.status = 200
-        mock_response.text = AsyncMock(return_value="")
+        mock_response.read = AsyncMock(return_value=b"")
 
         async_cm = AsyncMock()
         async_cm.__aenter__.return_value = mock_response

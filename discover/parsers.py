@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import re
 from datetime import date
 from email.utils import parsedate_to_datetime
@@ -12,6 +13,8 @@ import requests
 
 from discover.utils import normalize_url
 from discover import http
+
+logger = logging.getLogger(__name__)
 
 
 class LinkExtractor(HTMLParser):
@@ -81,7 +84,7 @@ def extract_page_date(url: str, timeout: int = 10) -> str:
             dt = parsedate_to_datetime(response.headers["Last-Modified"])
             return dt.date().isoformat()
 
-        html = response.text
+        html = response.content.decode("utf-8", errors="replace")
 
         meta_patterns = [
             r'<meta\s+property="article:published_time"\s+content="([^"]+)"',
@@ -120,5 +123,5 @@ def extract_page_date(url: str, timeout: int = 10) -> str:
         return date.today().isoformat()
 
     except requests.RequestException as e:
-        print(f"Warning: Could not extract date from {url}: {e}")
+        logger.warning("Could not extract date from %s: %s", url, e)
         return date.today().isoformat()

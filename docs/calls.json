@@ -1,17 +1,56 @@
 {
-  "updated": "2026-02-13",
+  "updated": "2026-02-21",
   "calls": [
     {
-      "conference": "PETS'26",
-      "name": "Privacy Enhancing Technologies Symposium",
+      "conference": "MICCAI'26",
+      "name": "International Conference on Medical Image Computing and Computer Assisted Intervention",
+      "area": "Interdisciplinary & Emerging",
+      "area_code": "MX",
+      "date": "2026-02",
+      "ccf": "B",
+      "core": "A",
+      "role": "Reviewer",
+      "url": "https://bskyview.com/7698f277/miccaisociety",
+      "dblp": "miccai",
+      "round": ""
+    },
+    {
+      "conference": "RE'26",
+      "name": "IEEE International Requirements Engineering Conference",
+      "area": "Software Engineering",
+      "area_code": "SE",
+      "date": "2026-02",
+      "ccf": "B",
+      "core": "A",
+      "role": "Reviewer",
+      "url": "https://jldhe.aldinhe.ac.uk/call-for-reviewers-14-march-2025/",
+      "dblp": "re",
+      "round": ""
+    },
+    {
+      "conference": "ICASSP'26",
+      "name": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "area": "Computer Graphics & Multimedia",
+      "area_code": "CG",
+      "date": "2026-02",
+      "ccf": "B",
+      "core": "B",
+      "role": "AC",
+      "url": "https://www.linkedin.com/posts/danilocomminiello_icassp-2026-mlsp-track-area-chair-nomination-activity-7370761090193936384-PYpz",
+      "dblp": "icassp",
+      "round": ""
+    },
+    {
+      "conference": "RAID'26",
+      "name": "International Symposium on Recent Advances in Intrusion Detection",
       "area": "Security & Cryptography",
       "area_code": "SC",
       "date": "2026-02",
-      "ccf": "C",
+      "ccf": "B",
       "core": "A",
-      "role": "AEC",
-      "url": "https://petsymposium.org/artifacts.php",
-      "dblp": "pet",
+      "role": "PC",
+      "url": "https://raid2026.org/call.html",
+      "dblp": "raid",
       "round": ""
     },
     {
@@ -662,6 +701,19 @@
       "role": "PC",
       "url": "https://www.sigmobile.org/mobisys/2026/pc_self_nomination",
       "dblp": "mobisys",
+      "round": ""
+    },
+    {
+      "conference": "CHI'26",
+      "name": "ACM Conference on Human Factors in Computing Systems",
+      "area": "Human-Computer Interaction",
+      "area_code": "HI",
+      "date": "2025-07",
+      "ccf": "A",
+      "core": "A*",
+      "role": "Reviewer",
+      "url": "https://chi2026.acm.org/2025/07/07/open-call-for-reviewers-chi-2026-student-research-competition",
+      "dblp": "chi",
       "round": ""
     }
   ]

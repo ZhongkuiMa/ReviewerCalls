@@ -95,17 +95,36 @@ body {
 header.site-header {
   background: linear-gradient(135deg, var(--rc-header-from), var(--rc-header-to));
   color: var(--rc-text-on-header);
-  padding: 1.5rem 0 1rem;
   margin-bottom: 1.5rem;
   backdrop-filter: blur(8px);
+  width: 100%;
 }
 
-header.site-header .container {
+header.site-header .header-wrapper {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 1rem;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+header.site-header .header-left {
+  flex: 1;
+  min-width: 0;
+}
+
+header.site-header .header-left hgroup {
+  margin: 0;
+}
+
+header.site-header .header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 header.site-header hgroup {
@@ -124,10 +143,12 @@ header.site-header p {
   color: rgba(255, 255, 255, 0.85);
   margin: 0.25rem 0 0;
   font-size: 0.875rem;
+  max-width: 600px;
 }
 
 header.site-header nav {
   margin: 0;
+  padding: 0;
 }
 
 header.site-header nav ul {
@@ -152,6 +173,22 @@ header.site-header nav a {
 header.site-header nav a:hover {
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
+}
+
+header.site-header nav a.github-star-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+header.site-header nav a.github-star-button:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* ----- Theme Toggle ----- */
@@ -315,46 +352,66 @@ header.site-header nav a:hover {
   color: var(--rc-badge-none-fg);
 }
 
-/* ----- View Link ----- */
-.view-link {
-  display: inline-block;
-  background: var(--rc-accent);
-  color: #fff !important;
-  text-decoration: none;
-  padding: 0.25em 0.75em;
+/* ----- Role Link (Outlined Pill) ----- */
+.role-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.3em 0.8em;
+  border: 1.5px solid var(--rc-accent);
   border-radius: 999px;
-  font-size: 0.8em;
-  font-weight: 600;
+  color: var(--rc-accent);
+  text-decoration: none;
   transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.8em;
   white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.view-link:hover {
-  background: var(--rc-primary);
-  color: #fff !important;
+.role-link:hover {
+  background-color: var(--rc-accent);
+  color: white;
   transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.view-link:active {
+.role-link:active {
   transform: translateY(0);
 }
 
-[data-theme="dark"] .view-link {
-  background: #5c6bc0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+.external-icon {
+  font-size: 0.85em;
+  opacity: 0.7;
 }
 
-[data-theme="dark"] .view-link:hover {
-  background: #7986cb;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+[data-theme="dark"] .role-link {
+  border-color: #7986cb;
+  color: #7986cb;
+}
+
+[data-theme="dark"] .role-link:hover {
+  background-color: #7986cb;
+  color: white;
 }
 
 .link-sep {
   margin: 0 0.5em;
   color: var(--pico-muted-color);
   font-weight: normal;
+}
+
+/* ----- NEW Badge ----- */
+.badge-new {
+  display: inline-block;
+  padding: 0.15em 0.4em;
+  margin-left: 0.5em;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: white;
+  background-color: #dc3545;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
 }
 
 /* ----- Empty State ----- */

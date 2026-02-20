@@ -5,6 +5,9 @@ Clean 4-step pipeline orchestrator.
 
 from __future__ import annotations
 
+import asyncio
+import json
+import logging
 import sys
 import os
 import datetime
@@ -14,17 +17,21 @@ from dataclasses import dataclass
 from discover import config
 from discover.data import (
     load_confs,
+    load_rejected_urls,
     is_in_recruitment_window,
     write_to_calls_yaml,
 )
 from discover.pipeline import (
     step1_search_homepage,
-    step2_explore_level1,
-    step3_explore_level2,
     step4_analyze_content,
+    explore_graph,
 )
+from discover.scoring import ScoredURL
+from discover.batch import AsyncFetcher
 from discover.utils import load_current_urls, guess_year
 from discover.github import create_issue, get_github_issues
+
+logger = logging.getLogger(__name__)
 
 _VALID_AREAS = ["AI", "CG", "CT", "DB", "DS", "HI", "MX", "NW", "SC", "SE"]
 _VALID_RANKS = ["A", "B", "C"]
@@ -56,6 +63,7 @@ class DiscoveryArgs:
     serper_key: str = ""
     repo: str = ""
     date_range: str | None = "m"
+    eval_output: str | None = None
 
 
 def _validate_args(args: argparse.Namespace) -> None:
@@ -67,10 +75,10 @@ def _validate_args(args: argparse.Namespace) -> None:
     if args.rank is not None:
         rank_upper = args.rank.upper()
         if rank_upper not in _VALID_RANKS:
-            print(
-                f"Error: Invalid rank '{args.rank}'. "
-                f"Valid options: {', '.join(_VALID_RANKS)}",
-                file=sys.stderr,
+            logger.error(
+                "Invalid rank '%s'. Valid options: %s",
+                args.rank,
+                ", ".join(_VALID_RANKS),
             )
             sys.exit(1)
         args.rank = rank_upper
@@ -78,10 +86,10 @@ def _validate_args(args: argparse.Namespace) -> None:
     if args.area is not None:
         area_upper = args.area.upper()
         if area_upper not in _VALID_AREAS:
-            print(
-                f"Error: Invalid area '{args.area}'. "
-                f"Valid options: {', '.join(_VALID_AREAS)}",
-                file=sys.stderr,
+            logger.error(
+                "Invalid area '%s'. Valid options: %s",
+                args.area,
+                ", ".join(_VALID_AREAS),
             )
             sys.exit(1)
         args.area = area_upper
@@ -90,16 +98,12 @@ def _validate_args(args: argparse.Namespace) -> None:
         args.conference = args.conference.upper()
 
     if args.limit is not None and args.limit <= 0:
-        print(
-            f"Error: Invalid limit '{args.limit}'. Must be a positive integer.",
-            file=sys.stderr,
-        )
+        logger.error("Invalid limit '%s'. Must be a positive integer.", args.limit)
         sys.exit(1)
 
     if args.max_links <= 0:
-        print(
-            f"Error: Invalid max_links '{args.max_links}'. Must be a positive integer.",
-            file=sys.stderr,
+        logger.error(
+            "Invalid max_links '%s'. Must be a positive integer.", args.max_links
         )
         sys.exit(1)
 
@@ -208,6 +212,27 @@ Examples:
         help="Search date range filter (default: m)",
     )
 
+    parser.add_argument(
+        "--log-level",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR"],
+        default="INFO",
+        help="Logging level (default: INFO)",
+    )
+
+    parser.add_argument(
+        "-q",
+        "--quiet",
+        action="store_true",
+        help="Quiet mode (sets log level to ERROR)",
+    )
+
+    parser.add_argument(
+        "--eval",
+        metavar="FILE",
+        dest="eval_output",
+        help="Export evaluation JSON with score breakdowns to FILE",
+    )
+
     return parser
 
 
@@ -220,6 +245,17 @@ def parse_args(argv: list[str] | None = None) -> DiscoveryArgs:
     """
     parser = _create_parser()
     args = parser.parse_args(argv)
+
+    # Configure logging
+    if args.quiet:
+        log_level = logging.ERROR
+    else:
+        log_level = getattr(logging, args.log_level)
+    logging.basicConfig(
+        level=log_level,
+        format="%(levelname).1s %(name)s %(message)s",
+    )
+
     _validate_args(args)
 
     date_range = args.date_range
@@ -239,10 +275,11 @@ def parse_args(argv: list[str] | None = None) -> DiscoveryArgs:
         serper_key=args.serper_key,
         repo=args.repo,
         date_range=date_range,
+        eval_output=args.eval_output,
     )
 
 
-def discover_conference(
+async def discover_conference(
     conf: dict,
     year: int,
     known_urls: set[str],
@@ -251,6 +288,7 @@ def discover_conference(
     search_provider: str = "duckduckgo",
     serper_key: str = "",
     date_range: str = "m",
+    fetcher: AsyncFetcher | None = None,
 ) -> list[dict]:
     """Main discovery pipeline for a single conference.
 
@@ -261,9 +299,10 @@ def discover_conference(
     :param search_provider: Search provider ('duckduckgo' or 'serper')
     :param serper_key: API key for Serper provider
     :param date_range: Date range filter
+    :param fetcher: Optional AsyncFetcher instance for shared session
     :return: List of candidate dictionaries
     """
-    print(f"\n{conf['short']} {year} ({conf['domain']})")
+    logger.info("%s %s (%s)", conf["short"], year, conf["domain"])
 
     homepage, reviewer_links = step1_search_homepage(
         conf,
@@ -273,40 +312,59 @@ def discover_conference(
         date_range=date_range,
     )
     if not homepage:
-        print("  Skipped: No homepage found")
+        logger.info("  Skipped: No homepage found")
         return []
 
-    level2_links = step2_explore_level1(
-        homepage, conf["domain"], conf["short"], max_links
-    )
-    if not level2_links:
-        print("  Warning: No level 2 links found, will analyze homepage only")
-
-    if reviewer_links:
-        level2_links.extend(reviewer_links)
-        print(
-            f"  Added {len(reviewer_links)} reviewer-specific search results to exploration"
+    # Build seeds for score-driven BFS
+    seeds = [
+        ScoredURL(
+            url=homepage,
+            depth=0,
+            search_score=6.0,
+            source_type="search",
+            text="Homepage",
+        )
+    ]
+    for rl in reviewer_links:
+        seeds.append(
+            ScoredURL(
+                url=rl["url"],
+                depth=0,
+                search_score=6.0,
+                source_type="search",
+                text=rl.get("text", ""),
+                from_reviewer_search=True,
+            )
         )
 
-    level3_links = []
-    if level2_links:
-        level3_links = step3_explore_level2(level2_links, conf["domain"], conf["short"])
-        if not level3_links:
-            print("  Warning: No level 3 links, using level 1+2 only")
-    else:
-        print("  [3/4] Skipped: No level 2 links to explore")
+    explored = await explore_graph(
+        seeds, conf["domain"], conf["short"], fetcher=fetcher
+    )
 
-    all_links = [{"url": homepage, "text": "Homepage"}] + level2_links + level3_links
+    all_links = [
+        {
+            "url": su.url,
+            "text": su.text,
+            "from_reviewer_search": su.from_reviewer_search,
+            "graph_score": su.graph_score,
+            "search_score": su.search_score,
+        }
+        for su in explored
+    ]
 
     unique_links = _deduplicate_links(all_links)
 
-    print(
-        f"  Total pages: {len(unique_links)} (L1: 1, L2: {len(level2_links)}, L3: {len(level3_links)})"
+    logger.info(
+        "  Total pages: %d (%d explored by BFS)",
+        len(unique_links),
+        len(explored),
     )
 
-    candidates = step4_analyze_content(unique_links, conf, year, known_urls)
+    candidates = await step4_analyze_content(
+        unique_links, conf, year, known_urls, fetcher=fetcher
+    )
 
-    print(f"  Complete: {len(candidates)} candidates found")
+    logger.info("  Complete: %d candidates found", len(candidates))
     return candidates
 
 
@@ -325,23 +383,30 @@ def _deduplicate_links(links: list[dict]) -> list[dict]:
     return unique
 
 
-def main() -> int:
-    """Main entry point for discovery script.
+async def _run_discovery(args: DiscoveryArgs) -> int:
+    """Async entry point for the discovery pipeline.
 
+    :param args: Validated discovery arguments
     :return: Exit code (0 for success)
     """
-    args = parse_args()
-
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     conf_path = os.path.join(repo_root, config.CONFERENCES_FILE)
     calls_path = os.path.join(repo_root, config.CALLS_FILE)
 
+    rejected_path = os.path.join(repo_root, config.REJECTED_URLS_FILE)
+
     conferences = load_confs(conf_path)
     known_urls = load_current_urls(calls_path)
+    rejected_urls = load_rejected_urls(rejected_path)
     issue_urls = get_github_issues(args.repo, args.dry_run)
-    all_known_urls = known_urls | issue_urls
+    all_known_urls = known_urls | rejected_urls | issue_urls
 
-    print(f"Loaded: {len(conferences)} conferences, {len(all_known_urls)} known URLs")
+    logger.info(
+        "Loaded: %d conferences, %d known URLs, %d rejected URLs",
+        len(conferences),
+        len(known_urls | issue_urls),
+        len(rejected_urls),
+    )
 
     today = datetime.date.today()
     year = guess_year()
@@ -349,39 +414,55 @@ def main() -> int:
     conferences = [c for c in conferences if is_in_recruitment_window(c, today)]
     conferences = _apply_filters(conferences, args)
 
-    print(f"Searching: {len(conferences)} conferences (year {year})")
+    logger.info("Searching: %d conferences (year %d)", len(conferences), year)
 
     all_candidates = []
-    for i, conf in enumerate(conferences, 1):
-        print(f"\n[{i}/{len(conferences)}]", end=" ")
-        try:
-            candidates = discover_conference(
-                conf,
-                year,
-                all_known_urls,
-                max_links=args.max_links,
-                search_provider=args.search_provider,
-                serper_key=args.serper_key,
-                date_range=args.date_range,
-            )
-            all_candidates.extend(candidates)
-        except Exception as e:
-            print(f"ERROR: {e}")
-            continue
+
+    async with AsyncFetcher() as fetcher:
+        for i, conf in enumerate(conferences, 1):
+            logger.info("[%d/%d]", i, len(conferences))
+            try:
+                candidates = await discover_conference(
+                    conf,
+                    year,
+                    all_known_urls,
+                    max_links=args.max_links,
+                    search_provider=args.search_provider,
+                    serper_key=args.serper_key,
+                    date_range=args.date_range,
+                    fetcher=fetcher,
+                )
+                all_candidates.extend(candidates)
+            except Exception as e:
+                logger.error("Conference %s failed: %s", conf["short"], e)
+                continue
 
     _print_summary(all_candidates, len(conferences))
 
+    # Evaluation JSON export
+    if args.eval_output:
+        _export_eval(args.eval_output, all_candidates, len(conferences))
+
     if all_candidates and not args.dry_run:
-        print("\nWriting to calls.yaml...")
+        logger.info("Writing to calls.yaml...")
         written = write_to_calls_yaml(all_candidates, calls_path)
-        print(f"Added {written} new entries (backup: {calls_path}.backup)")
+        logger.info("Added %d new entries (backup: %s.backup)", written, calls_path)
     elif all_candidates and args.dry_run:
-        print(f"\n[DRY-RUN] Would add {len(all_candidates)} entries")
+        logger.info("[DRY-RUN] Would add %d entries", len(all_candidates))
 
     if all_candidates:
         create_issue(all_candidates, args.repo, args.dry_run)
 
     return 0
+
+
+def main() -> int:
+    """Main entry point for discovery script.
+
+    :return: Exit code (0 for success)
+    """
+    args = parse_args()
+    return asyncio.run(_run_discovery(args))
 
 
 def _apply_filters(conferences: list, args: DiscoveryArgs) -> list:
@@ -408,12 +489,62 @@ def _print_summary(candidates: list, num_confs: int):
     :param candidates: List of candidate dicts
     :param num_confs: Number of conferences searched
     """
-    print(f"\n{'=' * 60}")
-    print(f"SUMMARY: {len(candidates)} candidates from {num_confs} conferences")
-    print(f"{'=' * 60}")
+    logger.info("=" * 60)
+    logger.info(
+        "SUMMARY: %d candidates from %d conferences", len(candidates), num_confs
+    )
+    logger.info("=" * 60)
 
     if candidates:
         for i, c in enumerate(candidates, 1):
+            score = c.get("final_score", 0)
+            decision = c.get("decision", "?")
             kws = ", ".join(c.get("matched_keywords", [])[:3])
-            print(f"{i}. {c['conference']} {c['year']} | {c['role']} | {kws}")
-            print(f"   {c['url']}")
+            logger.info(
+                "%d. [%.1f %s] %s %s | %s | %s",
+                i,
+                score,
+                decision,
+                c["conference"],
+                c["year"],
+                c["role"],
+                kws,
+            )
+            logger.info("   %s", c["url"])
+            evidence = c.get("evidence_snippet", "")
+            if evidence:
+                logger.debug("   Evidence: %s", evidence[:120])
+
+
+def _export_eval(path: str, candidates: list, num_confs: int) -> None:
+    """Export evaluation JSON with score breakdowns.
+
+    :param path: Output file path
+    :param candidates: List of candidate dicts
+    :param num_confs: Number of conferences searched
+    """
+    eval_data = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "conferences_searched": num_confs,
+        "total_candidates": len(candidates),
+        "candidates": [
+            {
+                "url": c["url"],
+                "conference": c["conference"],
+                "year": c["year"],
+                "role": c["role"],
+                "final_score": c.get("final_score", 0),
+                "search_score": c.get("search_score", 0),
+                "graph_score": c.get("graph_score", 0),
+                "content_score": c.get("content_score", 0),
+                "decision": c.get("decision", "unknown"),
+                "match_strength": c.get("match_strength", ""),
+                "matched_keywords": c.get("matched_keywords", []),
+                "evidence_snippet": c.get("evidence_snippet", ""),
+            }
+            for c in candidates
+        ],
+    }
+    with open(path, "w") as f:
+        json.dump(eval_data, f, indent=2)
+    logger.info("Evaluation JSON written to %s", path)

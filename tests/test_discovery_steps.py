@@ -77,20 +77,33 @@ def test_detect_url_label_parametrized(url, keywords, expected_label):
 class TestBuildSearchQueries:
     """Tests for _build_search_queries."""
 
+    def test_returns_four_categorized_queries(self):
+        conf = {"short": "IJCAI"}
+        queries = _build_search_queries(conf, 2026)
+        assert isinstance(queries, list)
+        assert len(queries) == 4
+        # Each entry is (query_str, category)
+        categories = [cat for _, cat in queries]
+        assert "homepage" in categories
+        assert "reviewer" in categories
+        assert "pc" in categories
+        assert "call" in categories
+
     def test_basic_queries(self):
         conf = {"short": "IJCAI"}
-        main_q, reviewer_q = _build_search_queries(conf, 2026)
-        assert '"IJCAI"' in main_q
-        assert '"2026"' in main_q
-        assert "conference" in main_q
-        assert '"IJCAI"' in reviewer_q
-        assert "reviewer" in reviewer_q
+        queries = _build_search_queries(conf, 2026)
+        query_map = {cat: q for q, cat in queries}
+        assert '"IJCAI"' in query_map["homepage"]
+        assert '"2026"' in query_map["homepage"]
+        assert "conference" in query_map["homepage"]
+        assert "reviewer" in query_map["reviewer"]
 
     def test_different_conference(self):
         conf = {"short": "NeurIPS"}
-        main_q, reviewer_q = _build_search_queries(conf, 2027)
-        assert '"NeurIPS"' in main_q
-        assert '"2027"' in main_q
+        queries = _build_search_queries(conf, 2027)
+        query_map = {cat: q for q, cat in queries}
+        assert '"NeurIPS"' in query_map["homepage"]
+        assert '"2027"' in query_map["homepage"]
 
 
 class TestValidateAndScoreResults:
@@ -105,13 +118,15 @@ class TestValidateAndScoreResults:
         assert len(candidates) == 1
         assert candidates[0]["score"] > 0
 
-    def test_non_matching_result_filtered(self):
+    def test_non_matching_result_gets_low_score(self):
         results = [
             {"url": "https://example.com/random", "title": "Random", "snippet": ""}
         ]
         conf = {"short": "IJCAI", "name": "IJCAI", "domain": "ijcai.org"}
         candidates = _validate_and_score_results(results, conf, 2026)
-        assert len(candidates) == 0
+        # Non-matching still scores > 0 (category bonus), but much lower
+        assert len(candidates) == 1
+        assert candidates[0]["score"] < 10
 
     def test_multiple_results_scored(self):
         results = [
@@ -121,7 +136,10 @@ class TestValidateAndScoreResults:
         ]
         conf = {"short": "IJCAI", "name": "IJCAI", "domain": "ijcai.org"}
         candidates = _validate_and_score_results(results, conf, 2026)
-        assert len(candidates) == 2  # two matching, one filtered
+        assert len(candidates) == 3
+        # Matching candidates score much higher than non-matching
+        scores = sorted([c["score"] for c in candidates], reverse=True)
+        assert scores[0] > scores[-1]
 
 
 class TestSelectBestHomepage:

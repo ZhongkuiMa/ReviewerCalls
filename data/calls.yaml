@@ -1,29 +1,67 @@
 # Verified reviewer self-nomination calls.
 # Manually maintained. PRs welcome after Issue verification.
 #
-# ============================================
-# IMPORTANT: Entries MUST be ordered by date
-# Order: NEWEST date first (descending)
-# DO NOT change the ordering when editing!
-# ============================================
+# IMPORTANT: Entries MUST be ordered by date (NEWEST first, descending)
 #
 # Fields:
 #   url: Official self-nomination page URL (PRIMARY KEY)
-#   conference: Conference short name (must match data/conferences.yaml)
+#   conference: Conference short name (match data/conferences.yaml)
 #   year: Conference year
-#   role: One of: Reviewer, External Reviewer, PC, SPC, AC, SAC, AEC, Emergency Reviewer
-#   date: Web page creation/publication date (YYYY-MM-DD)
+#   role: Reviewer, External Reviewer, PC, SPC, AC, SAC, AEC, Emergency Reviewer
+#   date: Web page creation date (YYYY-MM-DD)
 #   confirmed: Boolean, true=verified by human, false=auto-added pending review
 #   label: URL label (Main, Workshop, Industry, Shadow/Junior)
-#   round: (Optional) Round identifier for multi-round conferences
+#   round: Optional, Round identifier for multi-round conferences
 
 calls:
-- url: https://petsymposium.org/artifacts.php
-  conference: PETS
+- url: https://www.linkedin.com/posts/tahaei_call-for-reviewers-acm-chi-conference-activity-7376678557403684864-rYVe
+  conference: CHI
   year: 2026
-  role: AEC
+  role: Reviewer
   label: Main
-  date: '2026-02-11'
+  date: '2026-02-20'
+  confirmed: false
+- url: https://bskyview.com/7698f277/miccaisociety
+  conference: MICCAI
+  year: 2026
+  role: Reviewer
+  label: Main
+  date: '2026-02-20'
+  confirmed: true
+- url: https://www.linkedin.com/posts/tomzimmermann_softwareengineering-icse2026-programcommittee-activity-7252330979636252673-8vLg
+  conference: ICSE
+  year: 2026
+  role: Reviewer
+  label: Main
+  date: '2026-02-20'
+  confirmed: false
+- url: https://www.linkedin.com/posts/ali-f-al-ramadan_i-recently-received-the-distinguished-reviewer-activity-7394890499179933696-rizY
+  conference: ICSE
+  year: 2026
+  role: Reviewer
+  label: Shadow/Junior
+  date: '2026-02-20'
+  confirmed: false
+- url: https://jldhe.aldinhe.ac.uk/call-for-reviewers-14-march-2025/
+  conference: RE
+  year: 2026
+  role: Reviewer
+  label: Main
+  date: '2026-02-20'
+  confirmed: true
+- url: https://www.linkedin.com/posts/danilocomminiello_icassp-2026-mlsp-track-area-chair-nomination-activity-7370761090193936384-PYpz
+  conference: ICASSP
+  year: 2026
+  role: AC
+  label: Main
+  date: '2026-02-20'
+  confirmed: true
+- url: https://raid2026.org/call.html
+  conference: RAID
+  year: 2026
+  role: PC
+  label: Main
+  date: '2026-02-13'
   confirmed: true
 - url: https://2026.ecoop.org/track/ecoop-2026-artifact-evaluation
   conference: ECOOP
@@ -375,3 +413,10 @@ calls:
   date: '2025-08-29'
   confirmed: true
   label: Main
+- url: https://chi2026.acm.org/2025/07/07/open-call-for-reviewers-chi-2026-student-research-competition
+  conference: CHI
+  year: 2026
+  role: Reviewer
+  label: Main
+  date: '2025-07-07'
+  confirmed: true

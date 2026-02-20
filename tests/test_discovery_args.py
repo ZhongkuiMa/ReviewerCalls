@@ -1,7 +1,17 @@
 """Tests for discovery argument parsing and helpers."""
 
+import json
+import os
+import tempfile
+
 import pytest
-from discover.main import parse_args, DiscoveryArgs, _deduplicate_links, _apply_filters
+from discover.main import (
+    parse_args,
+    DiscoveryArgs,
+    _deduplicate_links,
+    _apply_filters,
+    _export_eval,
+)
 
 
 class TestParseArgs:
@@ -290,3 +300,59 @@ class TestApplyFilters:
         args = DiscoveryArgs(conference="NONEXISTENT")
         result = _apply_filters(self._make_confs(), args)
         assert len(result) == 0
+
+
+class TestParseArgsEval:
+    """Tests for --eval argument parsing."""
+
+    def test_eval_default_none(self):
+        args = parse_args([])
+        assert args.eval_output is None
+
+    def test_eval_with_path(self):
+        args = parse_args(["--eval", "/tmp/test.json"])
+        assert args.eval_output == "/tmp/test.json"
+
+
+class TestExportEval:
+    """Tests for _export_eval function."""
+
+    def test_writes_valid_json(self):
+        candidates = [
+            {
+                "url": "https://a.com/call",
+                "conference": "TEST",
+                "year": 2026,
+                "role": "Reviewer",
+                "final_score": 8.5,
+                "search_score": 6.0,
+                "graph_score": 5.0,
+                "content_score": 10.0,
+                "decision": "accept",
+                "match_strength": "high",
+                "matched_keywords": ["call for reviewers"],
+                "evidence_snippet": "...call for reviewers...",
+            }
+        ]
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = os.path.join(tmpdir, "eval.json")
+            _export_eval(path, candidates, 3)
+
+            with open(path) as f:
+                data = json.load(f)
+
+            assert data["conferences_searched"] == 3
+            assert data["total_candidates"] == 1
+            assert data["candidates"][0]["final_score"] == 8.5
+            assert data["candidates"][0]["decision"] == "accept"
+            assert "timestamp" in data
+
+    def test_empty_candidates(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = os.path.join(tmpdir, "eval.json")
+            _export_eval(path, [], 0)
+
+            with open(path) as f:
+                data = json.load(f)
+            assert data["total_candidates"] == 0
+            assert data["candidates"] == []

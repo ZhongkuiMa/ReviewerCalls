@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import datetime
+import logging
 import os
 from typing import Any
 
@@ -11,6 +12,8 @@ import shutil
 
 from discover import config
 from discover.utils import normalize_url
+
+logger = logging.getLogger(__name__)
 
 
 def read_yaml(path: str) -> dict[str, Any]:
@@ -151,13 +154,24 @@ def filter_new_candidates(
 
     new_entries = []
 
+    _strip_keys = {
+        "matched_keywords",
+        "source",
+        "title",
+        "snippet",
+        "final_score",
+        "decision",
+        "search_score",
+        "graph_score",
+        "content_score",
+        "match_strength",
+        "evidence_snippet",
+    }
     for candidate in candidates:
         candidate_url = normalize_url(candidate["url"])
         if candidate_url not in existing_urls and candidate_url not in rejected_urls:
             candidate_clean = {
-                k: v
-                for k, v in candidate.items()
-                if k not in ("matched_keywords", "source", "title", "snippet")
+                k: v for k, v in candidate.items() if k not in _strip_keys
             }
             new_entries.append(candidate_clean)
             existing_urls.add(candidate_url)
@@ -249,7 +263,7 @@ def write_to_calls_yaml(candidates: list[dict[str, Any]], calls_path: str) -> in
     new_entries = filter_new_candidates(candidates, existing_urls, rejected_urls)
 
     if not new_entries:
-        print("    No new unique entries to add")
+        logger.info("    No new unique entries to add")
         return 0
 
     all_calls = merge_and_sort_calls(new_entries, existing_calls)

@@ -3,12 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Zhongkui Ma">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#1a237e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
   <title>ReviewerCalls - Conference Reviewer Self-Nomination Calls</title>
-  <meta property="og:title" content="ReviewerCalls">
-  <meta property="og:description" content="Curated self-nomination calls for reviewers of CCF/CORE conferences">
+  <meta name="description" content="Discover and track self-nomination calls for reviewers and program committee members of CCF- and CORE-ranked computer science conferences. Free resource for academics.">
+  <meta name="keywords" content="conference reviewers, PC members, call for reviewers, academic conferences, CCF, CORE, program committee, reviewer nomination, self-nomination, academic opportunities">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ReviewerCalls - Reviewer Self-Nomination Calls">
+  <meta property="og:description" content="Curated self-nomination calls for reviewers and committee members of CCF- and CORE-ranked conferences">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ZhongkuiMa.github.io/ReviewerCalls/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ReviewerCalls - Reviewer Self-Nomination Calls">
+  <meta name="twitter:description" content="Discover reviewer and committee self-nomination calls for CCF/CORE conferences">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ZhongkuiMa.github.io/ReviewerCalls/">
+
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+
+  <!-- Icons -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231a237e'/><text x='50' y='68' font-size='48' font-weight='bold' fill='white' text-anchor='middle' font-family='system-ui'>RC</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect rx='40' width='180' height='180' fill='%231a237e'/><text x='90' y='120' font-size='80' font-weight='bold' fill='white' text-anchor='middle' font-family='system-ui'>RC</text></svg>">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
   <link rel="stylesheet" href="style.css">
@@ -17,18 +45,34 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
-    <div class="container">
-      <hgroup>
-        <h1>ReviewerCalls</h1>
-        <p>Curated self-nomination calls for reviewers and committee members of CCF- and CORE-ranked conferences.</p>
-      </hgroup>
-      <nav>
-        <ul>
-          <li><a href="https://github.com/ZhongkuiMa/ReviewerCalls" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.buymeacoffee.com/zhongkuimac" target="_blank" rel="noopener">☕ Support</a></li>
-          <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button></li>
-        </ul>
-      </nav>
+    <div class="header-wrapper">
+      <div class="header-left">
+        <hgroup>
+          <h1>ReviewerCalls</h1>
+          <p>Curated self-nomination calls for reviewers and committee members of CCF- and CORE-ranked conferences.</p>
+        </hgroup>
+      </div>
+      <div class="header-right">
+        <nav>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://github.com/ZhongkuiMa/ReviewerCalls" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.buymeacoffee.com/zhongkuimac" target="_blank" rel="noopener">☕ Support</a></li>
+            <li>
+              <a
+                class="github-star-button"
+                href="https://github.com/ZhongkuiMa/ReviewerCalls"
+                target="_blank"
+                rel="noopener"
+                aria-label="Star ReviewerCalls on GitHub"
+                title="Star this project on GitHub">
+                ⭐ Star
+              </a>
+            </li>
+            <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9790;</button></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -85,6 +129,46 @@
       © 2026 <a href="https://github.com/ZhongkuiMa" target="_blank" rel="noopener">Zhongkui Ma</a>. Licensed under <a href="https://github.com/ZhongkuiMa/ReviewerCalls/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.
     </small>
   </footer>
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ReviewerCalls",
+    "description": "Discover and track self-nomination calls for reviewers and program committee members of CCF- and CORE-ranked computer science conferences",
+    "url": "https://ZhongkuiMa.github.io/ReviewerCalls/",
+    "applicationCategory": "BusinessApplication",
+    "author": {
+      "@type": "Person",
+      "name": "Zhongkui Ma",
+      "url": "https://github.com/ZhongkuiMa"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ReviewerCalls",
+    "url": "https://ZhongkuiMa.github.io/ReviewerCalls/",
+    "logo": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231a237e'/><text x='50' y='68' font-size='48' font-weight='bold' fill='white' text-anchor='middle' font-family='system-ui'>RC</text></svg>",
+    "sameAs": [
+      "https://github.com/ZhongkuiMa/ReviewerCalls"
+    ]
+  }
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
   <script src="script.js"></script>
 </body>

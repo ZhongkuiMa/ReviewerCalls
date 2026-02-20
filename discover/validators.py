@@ -25,6 +25,8 @@ from discover.constants import (
     MEDIUM_CONFIDENCE_SIGNALS,
     YEAR_FILTER_START,
 )
+from discover.scoring import score_content_signals as _score_content_signals
+from discover.utils import extract_visible_text
 
 
 def is_obviously_useless(url: str) -> bool:
@@ -143,27 +145,39 @@ def is_false_positive_url(url: str) -> bool:
     return False
 
 
-def has_positive_signals(content: str) -> bool:
+def has_positive_signals(
+    content: str, *, explain: bool = False
+) -> bool | tuple[bool, dict[str, str]]:
     """Check if content has positive signals for reviewer recruitment.
 
-    :param content: Page content (lowercase)
-    :return: True if positive recruitment signals found
+    :param content: Page content (lowercase text)
+    :param explain: If True, return (bool, explanation_dict) instead of just bool
+    :return: True if positive recruitment signals found (or tuple if explain=True)
     """
     for signal in NEGATIVE_SIGNALS:
         if signal in content:
             if not any(term in content for term in REVIEWER_RECOVERY_TERMS):
+                if explain:
+                    return False, {"reason": "negative_signal", "signal": signal}
                 return False
 
-    if any(signal in content for signal in HIGH_CONFIDENCE_SIGNALS):
-        return True
+    for signal in HIGH_CONFIDENCE_SIGNALS:
+        if signal in content:
+            if explain:
+                return True, {"reason": "high_confidence", "signal": signal}
+            return True
 
     for signal, context_terms in MEDIUM_CONFIDENCE_SIGNALS:
         if signal in content:
             pos = content.find(signal)
             window = content[max(0, pos - 200) : pos + 200]
             if any(term in window for term in context_terms):
+                if explain:
+                    return True, {"reason": "medium_confidence", "signal": signal}
                 return True
 
+    if explain:
+        return False, {"reason": "no_signals", "signal": ""}
     return False
 
 
@@ -183,7 +197,8 @@ def check_page_content(url: str) -> dict[str, Any] | None:
         if resp.status_code != 200:
             return None
 
-        content = resp.text.lower()
+        html = resp.content.decode("utf-8", errors="replace")
+        content = extract_visible_text(html)
 
         if not has_positive_signals(content):
             return None
@@ -196,11 +211,16 @@ def check_page_content(url: str) -> dict[str, Any] | None:
                 matched_keywords.append(STEP4_CONTENT_KEYWORDS[i])
 
         if matched_indices:
+            signal_score, _ = _score_content_signals(content)
+            from discover import config as _cfg
+
+            keyword_score = len(matched_indices) * _cfg.CONTENT_WEAK_POSITIVE
             return {
                 "url": resp.url,
                 "matched_keyword_indices": matched_indices,
                 "matched_keywords": matched_keywords[:5],
                 "has_reviewer_call": True,
+                "content_score": signal_score + keyword_score,
             }
 
         return None

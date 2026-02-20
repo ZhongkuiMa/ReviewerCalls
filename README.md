@@ -18,8 +18,9 @@ Automated discovery runs weekly. Each candidate is manually verified before appe
 ## How It Works
 
 1. **Discovery** -- An automated system searches conference websites for reviewer nomination pages weekly
-2. **Verification** -- Each candidate is manually reviewed to confirm it is a genuine self-nomination page
-3. **Publication** -- Verified entries appear on the website, updated automatically
+2. **Validation** -- LLM-powered validator filters false positives (code of conduct, visa info, etc.)
+3. **Verification** -- Each candidate is manually reviewed to confirm it is a genuine self-nomination page
+4. **Publication** -- Verified entries appear on the website, updated automatically
 
 ## What Qualifies
 
@@ -52,6 +53,8 @@ We make no warranties about the accuracy, completeness, or timeliness of the inf
 
 ## Support
 
-If you find this project useful, consider supporting it:
+If you find this project useful and successfully land a reviewer position, consider buying me a coffee! ☕
 
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/zhongkuimac)
+<a href="https://www.buymeacoffee.com/zhongkuimac">
+  <img alt="Buy Me A Coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px" style="height: 50px;">
+</a>

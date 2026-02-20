@@ -38,7 +38,7 @@ class TestNormalizeUrl:
     def test_normalize_url_combined(self):
         """Should handle multiple transformations."""
         url = normalize_url("HTTPS://WWW.EXAMPLE.COM/PATH/#FRAG")
-        assert url == "https://example.com/path/"
+        assert url == "https://example.com/path"
 
     def test_normalize_url_without_www(self):
         """Should work for URLs without www."""

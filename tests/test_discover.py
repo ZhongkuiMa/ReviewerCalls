@@ -364,7 +364,7 @@ def test_conference_page_scoring():
         "snippet": "Conference information",
     }
     score = _score_conference_page(result, conf, year)
-    assert 10 <= score <= 22, f"Expected medium-high score, got {score}"
+    assert 10 <= score <= 25, f"Expected medium-high score, got {score}"
 
     result = {
         "url": "https://example.com/random",
@@ -372,7 +372,8 @@ def test_conference_page_scoring():
         "snippet": "Not related to conference",
     }
     score = _score_conference_page(result, conf, year)
-    assert score == 0, f"Expected zero score for non-match, got {score}"
+    # Category bonus means even non-matching results get a small score
+    assert score <= 5, f"Expected low score for non-match, got {score}"
 
 
 def test_conference_page_validation_flow():
@@ -408,4 +409,5 @@ def test_conference_page_validation_flow():
         "title": "Random",
         "snippet": "Nothing",
     }
-    assert _score_conference_page(result, conf, year) == 0
+    # Category bonus means even non-matching results get a small score
+    assert _score_conference_page(result, conf, year) <= 5

@@ -6,10 +6,13 @@ joins them, and writes docs/calls.json and docs/conferences.json.
 
 import datetime
 import json
+import logging
 import os
 import yaml
 import re
 from urllib.parse import urlparse
+
+logger = logging.getLogger(__name__)
 
 
 def extract_workshop_name(url: str) -> str:
@@ -110,9 +113,7 @@ def main() -> int:
 
     raw_calls = calls_data.get("calls", []) or []
 
-    print(f"\n{'=' * 60}")
-    print("Processing calls from calls.yaml")
-    print(f"{'=' * 60}")
+    logger.info("Processing calls from calls.yaml")
 
     enriched_calls = []
     skipped_calls = []
@@ -131,35 +132,63 @@ def main() -> int:
             date_display = str(year)
 
         if not confirmed:
-            print(
-                f"[SKIP] [{i}/{len(raw_calls)}] {short} {year}: Not confirmed (awaiting review)"
+            logger.info(
+                "[SKIP] [%d/%d] %s %s: Not confirmed (awaiting review)",
+                i,
+                len(raw_calls),
+                short,
+                year,
             )
             unconfirmed_calls.append(call)
             continue
 
         conf = conf_index.get(short)
         if not conf:
-            print(f"[SKIP] [{i}/{len(raw_calls)}] {short} {year}: Conference not found")
+            logger.info(
+                "[SKIP] [%d/%d] %s %s: Conference not found",
+                i,
+                len(raw_calls),
+                short,
+                year,
+            )
             skipped_calls.append(short)
             continue
 
         urls_to_process = []
         if "urls" in call:
             urls_to_process = call["urls"]
-            print(
-                f"[OK] [{i}/{len(raw_calls)}] {short} {year} - {base_role} ({len(urls_to_process)} URLs)"
+            logger.info(
+                "[OK] [%d/%d] %s %s - %s (%d URLs)",
+                i,
+                len(raw_calls),
+                short,
+                year,
+                base_role,
+                len(urls_to_process),
             )
         elif "url" in call:
             label = call.get("label", "Main")
             urls_to_process = [{"url": call["url"], "label": label}]
-            print(f"[OK] [{i}/{len(raw_calls)}] {short} {year} - {base_role} ({label})")
+            logger.info(
+                "[OK] [%d/%d] %s %s - %s (%s)",
+                i,
+                len(raw_calls),
+                short,
+                year,
+                base_role,
+                label,
+            )
         else:
-            print(f"[SKIP] [{i}/{len(raw_calls)}] {short} {year}: No URL found")
+            logger.info(
+                "[SKIP] [%d/%d] %s %s: No URL found", i, len(raw_calls), short, year
+            )
             continue
 
-        print(f"  Conference: {conf['name']}")
-        print(f"  Rank: CCF {conf['rank']['ccf']}, CORE {conf['rank']['core']}")
-        print(f"  Area: {areas.get(conf['area'], conf['area'])}")
+        logger.info("  Conference: %s", conf["name"])
+        logger.info(
+            "  Rank: CCF %s, CORE %s", conf["rank"]["ccf"], conf["rank"]["core"]
+        )
+        logger.info("  Area: %s", areas.get(conf["area"], conf["area"]))
 
         for url_obj in urls_to_process:
             url = url_obj["url"]
@@ -167,7 +196,7 @@ def main() -> int:
 
             role_display = base_role
 
-            print(f"    - {label}: {url} -> Role: '{role_display}'")
+            logger.info("    - %s: %s -> Role: '%s'", label, url, role_display)
 
             year_suffix = str(year)[-2:]
             conf_abbr = f"{short}'{year_suffix}"
@@ -196,7 +225,7 @@ def main() -> int:
                 }
             )
 
-        print(f"  Date: {date_display}")
+        logger.info("  Date: %s", date_display)
 
     conferences_out = []
     for c in conferences:
@@ -214,9 +243,7 @@ def main() -> int:
 
     os.makedirs(site_dir, exist_ok=True)
 
-    print(f"\n{'=' * 60}")
-    print("Writing output files")
-    print(f"{'=' * 60}")
+    logger.info("Writing output files")
 
     calls_json_path = os.path.join(site_dir, "calls.json")
     calls_payload = {
@@ -225,28 +252,25 @@ def main() -> int:
     }
     with open(calls_json_path, "w") as f:
         json.dump(calls_payload, f, indent=2, ensure_ascii=False)
-    print(f"[OK] Written: {calls_json_path}")
-    print(f"  Entries: {len(enriched_calls)}")
-    print(f"  Size: {os.path.getsize(calls_json_path)} bytes")
+    logger.info("[OK] Written: %s", calls_json_path)
+    logger.info("  Entries: %d", len(enriched_calls))
+    logger.info("  Size: %d bytes", os.path.getsize(calls_json_path))
 
     conf_json_path = os.path.join(site_dir, "conferences.json")
     with open(conf_json_path, "w") as f:
         json.dump(conferences_out, f, indent=2, ensure_ascii=False)
-    print(f"[OK] Written: {conf_json_path}")
-    print(f"  Entries: {len(conferences_out)}")
-    print(f"  Size: {os.path.getsize(conf_json_path)} bytes")
+    logger.info("[OK] Written: %s", conf_json_path)
+    logger.info("  Entries: %d", len(conferences_out))
+    logger.info("  Size: %d bytes", os.path.getsize(conf_json_path))
 
-    print(f"\n{'=' * 60}")
-    print("BUILD SUMMARY")
-    print(f"{'=' * 60}")
-    print(f"Input: {len(raw_calls)} calls from calls.yaml")
-    print(f"Output: {len(enriched_calls)} enriched calls")
-    print(f"Unconfirmed: {len(unconfirmed_calls)} calls (awaiting review)")
+    logger.info("BUILD SUMMARY")
+    logger.info("Input: %d calls from calls.yaml", len(raw_calls))
+    logger.info("Output: %d enriched calls", len(enriched_calls))
+    logger.info("Unconfirmed: %d calls (awaiting review)", len(unconfirmed_calls))
     if skipped_calls:
-        print(f"Skipped: {len(skipped_calls)} calls (conference not found)")
-        print(f"  {', '.join(skipped_calls)}")
-    print(f"Conferences: {len(conferences_out)} total")
-    print(f"Updated: {datetime.date.today().isoformat()}")
-    print(f"{'=' * 60}")
+        logger.info("Skipped: %d calls (conference not found)", len(skipped_calls))
+        logger.info("  %s", ", ".join(skipped_calls))
+    logger.info("Conferences: %d total", len(conferences_out))
+    logger.info("Updated: %s", datetime.date.today().isoformat())
 
     return 0

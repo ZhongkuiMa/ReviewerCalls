@@ -511,3 +511,19 @@ MEDIUM_CONFIDENCE_SIGNALS = [
 ]
 
 YEAR_FILTER_START = 2020
+
+# Cheap precheck roots: if none present, skip expensive regex matching
+PRECHECK_ROOTS = [
+    "reviewer",
+    "review",
+    "program committee",
+    "pc member",
+    "recruit",
+    "nominate",
+    "nomination",
+    "committee member",
+    "area chair",
+    "artifact",
+    "volunteer",
+    "shadow",
+]

@@ -3,10 +3,36 @@
 from __future__ import annotations
 
 import datetime
+import html as html_lib
+import re
 
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlencode, parse_qs
 
 from discover import constants
+
+# Regex patterns for visible text extraction (compiled once)
+_RE_SCRIPT_STYLE = re.compile(
+    r"<(script|style|noscript)[^>]*>.*?</\1>", re.DOTALL | re.IGNORECASE
+)
+_RE_HTML_COMMENTS = re.compile(r"<!--.*?-->", re.DOTALL)
+_RE_ALL_TAGS = re.compile(r"<[^>]+>")
+_RE_WHITESPACE = re.compile(r"\s+")
+
+# Tracking parameters to strip from URLs during normalization
+_TRACKING_PARAMS = {
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "ref",
+    "source",
+    "fbclid",
+    "gclid",
+}
+
+# Path suffixes to strip (index pages)
+_INDEX_SUFFIXES = ("/index.html", "/index.php")
 
 
 def guess_year() -> int:
@@ -48,7 +74,8 @@ def load_current_urls(calls_path: str) -> set[str]:
 def normalize_url(url: str) -> str:
     """Normalize URL for comparison.
 
-    Strips trailing slash and fragment, converts to lowercase, removes www. prefix.
+    Strips trailing slash and fragment, converts to lowercase, removes www. prefix,
+    removes tracking parameters, and removes index.html/index.php suffixes.
 
     :param url: Raw URL string
     :return: Normalized URL (lowercase, no trailing slash/fragment, no www)
@@ -57,11 +84,29 @@ def normalize_url(url: str) -> str:
 
     # Remove www. prefix from domain
     parsed = urlparse(url)
-    if parsed.netloc.startswith("www."):
-        netloc_without_www = parsed.netloc[4:]  # Remove 'www.'
-        url = url.replace(f"://{parsed.netloc}", f"://{netloc_without_www}", 1)
+    netloc = parsed.netloc
+    if netloc.startswith("www."):
+        netloc = netloc[4:]
+        url = url.replace(f"://{parsed.netloc}", f"://{netloc}", 1)
 
-    return url
+    # Remove tracking query parameters
+    parsed = urlparse(url)
+    if parsed.query:
+        params = parse_qs(parsed.query, keep_blank_values=True)
+        cleaned = {k: v for k, v in params.items() if k not in _TRACKING_PARAMS}
+        if cleaned:
+            new_query = urlencode(cleaned, doseq=True)
+            url = url.split("?", 1)[0] + "?" + new_query
+        else:
+            url = url.split("?", 1)[0]
+
+    # Remove index.html / index.php suffixes
+    for suffix in _INDEX_SUFFIXES:
+        if url.endswith(suffix):
+            url = url[: -len(suffix)]
+            break
+
+    return url.rstrip("/")
 
 
 def is_same_domain(url: str, domain: str) -> bool:
@@ -77,3 +122,20 @@ def is_same_domain(url: str, domain: str) -> bool:
     url_domain = parsed.netloc.lower()
     domain_lower = domain.lower()
     return url_domain == domain_lower or url_domain.endswith("." + domain_lower)
+
+
+def extract_visible_text(html: str) -> str:
+    """Extract visible text from HTML, stripping script/style/tags.
+
+    Uses only stdlib (re, html.unescape). Returns lowercase text with
+    collapsed whitespace, suitable for keyword matching.
+
+    :param html: Raw HTML string
+    :return: Lowercase visible text
+    """
+    text = _RE_SCRIPT_STYLE.sub(" ", html)
+    text = _RE_HTML_COMMENTS.sub(" ", text)
+    text = _RE_ALL_TAGS.sub(" ", text)
+    text = html_lib.unescape(text)
+    text = _RE_WHITESPACE.sub(" ", text)
+    return text.lower().strip()
